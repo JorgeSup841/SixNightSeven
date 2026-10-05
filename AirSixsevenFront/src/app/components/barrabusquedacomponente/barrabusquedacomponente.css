@@ -1,0 +1,98 @@
+/* Contenedor principal: la píldora */
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 850px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+}
+
+/* Cada campo (Dónde, Llegada, etc.) */
+.search-item {
+  flex: 1;                       /* todos ocupan el mismo ancho */
+  padding: 8px 24px;
+  border-radius: 40px;
+  transition: background 0.2s;
+}
+
+/* Línea divisoria entre campos */
+.search-item + .search-item {
+  border-left: 1px solid #ddd;
+}
+
+.search-item:hover {
+  background: #ebebeb;
+}
+
+/* Cuando haces clic dentro del campo, se pone blanco con sombra */
+.search-item:focus-within {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  border-left-color: transparent;
+}
+
+/* Título pequeño de cada campo */
+.search-item label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+/* El input sin bordes ni fondo, para que parezca texto */
+.search-item input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: #222;
+  padding: 0;
+}
+
+.search-item input::placeholder {
+  color: #6a6a6a;
+}
+
+/* Botón circular rojo */
+.search-btn {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;                /* evita que se aplaste */
+  border: none;
+  border-radius: 50%;
+  background: #ff385c;
+  color: white;
+  font-size: 1.1rem;
+  margin-left: 8px;
+  transition: background 0.2s;
+}
+
+.search-btn:hover {
+  background: #e31c5f;
+}
+
+/* Versión móvil: los campos se apilan */
+@media (max-width: 767px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 24px;
+    padding: 12px;
+  }
+
+  .search-item + .search-item {
+    border-left: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .search-btn {
+    width: 100%;
+    border-radius: 30px;
+    margin: 10px 0 0;
+  }
+}
