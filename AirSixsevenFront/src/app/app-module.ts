@@ -1,40 +1,35 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { NgModule, provideBrowserGlobalErrorListeners } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientModule } from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing-module';
-import { App } from './app';
+import { AppRoutingModule } from "./app-routing-module";
+import { App } from "./app";
 
-import { Navbarcomponent } from './components/navbarcomponent/navbarcomponent';
-import { Barrabusquedacomponente } from './components/barrabusquedacomponente/barrabusquedacomponente';
-import { Iniciocomponent } from './components/iniciocomponent/iniciocomponent';
-import { Destacadoscomponent } from './components/destacadoscomponent/destacadoscomponent';
-import { Tarjetaalojamientocomponent } from './components/tarjetaalojamientocomponent/tarjetaalojamientocomponent';
-import { Reservascomponent } from './components/reservascomponent/reservascomponent';
+import { Navbarcomponent } from "./components/navbarcomponent/navbarcomponent";
+import { Barrabusquedacomponente } from "./components/barrabusquedacomponente/barrabusquedacomponente";
+import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
+import { Destacadoscomponent } from "./components/destacadoscomponent/destacadoscomponent";
+import { Tarjetaalojamientocomponent } from "./components/tarjetaalojamientocomponent/tarjetaalojamientocomponent";
+import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { FormsModule } from "@angular/forms";
+import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 
 @NgModule({
-    declarations: [
-        App,
-        Navbarcomponent,
-        Barrabusquedacomponente,
-        Iniciocomponent,
-        Destacadoscomponent,
-        Tarjetaalojamientocomponent,
-        Reservascomponent
-    ],
+  declarations: [
+    App,
+    Navbarcomponent,
+    Barrabusquedacomponente,
+    Iniciocomponent,
+    Destacadoscomponent,
+    Tarjetaalojamientocomponent,
+    Reservascomponent,
+    Serviciociudadescomponent,
+  ],
 
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        AppRoutingModule
-    ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
 
-    providers: [
-        provideBrowserGlobalErrorListeners()
-    ],
+  providers: [provideBrowserGlobalErrorListeners()],
 
-    bootstrap: [
-        App
-    ]
+  bootstrap: [App],
 })
 export class AppModule {}

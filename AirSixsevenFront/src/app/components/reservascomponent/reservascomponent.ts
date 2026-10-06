@@ -30,7 +30,7 @@ export class Reservascomponent {
 
         if (nombre === "" || prohibidos.split("").some(c => nombre.includes(c))) {
             this.esNombreValido = false;
-            this.nombreValidado = "Pone un nombre real guachin";
+            this.nombreValidado = "Ponga un nombre real, no puede contener numeros o simbolos";
         } else {
             this.esNombreValido = true;
             this.nombreValidado = nombre;
@@ -52,7 +52,7 @@ export class Reservascomponent {
             this.telefonoCorrecto = celuco;
         } else {
             this.esTelefonoValido = false;
-            this.telefonoCorrecto = "Pon un numero de verda botardo";
+            this.telefonoCorrecto = "El telefono no puede incluir letras o simbolos";
         }
     }
     esCedulaValida: boolean = false;
@@ -70,9 +70,56 @@ export class Reservascomponent {
             this.cedulaCorrecta = cedula;
         } else {
             this.esCedulaValida = false;
-            this.cedulaCorrecta = "Pon una cédula de verdad guachin";
+            this.cedulaCorrecta = "La cedula no puede contener letras o simbolos";
         }
     }
+    fechaLlegada: string = "";
+    fechaSalida: string = "";
+    numeroHuespedes: number = 1;
+
+
+    precioPorNoche: number = 150000;
+    tarifaLimpiezaFija: number = 40000;
+
+    numeroNoches: number = 0;
+    subtotal: number = 0;
+    tarifaServicio: number = 0;
+    totalPagar: number = 0;
+
+    calcularSubtotal() {
+        this.subtotal = this.numeroNoches * this.precioPorNoche;
+    }
+
+    calcularTarifaServicio() {
+        this.tarifaServicio = this.subtotal * 0.10;
+    }
+
+    calcularTotal() {
+        if (this.numeroNoches > 0) {
+            this.totalPagar = this.subtotal + this.tarifaLimpiezaFija + this.tarifaServicio;
+        } else {
+            this.totalPagar = 0;
+        }
+    }
+    calcularNoches() {
+        if (this.fechaLlegada && this.fechaSalida) {
+            const llegada = new Date(this.fechaLlegada).getTime();
+            const salida = new Date(this.fechaSalida).getTime();
+            const diferencia = salida - llegada;
+            this.numeroNoches = diferencia > 0 ? diferencia / (1000 * 3600 * 24) : 0;
+        } else {
+            this.numeroNoches = 0;
+        }
+    }
+
+
+    calcularReserva() {
+        this.calcularNoches();
+        this.calcularSubtotal();
+        this.calcularTarifaServicio();
+        this.calcularTotal();
+    }
+
 
 
 }
