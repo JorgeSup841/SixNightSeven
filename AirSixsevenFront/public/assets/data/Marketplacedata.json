@@ -3,7 +3,7 @@
     {
       "id": 1,
       "nombre": "Loft moderno en Chapinero",
-      "descripcion": "Loft moderno ubicado cerca de restaurantes, cafés y zonas comerciales de Bogotá.",
+      "descripcion": "Loft moderno ubicado en una zona tranquila de Bogotá.",
       "ciudad": "Bogotá",
       "ubicacion": "Chapinero, Bogotá",
       "tipo": "Apartamento",
@@ -15,10 +15,9 @@
       "tarifaLimpieza": 45000,
       "calificacion": 4.8,
       "activo": true,
-      "imagenPrincipal": "assets/images/loft-bogota.jpg",
+      "imagenPrincipal": "assets/images/Chapinero.jpeg",
       "imagenes": [
-        "assets/images/loft-bogota.jpg",
-        "assets/images/loft-bogota-2.jpg"
+        "assets/images/Chapinero.jpeg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -34,7 +33,7 @@
     {
       "id": 2,
       "nombre": "Apartamento frente al mar",
-      "descripcion": "Apartamento con vista al mar ubicado en una zona turística de Cartagena.",
+      "descripcion": "Apartamento con vista al mar en Cartagena.",
       "ciudad": "Cartagena",
       "ubicacion": "Bocagrande, Cartagena",
       "tipo": "Apartamento",
@@ -46,10 +45,9 @@
       "tarifaLimpieza": 70000,
       "calificacion": 4.9,
       "activo": true,
-      "imagenPrincipal": "assets/images/cartagena.jpg",
+      "imagenPrincipal": "assets/images/Cartagena.jpeg",
       "imagenes": [
-        "assets/images/cartagena.jpg",
-        "assets/images/cartagena-2.jpg"
+        "assets/images/Cartagena.jpeg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -66,7 +64,7 @@
     {
       "id": 3,
       "nombre": "Cabaña en Guatapé",
-      "descripcion": "Cabaña rodeada de naturaleza con vista al embalse de Guatapé.",
+      "descripcion": "Cabaña rodeada de naturaleza con vista al embalse.",
       "ciudad": "Guatapé",
       "ubicacion": "Guatapé, Antioquia",
       "tipo": "Cabaña",
@@ -78,10 +76,9 @@
       "tarifaLimpieza": 60000,
       "calificacion": 4.7,
       "activo": true,
-      "imagenPrincipal": "assets/images/guatape.jpg",
+      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
       "imagenes": [
-        "assets/images/guatape.jpg",
-        "assets/images/guatape-2.jpg"
+        "assets/images/CabañaGuatape.jpeg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -97,7 +94,7 @@
     {
       "id": 4,
       "nombre": "Casa colonial en Villa de Leyva",
-      "descripcion": "Casa de estilo colonial localizada cerca de la plaza principal.",
+      "descripcion": "Casa colonial cerca de la plaza principal.",
       "ciudad": "Villa de Leyva",
       "ubicacion": "Centro histórico",
       "tipo": "Casa",
@@ -109,10 +106,9 @@
       "tarifaLimpieza": 90000,
       "calificacion": 4.6,
       "activo": true,
-      "imagenPrincipal": "assets/images/villa-leyva.jpg",
+      "imagenPrincipal": "assets/images/VillaDeLeyva.jpeg",
       "imagenes": [
-        "assets/images/villa-leyva.jpg",
-        "assets/images/villa-leyva-2.jpg"
+        "assets/images/VillaDeLeyva.jpeg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -128,7 +124,7 @@
     {
       "id": 5,
       "nombre": "Apartamento ejecutivo Medellín",
-      "descripcion": "Apartamento moderno cercano a zonas comerciales y empresariales.",
+      "descripcion": "Apartamento moderno en una zona empresarial de Medellín.",
       "ciudad": "Medellín",
       "ubicacion": "El Poblado, Medellín",
       "tipo": "Apartamento",
@@ -140,9 +136,9 @@
       "tarifaLimpieza": 50000,
       "calificacion": 4.5,
       "activo": true,
-      "imagenPrincipal": "assets/images/medellin.jpg",
+      "imagenPrincipal": "assets/images/Medallo.jpeg",
       "imagenes": [
-        "assets/images/medellin.jpg"
+        "assets/images/Medallo.jpeg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -157,7 +153,7 @@
     {
       "id": 6,
       "nombre": "Casa campestre",
-      "descripcion": "Casa campestre actualmente fuera de servicio.",
+      "descripcion": "Casa campestre en Armenia.",
       "ciudad": "Armenia",
       "ubicacion": "Zona rural",
       "tipo": "Casa",
@@ -169,9 +165,9 @@
       "tarifaLimpieza": 120000,
       "calificacion": 4.4,
       "activo": false,
-      "imagenPrincipal": "assets/images/armenia.jpg",
+      "imagenPrincipal": "assets/images/FotoHero1.jpg",
       "imagenes": [
-        "assets/images/armenia.jpg"
+        "assets/images/FotoHero1.jpg"
       ],
       "servicios": [
         "Piscina",
@@ -179,46 +175,10 @@
         "BBQ"
       ],
       "reglas": [
-        "No fiestas"
+        "No fumar",
+        "No mascotas"
       ]
     }
   ],
-  "resenas": [
-    {
-      "id": 1,
-      "alojamientoId": 1,
-      "usuario": "Laura Gómez",
-      "calificacion": 5,
-      "comentario": "Excelente ubicación y apartamento muy cómodo."
-    },
-    {
-      "id": 2,
-      "alojamientoId": 1,
-      "usuario": "Carlos Ruiz",
-      "calificacion": 4,
-      "comentario": "Muy buena experiencia."
-    },
-    {
-      "id": 3,
-      "alojamientoId": 2,
-      "usuario": "Andrea López",
-      "calificacion": 5,
-      "comentario": "La vista es excelente y la ubicación muy conveniente."
-    },
-    {
-      "id": 4,
-      "alojamientoId": 3,
-      "usuario": "Miguel Torres",
-      "calificacion": 5,
-      "comentario": "Excelente lugar para descansar."
-    },
-    {
-      "id": 5,
-      "alojamientoId": 4,
-      "usuario": "Natalia Pérez",
-      "calificacion": 4,
-      "comentario": "La casa es amplia y está muy bien ubicada."
-    }
-  ]
+  "resenas": []
 }
-
