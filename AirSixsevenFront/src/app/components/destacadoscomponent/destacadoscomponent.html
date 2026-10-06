@@ -1,0 +1,43 @@
+<section class="destacados">
+    <div class="container">
+
+        <div class="chips">
+            <button class="chip" [class.activo]="tipoSeleccionado === ''"
+                    (click)="seleccionarTipo('')">
+                Todos los alojamientos
+            </button>
+
+            @for (tipo of tipos; track tipo) {
+                <button class="chip" [class.activo]="tipoSeleccionado === tipo"
+                        (click)="seleccionarTipo(tipo)">
+                    {{ tipo }}
+                </button>
+            }
+        </div>
+
+        <div class="encabezado">
+            <div>
+                <p class="eyebrow">LUGARES QUE ENAMORAN</p>
+                <h2 class="titulo">Tu próxima historia, aquí.</h2>
+            </div>
+            <a routerLink="/alojamientos" class="ver-todos">
+                Ver todos los alojamientos <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        @if (destacados.length > 0) {
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                @for (alojamiento of destacados; track alojamiento.id) {
+                    <div class="col">
+                        <app-tarjetaalojamientocomponent [alojamiento]="alojamiento"/>
+                    </div>
+                }
+            </div>
+        } @else {
+            <p class="text-center text-muted py-5">
+                No hay alojamientos de este tipo por ahora.
+            </p>
+        }
+
+    </div>
+</section>
