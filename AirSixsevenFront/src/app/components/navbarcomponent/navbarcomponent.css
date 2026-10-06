@@ -1,5 +1,5 @@
 .nav-link-airbnb {
-  color: #6a6a6a !important;
+  color: #6a6a6a ;
   font-weight: 500;
   padding: 0.5rem 1rem !important;
   position: relative;
@@ -8,7 +8,7 @@
 
 .nav-link-airbnb:hover,
 .nav-link-airbnb.active {
-  color: #222 !important;
+  color: #222 ;
 }
 
 .nav-link-airbnb::after {

@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --terracota: #a8452c;
+    --marron: #3a2a22;
+    --crema: #f7f1e8;
+}
+
+body {
+    background: var(--crema);
+    color: var(--marron);
+}
