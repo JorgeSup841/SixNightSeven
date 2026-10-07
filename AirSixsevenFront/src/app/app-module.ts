@@ -13,6 +13,7 @@ import { Tarjetaalojamientocomponent } from "./components/tarjetaalojamientocomp
 import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
 import { FormsModule } from "@angular/forms";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
+import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,10 @@ import { Serviciociudadescomponent } from "./components/serviciociudadescomponen
   ],
 
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
+    Detallealojamientocomponent,
+  ],
+
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
 
   providers: [provideBrowserGlobalErrorListeners()],
 
