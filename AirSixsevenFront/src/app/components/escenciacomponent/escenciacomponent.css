@@ -1,0 +1,66 @@
+.esencia {
+    background: var(--verde);
+    color: #f3ede2;
+    padding: 4rem 0;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: #e0a58f;
+    margin: 0 0 4px;
+}
+
+.titulo {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 400;
+    margin: 0;
+}
+
+.descripcion {
+    max-width: 260px;
+    font-size: 0.8rem;
+    opacity: 0.75;
+    margin: 0;
+}
+
+.valor {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.valor-icono {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(243, 237, 226, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+}
+
+.valor h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+.valor p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    opacity: 0.75;
+    margin: 0;
+}
