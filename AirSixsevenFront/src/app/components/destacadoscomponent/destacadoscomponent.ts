@@ -38,3 +38,4 @@ export class Destacadoscomponent {
     return lista.slice(0, 4);
   }
 }
+
