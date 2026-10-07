@@ -11,6 +11,8 @@ import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
 import { Destacadoscomponent } from "./components/destacadoscomponent/destacadoscomponent";
 import { Tarjetaalojamientocomponent } from "./components/tarjetaalojamientocomponent/tarjetaalojamientocomponent";
 import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { FormsModule } from "@angular/forms";
+import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
 
 @NgModule({
@@ -22,6 +24,10 @@ import { Detallealojamientocomponent } from "./components/detallealojamientocomp
     Destacadoscomponent,
     Tarjetaalojamientocomponent,
     Reservascomponent,
+    Serviciociudadescomponent,
+  ],
+
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
     Detallealojamientocomponent,
   ],
 

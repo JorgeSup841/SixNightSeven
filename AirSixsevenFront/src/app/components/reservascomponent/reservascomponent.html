@@ -83,9 +83,14 @@
                         <span class="value">$ COP</span>
                     </div>
 
-                    <div class="cotizacion-row">
-                        <span class="label">Número de noches</span>
-                        <span class="value"></span>
+                    <div class="campo">
+                        <label for="numeroNoches">Número de noches:</label>
+                        <input
+                                type="number"
+                                id="numeroNoches"
+                                min="1"
+                                placeholder="Ej: 3"
+                                [(ngModel)]="numeroNoches">
                     </div>
 
                     <div class="cotizacion-row">

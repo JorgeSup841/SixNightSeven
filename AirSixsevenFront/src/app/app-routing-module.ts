@@ -1,3 +1,10 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import {Reservascomponent} from "./components/reservascomponent/reservascomponent";
+
+
+import { Iniciocomponent } from './components/iniciocomponent/iniciocomponent';
+
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
