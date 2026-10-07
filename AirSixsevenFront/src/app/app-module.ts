@@ -1,6 +1,7 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from "./app-routing-module";
 import { App } from "./app";
@@ -11,7 +12,6 @@ import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
 import { Destacadoscomponent } from "./components/destacadoscomponent/destacadoscomponent";
 import { Tarjetaalojamientocomponent } from "./components/tarjetaalojamientocomponent/tarjetaalojamientocomponent";
 import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
-import { FormsModule } from "@angular/forms";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
 
@@ -25,16 +25,22 @@ import { Detallealojamientocomponent } from "./components/detallealojamientocomp
     Tarjetaalojamientocomponent,
     Reservascomponent,
     Serviciociudadescomponent,
+    Detallealojamientocomponent
   ],
 
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
-    Detallealojamientocomponent,
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
 
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  providers: [
+    provideBrowserGlobalErrorListeners()
+  ],
 
-  providers: [provideBrowserGlobalErrorListeners()],
-
-  bootstrap: [App],
+  bootstrap: [
+    App
+  ]
 })
 export class AppModule {}
