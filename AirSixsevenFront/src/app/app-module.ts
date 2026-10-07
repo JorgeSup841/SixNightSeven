@@ -1,40 +1,40 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { NgModule, provideBrowserGlobalErrorListeners } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientModule } from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing-module';
-import { App } from './app';
+import { AppRoutingModule } from "./app-routing-module";
+import { App } from "./app";
 
-import { Navbarcomponent } from './components/navbarcomponent/navbarcomponent';
-import { Barrabusquedacomponente } from './components/barrabusquedacomponente/barrabusquedacomponente';
-import { Iniciocomponent } from './components/iniciocomponent/iniciocomponent';
-import { Destacadoscomponent } from './components/destacadoscomponent/destacadoscomponent';
-import { Tarjetaalojamientocomponent } from './components/tarjetaalojamientocomponent/tarjetaalojamientocomponent';
-import { Reservascomponent } from './components/reservascomponent/reservascomponent';
+import { Navbarcomponent } from "./components/navbarcomponent/navbarcomponent";
+import { Barrabusquedacomponente } from "./components/barrabusquedacomponente/barrabusquedacomponente";
+import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
+import { Destacadoscomponent } from "./components/destacadoscomponent/destacadoscomponent";
+import { Tarjetaalojamientocomponent } from "./components/tarjetaalojamientocomponent/tarjetaalojamientocomponent";
+import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { Footercomponent } from "./components/footercomponent/footercomponent";
+import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
+import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
+import {Escenciacomponent} from "./components/escenciacomponent/escenciacomponent";
 
 @NgModule({
-    declarations: [
-        App,
-        Navbarcomponent,
-        Barrabusquedacomponente,
-        Iniciocomponent,
-        Destacadoscomponent,
-        Tarjetaalojamientocomponent,
-        Reservascomponent
-    ],
+  declarations: [
+    App,
+    Navbarcomponent,
+    Barrabusquedacomponente,
+    Iniciocomponent,
+    Destacadoscomponent,
+    Tarjetaalojamientocomponent,
+    Reservascomponent,
+    Footercomponent,
+    Confianzacomponent,
+    Cierrecomponent,
+    Escenciacomponent,
+  ],
 
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        AppRoutingModule
-    ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
 
-    providers: [
-        provideBrowserGlobalErrorListeners()
-    ],
+  providers: [provideBrowserGlobalErrorListeners()],
 
-    bootstrap: [
-        App
-    ]
+  bootstrap: [App],
 })
 export class AppModule {}

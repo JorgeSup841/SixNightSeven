@@ -1,0 +1,43 @@
+.cierre {
+    background: var(--arena);
+    padding: 3rem 0;
+}
+
+.cierre-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;                /* en móvil el botón baja debajo del texto */
+    gap: 1.5rem;
+}
+
+.cierre-titulo {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-weight: 400;
+    margin: 0;
+}
+
+.cierre-sub {
+    font-size: 0.8rem;
+    color: #7a6a60;
+    margin: 4px 0 0;
+}
+
+.btn-principal {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--terracota);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 22px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-principal:hover {
+    background: #8c3722;
+    color: white;
+}

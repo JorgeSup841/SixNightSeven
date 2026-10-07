@@ -1,0 +1,59 @@
+<footer class="footer">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+                <a routerLink="/" class="footer-marca">
+                    <i class="bi bi-house-heart-fill"></i> Skibirnbn
+                </a>
+                <p class="footer-desc">
+                    Lugares con alma para quienes disfrutan el arte de quedarse.
+                </p>
+                <div class="redes">
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-2 offset-lg-1">
+                <h4>Explora</h4>
+                <ul>
+                    <li><a routerLink="/alojamientos">Todos los alojamientos</a></li>
+                    <li><a routerLink="/alojamientos" [queryParams]="{ ciudad: 'Cartagena' }">Cartagena</a></li>
+                    <li><a routerLink="/alojamientos" [queryParams]="{ ciudad: 'Guatapé' }">Guatapé</a></li>
+                    <li><a routerLink="/alojamientos" [queryParams]="{ ciudad: 'Villa de Leyva' }">Villa de Leyva</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-lg-2">
+                <h4>Skibirnbn</h4>
+                <ul>
+                    <li><a href="#">Nuestra esencia</a></li>
+                    <li><a routerLink="/mis-reservas">Mis reservas</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-lg-2">
+                <h4>Te ayudamos</h4>
+                <ul>
+                    <li><a href="#">Cómo reservar</a></li>
+                    <li><a href="#">Cancelaciones</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-inferior">
+            <span>© 2026 Skibirnbn · Aplicativo web de reserva de hoteles</span>
+            <span>Español · COP</span>
+        </div>
+
+    </div>
+</footer>
