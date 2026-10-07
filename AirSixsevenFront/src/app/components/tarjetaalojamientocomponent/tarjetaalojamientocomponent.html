@@ -1,41 +1,83 @@
 <article class="tarjeta">
 
-    <button class="btn-favorito" (click)="alternarFavorito()" aria-label="Guardar en favoritos">
-        <i class="bi" [class.bi-heart]="!favorito"
-           [class.bi-heart-fill]="favorito"
-           [class.activo]="favorito"></i>
+    <button
+            class="btn-favorito"
+            (click)="alternarFavorito()"
+            aria-label="Guardar en favoritos">
+
+        <i
+                class="bi"
+                [class.bi-heart]="!favorito"
+                [class.bi-heart-fill]="favorito"
+                [class.activo]="favorito">
+        </i>
+
     </button>
 
-    <a class="tarjeta-link" [routerLink]="['/alojamientos', alojamiento.id]">
+    <a
+            class="tarjeta-link"
+            [routerLink]="['/alojamientos', alojamiento.id]"
+            [state]="{ alojamiento: alojamiento }">
 
-        <img [src]="alojamiento.imagenPrincipal" [alt]="alojamiento.nombre">
+        <img
+                [src]="alojamiento.imagenPrincipal"
+                [alt]="alojamiento.nombre">
 
         <div class="tarjeta-cuerpo">
+
             <div class="d-flex justify-content-between align-items-start">
-                <h3 class="tarjeta-titulo">{{ alojamiento.nombre }}</h3>
+
+                <h3 class="tarjeta-titulo">
+                    {{ alojamiento.nombre }}
+                </h3>
+
                 <span class="calificacion">
-          <i class="bi bi-star-fill"></i> {{ alojamiento.calificacion }}
-        </span>
+                    <i class="bi bi-star-fill"></i>
+                    {{ alojamiento.calificacion }}
+                </span>
+
             </div>
 
-            <p class="tarjeta-meta">{{ alojamiento.ubicacion }}</p>
             <p class="tarjeta-meta">
-                {{ alojamiento.tipo }} · {{ alojamiento.capacidad }} huéspedes
+                {{ alojamiento.ubicacion }}
+            </p>
+
+            <p class="tarjeta-meta">
+                {{ alojamiento.tipo }} ·
+                {{ alojamiento.capacidad }} huéspedes
             </p>
 
             <div class="servicios">
-                @for (servicio of alojamiento.servicios.slice(0, 3); track servicio) {
-                    <span class="servicio">{{ servicio }}</span>
+
+                @for (
+                    servicio of alojamiento.servicios.slice(0, 3);
+                    track servicio
+                        ) {
+
+                    <span class="servicio">
+                        {{ servicio }}
+                    </span>
+
                 }
+
             </div>
 
             <hr>
 
             <p class="tarjeta-precio">
-                <strong>{{ alojamiento.precioNoche | currency:'COP':'symbol-narrow':'1.0-0' }}</strong>
-                <span> / noche</span>
+
+                <strong>
+                    {{ alojamiento.precioNoche | currency:'COP':'symbol-narrow':'1.0-0' }}
+                </strong>
+
+                <span>
+                    / noche
+                </span>
+
             </p>
+
         </div>
 
     </a>
+
 </article>

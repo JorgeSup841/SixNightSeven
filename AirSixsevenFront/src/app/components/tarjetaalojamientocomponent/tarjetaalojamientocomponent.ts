@@ -1,5 +1,5 @@
-import {Component, Input} from "@angular/core";
-import {Alojamiento} from "../../models/alojamientomodel";
+import { Component, Input } from "@angular/core";
+import { Alojamiento } from "../../models/alojamientomodel";
 
 @Component({
   selector: "app-tarjetaalojamientocomponent",

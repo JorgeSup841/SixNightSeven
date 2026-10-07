@@ -1,21 +1,32 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {Reservascomponent} from "./components/reservascomponent/reservascomponent";
-import {Iniciocomponent} from "./components/iniciocomponent/iniciocomponent";
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 
-import { Iniciocomponent } from './components/iniciocomponent/iniciocomponent';
-import { Reservascomponent } from './components/reservascomponent/reservascomponent';
+import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
+import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
 
 const routes: Routes = [
+
     {
-        path: '',
+        path: "",
         component: Iniciocomponent
     },
 
     {
-        path: 'reservas',
+        path: "reservas",
         component: Reservascomponent
+    },
+
+    {
+        path: "alojamientos/:id",
+        component: Detallealojamientocomponent
+    },
+
+    {
+        path: "**",
+        redirectTo: ""
     }
+
 ];
 
 @NgModule({
