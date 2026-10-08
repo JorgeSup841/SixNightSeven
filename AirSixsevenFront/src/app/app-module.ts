@@ -25,40 +25,35 @@ import { Misreservascomponent } from "./components/misreservascomponent/misreser
 import {CommonModule} from "@angular/common";
 
 @NgModule({
-  declarations: [
-    App,
-    Navbarcomponent,
-    Barrabusquedacomponente,
-    Iniciocomponent,
-    Destacadoscomponent,
-    Tarjetaalojamientocomponent,
-    Reservascomponent,
-    Footercomponent,
-    Confianzacomponent,
-    Cierrecomponent,
-    Eventoscomponent,
-    Escenciacomponent,
-    Serviciociudadescomponent,
-    Detallealojamientocomponent,
-    Alojamientocomponent,
-    Confirmacionreservacomponent,
-    Misreservascomponent,
-  ],
+    declarations: [
+        App,
+        Navbarcomponent,
+        Barrabusquedacomponente,
+        Iniciocomponent,
+        Destacadoscomponent,
+        Tarjetaalojamientocomponent,
+        Reservascomponent,
+        Footercomponent,
+        Confianzacomponent,
+        Cierrecomponent,
+        Escenciacomponent,
+        Serviciociudadescomponent,
+        Detallealojamientocomponent
+    ],
 
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    FormsModule,
-    CommonModule,
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        FormsModule
+    ],
 
-  providers: [
-    provideBrowserGlobalErrorListeners()
-  ],
+    providers: [
+        provideBrowserGlobalErrorListeners()
+    ],
 
-  bootstrap: [
-    App
-  ]
+    bootstrap: [
+        App
+    ]
 })
 export class AppModule {}

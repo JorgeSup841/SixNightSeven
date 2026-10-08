@@ -1,13 +1,11 @@
-import {NgModule} from "@angular/core";
-import {RouterModule, Routes} from "@angular/router";
+import { NgModule } from '@angular/core';
 
-import {Iniciocomponent} from "./components/iniciocomponent/iniciocomponent";
-import {Alojamientocomponent} from "./components/alojamientocomponent/alojamientocomponent";
-import {Detallealojamientocomponent} from "./components/detallealojamientocomponent/detallealojamientocomponent";
-import {Reservascomponent} from "./components/reservascomponent/reservascomponent";
-import {Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
-import {Confirmacionreservacomponent} from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
-import {Misreservascomponent} from "./components/misreservascomponent/misreservascomponent";
+import { RouterModule, Routes } from "@angular/router";
+
+import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
+import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
+import {Serviciociudadescomponent} from "./components/serviciociudadescomponent/serviciociudadescomponent";
 
 const routes: Routes = [
 
@@ -24,6 +22,10 @@ const routes: Routes = [
     {
         path: "alojamientos/:id",
         component: Detallealojamientocomponent
+    },
+    {
+        path: "servicios",
+        component:Serviciociudadescomponent
     },
 
   
@@ -45,6 +47,8 @@ const routes: Routes = [
         path: "**",
         redirectTo: ""
     }
+
+
 
 ];
 

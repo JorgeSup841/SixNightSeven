@@ -1,33 +1,43 @@
 <header class="airbnb-header border-bottom">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg py-3">
 
-    <div class="container">
+      <a class="navbar-brand d-flex align-items-center fw-bold" href="/" style="color: #ff385c;">
+        <i class="bi bi-house-heart-fill fs-3 me-2"></i>
+        <span class="d-none d-md-inline fs-4">mistays</span>
+      </a>
 
-        <nav class="navbar navbar-expand-lg py-3">
+      <button class="navbar-toggler border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <a
-                    class="navbar-brand d-flex align-items-center fw-bold"
-                    [routerLink]="['/']"
-                    style="color: #ff385c;">
+      <div class="collapse navbar-collapse" id="menuPrincipal">
 
-                <i class="bi bi-house-heart-fill fs-3 me-2"></i>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link nav-link-airbnb active" href="#">Estadías</a>
+          </li>
 
-                <span class="d-none d-md-inline fs-4">
-                    mistays
-                </span>
+          <li class="nav-item">
+              <a class="nav-link nav-link-airbnb" routerLink="/servicios" routerLinkActive="active">Servicios Turisticos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-airbnb" href="#">About</a>
+          </li>
+        </ul>
 
-            </a>
+        <div class="d-flex align-items-center gap-2">
+          <a href="#" class="btn btn-link text-dark text-decoration-none fw-medium d-none d-lg-inline">
+            Mis Reservas
+          </a>
 
-            <button
-                    class="navbar-toggler border-0"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal"
-                    aria-expanded="false"
-                    aria-label="Abrir menú">
-
-                <span class="navbar-toggler-icon"></span>
-
+          <div class="dropdown">
+            <button class="btn user-menu dropdown-toggle-none d-flex align-items-center gap-2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-list fs-5"></i>
+              <i class="bi bi-person-circle fs-4 text-secondary"></i>
             </button>
 
             <div
