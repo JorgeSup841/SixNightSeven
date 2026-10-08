@@ -15,7 +15,7 @@ import { Reservascomponent } from "./components/reservascomponent/reservascompon
 import { Footercomponent } from "./components/footercomponent/footercomponent";
 import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
 import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
-import {Escenciacomponent} from "./components/escenciacomponent/escenciacomponent";
+import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
 
@@ -32,13 +32,6 @@ import { Detallealojamientocomponent } from "./components/detallealojamientocomp
     Confianzacomponent,
     Cierrecomponent,
     Escenciacomponent,
-  ],
-
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
-
-  providers: [provideBrowserGlobalErrorListeners()],
-
-  bootstrap: [App],
     Serviciociudadescomponent,
     Detallealojamientocomponent
   ],

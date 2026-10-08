@@ -14,7 +14,6 @@
 
         <div class="detalle-card">
 
-            <!-- BOTÓN VOLVER -->
             <a
                     class="btn-volver"
                     [routerLink]="['/']">
@@ -26,7 +25,6 @@
             </a>
 
 
-            <!-- IMAGEN PRINCIPAL -->
             <div class="detalle-imagen">
 
                 <img
@@ -36,10 +34,8 @@
             </div>
 
 
-            <!-- CONTENIDO -->
             <div class="detalle-contenido">
 
-                <!-- ENCABEZADO -->
                 <div class="detalle-header">
 
                     <div>
@@ -73,7 +69,6 @@
                 <hr>
 
 
-                <!-- INFORMACIÓN BÁSICA -->
                 <div class="informacion-basica">
 
                     <div class="info-item">
@@ -154,7 +149,6 @@
                 </div>
 
 
-                <!-- DESCRIPCIÓN -->
                 <section class="seccion">
 
                     <h2>
@@ -168,7 +162,6 @@
                 </section>
 
 
-                <!-- SERVICIOS -->
                 <section class="seccion">
 
                     <h2>
@@ -177,10 +170,8 @@
 
                     <div class="lista-servicios">
 
-                        @for (
-                            servicio of alojamiento.servicios;
-                            track servicio
-                                ) {
+                        @for (servicio of alojamiento.servicios;
+                            track servicio) {
 
                             <div class="servicio-item">
 
@@ -199,7 +190,6 @@
                 </section>
 
 
-                <!-- REGLAS -->
                 <section class="seccion">
 
                     <h2>
@@ -208,10 +198,8 @@
 
                     <div class="lista-reglas">
 
-                        @for (
-                            regla of alojamiento.reglas;
-                            track regla
-                                ) {
+                        @for (regla of alojamiento.reglas;
+                            track regla) {
 
                             <div class="regla-item">
 
@@ -230,15 +218,16 @@
                 </section>
 
 
-                <!-- RESERVA -->
                 <div class="reserva-card">
 
                     <div class="precio">
 
                         <span class="precio-numero">
 
-                            {{ alojamiento.precioNoche
-                            | currency:'COP':'symbol-narrow':'1.0-0' }}
+                            {{
+                                alojamiento.precioNoche
+                                    | currency:'COP':'symbol-narrow':'1.0-0'
+                            }}
 
                         </span>
 
@@ -251,8 +240,10 @@
 
                     <div class="limpieza">
 
-                        + {{ alojamiento.tarifaLimpieza
-                        | currency:'COP':'symbol-narrow':'1.0-0' }}
+                        + {{
+                            alojamiento.tarifaLimpieza
+                                | currency:'COP':'symbol-narrow':'1.0-0'
+                        }}
 
                         <span>
                             tarifa de limpieza
