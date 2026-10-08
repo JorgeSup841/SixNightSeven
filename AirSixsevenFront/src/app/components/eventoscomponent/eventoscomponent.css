@@ -1,0 +1,136 @@
+.eventos {
+    padding: 3rem 0;
+}
+
+.eventos-hero {
+    background: #efe6d8;
+    border: 1px solid #e5dccf;
+    border-radius: 24px;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 2rem;
+}
+
+.eventos-hero-texto {
+    max-width: 600px;
+}
+
+.eventos-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 400;
+    color: var(--marron);
+    margin: 0 0 1rem;
+}
+
+.eventos-sub {
+    font-size: 0.95rem;
+    color: #6b5b52;
+    margin: 0 0 1rem;
+}
+
+.eventos-link {
+    color: var(--terracota);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.eventos-link:hover {
+    text-decoration: underline;
+}
+
+.tarjeta-evento {
+    position: relative;
+    display: flex;
+    height: 100%;
+    min-height: 250px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(58, 42, 34, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-evento:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(58, 42, 34, 0.15);
+}
+
+.tarjeta-evento-cuerpo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.tarjeta-evento-categoria {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--terracota);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-evento-titulo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--marron);
+    margin: 0 0 0.25rem;
+}
+
+.tarjeta-evento-fecha {
+    font-size: 0.85rem;
+    color: #7a6a60;
+    margin: 0 0 0.75rem;
+}
+
+.tarjeta-evento-texto {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #6b5b52;
+    margin: 0 0 auto;
+}
+
+.tarjeta-evento-link {
+    align-self: flex-start;
+    margin-top: 1rem;
+    color: var(--terracota);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.tarjeta-evento-link:hover {
+    text-decoration: underline;
+}
+
+.tarjeta-evento-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.tarjeta-evento-imagen {
+    display: none;
+    width: 220px;
+    align-items: center;
+    justify-content: center;
+    background: #e5dccf;
+    color: #7a6a60;
+    font-size: 0.85rem;
+    position: relative;
+}
+.tarjeta-evento-imagen img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 992px) {
+    .tarjeta-evento-imagen {
+        display: flex;
+    }
+}

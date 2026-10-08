@@ -15,7 +15,7 @@ const routes: Routes = [
     },
 
     {
-        path: "reservas",
+        path: "reservas/:id",
         component: Reservascomponent
     },
 
@@ -27,6 +27,21 @@ const routes: Routes = [
         path: "servicios",
         component:Serviciociudadescomponent
     },
+
+  
+
+    {
+        path: "reservas/:id",
+        component: Reservascomponent
+    },
+
+    {
+        path: "eventos",
+        component: Eventoscomponent
+    },
+
+    {path: 'reserva-confirmada/:id', component: Confirmacionreservacomponent},
+    {path: 'mis-reservas', component: Misreservascomponent},
 
     {
         path: "**",
@@ -46,4 +61,5 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

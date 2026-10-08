@@ -2,6 +2,7 @@ import { NgModule, provideBrowserGlobalErrorListeners } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
 
 import { AppRoutingModule } from "./app-routing-module";
 import { App } from "./app";
@@ -18,6 +19,10 @@ import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
 import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
+import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
+import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
+import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
     declarations: [
