@@ -15,7 +15,10 @@ import { Reservascomponent } from "./components/reservascomponent/reservascompon
 import { Footercomponent } from "./components/footercomponent/footercomponent";
 import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
 import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
+<<<<<<< HEAD
 import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
+=======
+>>>>>>> 73665d7 (sixseven)
 import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
@@ -36,6 +39,7 @@ import { Alojamientocomponent } from "./components/alojamientocomponent/alojamie
     Eventoscomponent,
     Escenciacomponent,
     Serviciociudadescomponent,
+<<<<<<< HEAD
     Detallealojamientocomponent,
       Alojamientocomponent ,
   ],
@@ -45,5 +49,24 @@ import { Alojamientocomponent } from "./components/alojamientocomponent/alojamie
   providers: [provideBrowserGlobalErrorListeners()],
 
   bootstrap: [App],
+=======
+    Detallealojamientocomponent
+  ],
+
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+
+  providers: [
+    provideBrowserGlobalErrorListeners()
+  ],
+
+  bootstrap: [
+    App
+  ]
+>>>>>>> 73665d7 (sixseven)
 })
 export class AppModule {}
