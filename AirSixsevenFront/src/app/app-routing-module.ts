@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { NgModule } from "@angular/core";
+
 import { RouterModule, Routes } from "@angular/router";
 
 import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
 import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
+import {Serviciociudadescomponent} from "./components/serviciociudadescomponent/serviciociudadescomponent";
 
 const routes: Routes = [
 
@@ -23,11 +23,17 @@ const routes: Routes = [
         path: "alojamientos/:id",
         component: Detallealojamientocomponent
     },
+    {
+        path: "servicios",
+        component:Serviciociudadescomponent
+    },
 
     {
         path: "**",
         redirectTo: ""
     }
+
+
 
 ];
 
