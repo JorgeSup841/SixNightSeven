@@ -1,0 +1,248 @@
+{
+  "eventos": [
+    {
+      "id": 1,
+      "nombre": "Atardecer y mirador en Monserrate",
+      "descripcion": "Sube al cerro tutelar en funicular para disfrutar de una vista panorámica única de la sabana mientras cae la tarde y la ciudad se ilumina entre las montañas.",
+      "ciudad": "Bogotá",
+      "categoria": "Turismo",
+      "ubicacion": "Cerro de Monserrate, Bogotá",
+      "latitud": 4.6058,
+      "longitud": -74.056,
+      "duracionHoras": 4,
+      "precioPersona": 30000,
+      "calificacion": 4.8,
+      "totalValoraciones": 120,
+      "activo": true,
+      "imagenPrincipal": "assets/images/mssrt.jpg",
+      "imagenes": [
+        "assets/images/mssrt.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "La auténtica ruta del Cholado tradicional",
+      "descripcion": "Visita la cuna del cholado en el Valle del Cauca y aprende a saborear este icónico postre refrescante preparado con frutas frescas de la región y leche condensada.",
+      "ciudad": "Jamundí",
+      "categoria": "Gastronomía",
+      "ubicacion": "Jamundí, Valle del Cauca",
+      "latitud": 3.2612,
+      "longitud": -76.5405,
+      "duracionHoras": 2,
+      "precioPersona": 15000,
+      "calificacion": 4.7,
+      "totalValoraciones": 80,
+      "activo": true,
+      "imagenPrincipal": "assets/images/chldo.jpg",
+      "imagenes": [
+        "assets/images/chldo.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Noche de astronomía colonial",
+      "descripcion": "Aprovecha los cielos limpios de este hermoso pueblo patrimonio para explorar constelaciones y planetas con telescopios profesionales en una experiencia guiada inolvidable.",
+      "ciudad": "Villa de Leyva",
+      "categoria": "Naturaleza",
+      "ubicacion": "Villa de Leyva, Boyacá",
+      "latitud": 5.6339,
+      "longitud": -73.5253,
+      "duracionHoras": 3,
+      "precioPersona": 45000,
+      "calificacion": 4.9,
+      "totalValoraciones": 64,
+      "activo": true,
+      "imagenPrincipal": "assets/images/villadeleyva.jpg",
+      "imagenes": [
+        "assets/images/villadeleyva.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Recorrido histórico por el Castillo de San Felipe de Barajas",
+      "descripcion": "Adéntrate en la imponente fortaleza militar construida por los españoles en el siglo XVII, explorando los túneles subterráneos y conociendo las estrategias defensivas que protegieron la ciudad.",
+      "ciudad": "Cartagena",
+      "categoria": "Cultura",
+      "ubicacion": "Castillo de San Felipe de Barajas, Cartagena",
+      "latitud": 10.4223,
+      "longitud": -75.5389,
+      "duracionHoras": 3,
+      "precioPersona": 90000,
+      "calificacion": 4.8,
+      "totalValoraciones": 150,
+      "activo": true,
+      "imagenPrincipal": "assets/images/castillocartgn.jpg",
+      "imagenes": [
+        "assets/images/castillocartgn.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Aventura en el embalse y la Piedra",
+      "descripcion": "Escala los emblemáticos peldaños de la gran Piedra del Peñol para contemplar el imponente laberinto de islotes verdes que forman el embalse de la región.",
+      "ciudad": "Guatapé",
+      "categoria": "Aventura",
+      "ubicacion": "Piedra del Peñol, Guatapé, Antioquia",
+      "latitud": 6.2338,
+      "longitud": -75.1593,
+      "duracionHoras": 8,
+      "precioPersona": 30000,
+      "calificacion": 4.7,
+      "totalValoraciones": 110,
+      "activo": true,
+      "imagenPrincipal": "assets/images/peñol.jpg",
+      "imagenes": [
+        "assets/images/peñol.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Avistamiento de ballenas jorobadas",
+      "descripcion": "Adéntrate en las costas del Pacífico colombiano para vivir una conexión única con la naturaleza presenciando el majestuoso paso de las ballenas en su hábitat natural.",
+      "ciudad": "Chocó",
+      "categoria": "Naturaleza",
+      "ubicacion": "Costa del Pacífico, Chocó",
+      "latitud": 5.7111,
+      "longitud": -77.265,
+      "duracionHoras": 6,
+      "precioPersona": 50000,
+      "calificacion": 4.9,
+      "totalValoraciones": 45,
+      "activo": true,
+      "imagenPrincipal": "assets/images/jorobadas.jpg",
+      "imagenes": [
+        "assets/images/jorobadas.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Trekking y baño natural en el Parque Tayrona",
+      "descripcion": "Sumérgete en la densa selva tropical de la Sierra Nevada hasta llegar a las cristalinas aguas de playas vírgenes como Arrecifes o el Cabo San Juan, combinando senderismo, naturaleza y descanso.",
+      "ciudad": "Santa Marta",
+      "categoria": "Naturaleza",
+      "ubicacion": "Parque Tayrona, Santa Marta",
+      "latitud": 11.2408,
+      "longitud": -74.199,
+      "duracionHoras": 8,
+      "precioPersona": 50000,
+      "calificacion": 4.8,
+      "totalValoraciones": 95,
+      "activo": true,
+      "imagenPrincipal": "assets/images/parquetayrona.jpg",
+      "imagenes": [
+        "assets/images/parquetayrona.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "Expedición por la biodiversidad en el Bioparque Los Ocarros",
+      "descripcion": "Descubre la fauna única de la Orinoquía colombiana recorriendo este parque especializado que alberga especies nativas como jaguares, dantas, chigüiros, pumas y una gran variedad de aves y reptiles.",
+      "ciudad": "Villavicencio",
+      "categoria": "Naturaleza",
+      "ubicacion": "Bioparque Los Ocarros, Villavicencio, Meta",
+      "latitud": 4.142,
+      "longitud": -73.6266,
+      "duracionHoras": 3,
+      "precioPersona": 35000,
+      "calificacion": 4.6,
+      "totalValoraciones": 58,
+      "activo": true,
+      "imagenPrincipal": "assets/images/ocarros.jpg",
+      "imagenes": [
+        "assets/images/ocarros.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "nombre": "Inmersión cultural en una Ranchería Wayúu",
+      "descripcion": "Visita una comunidad indígena tradicional para conocer de cerca su fascinante cosmovisión, el arte ancestral del tejido de mochilas y su gastronomía típica.",
+      "ciudad": "Riohacha",
+      "categoria": "Cultura",
+      "ubicacion": "Riohacha, La Guajira",
+      "latitud": 11.5444,
+      "longitud": -72.9072,
+      "duracionHoras": 6,
+      "precioPersona": 85000,
+      "calificacion": 4.9,
+      "totalValoraciones": 40,
+      "activo": true,
+      "imagenPrincipal": "assets/images/wayuu.jpg",
+      "imagenes": [
+        "assets/images/wayuu.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "nombre": "Rafting y aventura en el río Fonce (San Gil)",
+      "descripcion": "Vive una experiencia llena de adrenalina navegando por los rápidos del río Fonce, rodeado por la imponente naturaleza y cañones de la capital turística del departamento.",
+      "ciudad": "Santander",
+      "categoria": "Aventura",
+      "ubicacion": "Río Fonce, San Gil, Santander",
+      "latitud": 6.5544,
+      "longitud": -73.1346,
+      "duracionHoras": 4,
+      "precioPersona": 60000,
+      "calificacion": 4.8,
+      "totalValoraciones": 132,
+      "activo": true,
+      "imagenPrincipal": "assets/images/fonce.jpg",
+      "imagenes": [
+        "assets/images/fonce.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "nombre": "Tour de Ruta histórica en el Templo de Villa del Rosario",
+      "descripcion": "Explora el Parque Grancolombiano y el histórico templo donde se firmó la Constitución de 1821, descubriendo los cimientos de la historia nacional.",
+      "ciudad": "Cúcuta",
+      "categoria": "Cultura",
+      "ubicacion": "Templo Histórico, Villa del Rosario, Norte de Santander",
+      "latitud": 7.8333,
+      "longitud": -72.4667,
+      "duracionHoras": 3,
+      "precioPersona": 30000,
+      "calificacion": 4.5,
+      "totalValoraciones": 36,
+      "activo": true,
+      "imagenPrincipal": "assets/images/rosario.jpg",
+      "imagenes": [
+        "assets/images/rosario.jpg"
+      ]
+    }
+  ],
+  "horarios": [
+    {"id": 1, "eventoId": 1, "fecha": "2026-10-14", "hora": "16:00", "cuposDisponibles": 12},
+    {"id": 2, "eventoId": 1, "fecha": "2026-10-14", "hora": "17:30", "cuposDisponibles": 8},
+    {"id": 3, "eventoId": 1, "fecha": "2026-10-15", "hora": "16:00", "cuposDisponibles": 0},
+    {"id": 4, "eventoId": 2, "fecha": "2026-10-14", "hora": "10:00", "cuposDisponibles": 10},
+    {"id": 5, "eventoId": 2, "fecha": "2026-10-15", "hora": "10:00", "cuposDisponibles": 6},
+    {"id": 6, "eventoId": 2, "fecha": "2026-10-15", "hora": "15:00", "cuposDisponibles": 4},
+    {"id": 7, "eventoId": 3, "fecha": "2026-10-14", "hora": "19:30", "cuposDisponibles": 10},
+    {"id": 8, "eventoId": 3, "fecha": "2026-10-14", "hora": "21:00", "cuposDisponibles": 6},
+    {"id": 9, "eventoId": 3, "fecha": "2026-10-15", "hora": "19:30", "cuposDisponibles": 8},
+    {"id": 10, "eventoId": 4, "fecha": "2026-10-14", "hora": "09:00", "cuposDisponibles": 15},
+    {"id": 11, "eventoId": 4, "fecha": "2026-10-14", "hora": "15:00", "cuposDisponibles": 10},
+    {"id": 12, "eventoId": 4, "fecha": "2026-10-15", "hora": "09:00", "cuposDisponibles": 0},
+    {"id": 13, "eventoId": 5, "fecha": "2026-10-14", "hora": "08:00", "cuposDisponibles": 14},
+    {"id": 14, "eventoId": 5, "fecha": "2026-1-15", "hora": "08:00", "cuposDisponibles": 9},
+    {"id": 15, "eventoId": 5, "fecha": "2026-10-21", "hora": "08:00", "cuposDisponibles": 20},
+    {"id": 16, "eventoId": 6, "fecha": "2027-07-10", "hora": "07:00", "cuposDisponibles": 16},
+    {"id": 17, "eventoId": 6, "fecha": "2027-07-11", "hora": "07:00", "cuposDisponibles": 12},
+    {"id": 18, "eventoId": 6, "fecha": "2027-07-17", "hora": "07:00", "cuposDisponibles": 8},
+    {"id": 19, "eventoId": 7, "fecha": "2026-11-14", "hora": "07:00", "cuposDisponibles": 18},
+    {"id": 20, "eventoId": 7, "fecha": "2026-11-15", "hora": "07:00", "cuposDisponibles": 10},
+    {"id": 21, "eventoId": 7, "fecha": "2026-11-21", "hora": "07:00", "cuposDisponibles": 0},
+    {"id": 22, "eventoId": 8, "fecha": "2026-11-14", "hora": "09:00", "cuposDisponibles": 20},
+    {"id": 23, "eventoId": 8, "fecha": "2026-11-14", "hora": "14:00", "cuposDisponibles": 15},
+    {"id": 24, "eventoId": 8, "fecha": "2026-11-15", "hora": "09:00", "cuposDisponibles": 12},
+    {"id": 25, "eventoId": 9, "fecha": "2026-11-14", "hora": "08:00", "cuposDisponibles": 8},
+    {"id": 26, "eventoId": 9, "fecha": "2026-11-15", "hora": "08:00", "cuposDisponibles": 6},
+    {"id": 27, "eventoId": 9, "fecha": "2026-11-21", "hora": "08:00", "cuposDisponibles": 10},
+    {"id": 28, "eventoId": 10, "fecha": "2026-11-14", "hora": "09:00", "cuposDisponibles": 10},
+    {"id": 29, "eventoId": 10, "fecha": "2026-11-14", "hora": "13:00", "cuposDisponibles": 8},
+    {"id": 30, "eventoId": 10, "fecha": "2026-11-15", "hora": "09:00", "cuposDisponibles": 6},
+    {"id": 31, "eventoId": 11, "fecha": "2026-11-14", "hora": "10:00", "cuposDisponibles": 15},
+    {"id": 32, "eventoId": 11, "fecha": "2026-11-14", "hora": "15:00", "cuposDisponibles": 12},
+    {"id": 33, "eventoId": 11, "fecha": "2026-11-15", "hora": "10:00", "cuposDisponibles": 9}
+  ]
+}
