@@ -15,42 +15,35 @@ import { Reservascomponent } from "./components/reservascomponent/reservascompon
 import { Footercomponent } from "./components/footercomponent/footercomponent";
 import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
 import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
-import { Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
+import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
 import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
+import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
 
 @NgModule({
-    declarations: [
-        App,
-        Navbarcomponent,
-        Barrabusquedacomponente,
-        Iniciocomponent,
-        Destacadoscomponent,
-        Tarjetaalojamientocomponent,
-        Reservascomponent,
-        Footercomponent,
-        Confianzacomponent,
-        Cierrecomponent,
-        Eventoscomponent,
-        Escenciacomponent,
-        Serviciociudadescomponent,
-        Detallealojamientocomponent
-    ],
+  declarations: [
+    App,
+    Navbarcomponent,
+    Barrabusquedacomponente,
+    Iniciocomponent,
+    Destacadoscomponent,
+    Tarjetaalojamientocomponent,
+    Reservascomponent,
+    Footercomponent,
+    Confianzacomponent,
+    Cierrecomponent,
+    Eventoscomponent,
+    Escenciacomponent,
+    Serviciociudadescomponent,
+    Detallealojamientocomponent,
+      Alojamientocomponent ,
+  ],
 
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        AppRoutingModule,
-        FormsModule
-    ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
 
-    providers: [
-        provideBrowserGlobalErrorListeners()
-    ],
+  providers: [provideBrowserGlobalErrorListeners()],
 
-    bootstrap: [
-        App
-    ]
+  bootstrap: [App],
 })
 export class AppModule {}

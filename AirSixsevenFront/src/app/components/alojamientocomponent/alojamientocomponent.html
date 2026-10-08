@@ -1,0 +1,444 @@
+<div class="alojamientos-container">
+
+    <div class="container">
+
+        <div class="encabezado-pagina">
+
+            <div>
+
+                <p class="eyebrow">
+                    EXPLORA NUESTROS ALOJAMIENTOS
+                </p>
+
+                <h1>
+                    Todos los alojamientos
+                </h1>
+
+                <p class="descripcion-pagina">
+                    Encuentra el lugar perfecto para tu próxima aventura.
+                </p>
+
+            </div>
+
+            <a
+                    class="btn-volver"
+                    [routerLink]="['/']">
+
+                <i class="bi bi-arrow-left"></i>
+
+                Volver
+
+            </a>
+
+        </div>
+
+
+        @if (cargando) {
+
+            <div class="cargando">
+
+                <div
+                        class="spinner-border"
+                        role="status">
+                </div>
+
+                <p>
+                    Cargando alojamientos...
+                </p>
+
+            </div>
+
+        } @else {
+
+            <div class="contenido-alojamientos">
+
+
+                <aside class="panel-filtros">
+
+                    <div class="filtros-header">
+
+                        <h2>
+                            Filtros
+                        </h2>
+
+                        <button
+                                type="button"
+                                class="btn-limpiar"
+                                (click)="limpiarFiltros()">
+
+                            Limpiar
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="filtro">
+
+                        <label for="ciudad">
+                            Destino
+                        </label>
+
+                        <select
+                                id="ciudad"
+                                class="form-select"
+                                [(ngModel)]="ciudadSeleccionada"
+                                (ngModelChange)="aplicarFiltros()">
+
+                            <option value="">
+                                Todos los destinos
+                            </option>
+
+                            @for (
+                                ciudad of ciudades;
+                                track ciudad
+                                    ) {
+
+                                <option [value]="ciudad">
+                                    {{ ciudad }}
+                                </option>
+
+                            }
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filtro">
+
+                        <label>
+                            Tipo de alojamiento
+                        </label>
+
+                        <div class="chips-filtro">
+
+                            @for (
+                                tipo of tipos;
+                                track tipo
+                                    ) {
+
+                                <button
+                                        type="button"
+                                        class="chip-filtro"
+                                        [class.activo]="
+                                        tipoSeleccionado === tipo
+                                    "
+                                        (click)="seleccionarTipo(tipo)">
+
+                                    {{ tipo }}
+
+                                </button>
+
+                            }
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="filtro">
+
+                        <label for="capacidad">
+                            Huéspedes
+                        </label>
+
+                        <select
+                                id="capacidad"
+                                class="form-select"
+                                [(ngModel)]="capacidadMinima"
+                                (ngModelChange)="aplicarFiltros()">
+
+                            <option [ngValue]="1">
+                                Cualquier cantidad
+                            </option>
+
+                            <option [ngValue]="2">
+                                2 o más huéspedes
+                            </option>
+
+                            <option [ngValue]="3">
+                                3 o más huéspedes
+                            </option>
+
+                            <option [ngValue]="4">
+                                4 o más huéspedes
+                            </option>
+
+                            <option [ngValue]="5">
+                                5 o más huéspedes
+                            </option>
+
+                            <option [ngValue]="6">
+                                6 o más huéspedes
+                            </option>
+
+                            <option [ngValue]="8">
+                                8 o más huéspedes
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filtro">
+
+                        <label>
+                            Precio por noche
+                        </label>
+
+                        <div class="precio-valores">
+
+                            <span>
+                                {{ precioMinimo | currency:'COP':'symbol-narrow':'1.0-0' }}
+                            </span>
+
+                            <span>
+                                {{ precioMaximo | currency:'COP':'symbol-narrow':'1.0-0' }}
+                            </span>
+
+                        </div>
+
+
+                        <div class="rango-precio">
+
+                            <input
+                                    type="range"
+                                    class="form-range"
+                                    [min]="precioMinimoDisponible"
+                                    [max]="precioMaximo"
+                                    [step]="10000"
+                                    [(ngModel)]="precioMinimo"
+                                    (ngModelChange)="cambiarPrecioMinimo()">
+
+
+                            <input
+                                    type="range"
+                                    class="form-range"
+                                    [min]="precioMinimo"
+                                    [max]="precioMaximoDisponible"
+                                    [step]="10000"
+                                    [(ngModel)]="precioMaximo"
+                                    (ngModelChange)="cambiarPrecioMaximo()">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="filtro">
+
+                        <label>
+                            Servicios
+                        </label>
+
+                        <div class="lista-servicios-filtro">
+
+                            @for (
+                                servicio of servicios;
+                                track servicio
+                                    ) {
+
+                                <label
+                                        class="servicio-filtro">
+
+                                    <input
+                                            type="checkbox"
+                                            [checked]="
+                                            servicioSeleccionado(
+                                                servicio
+                                            )
+                                        "
+                                            (change)="
+                                            cambiarServicio(
+                                                servicio
+                                            )
+                                        ">
+
+                                    <span>
+                                        {{ servicio }}
+                                    </span>
+
+                                </label>
+
+                            }
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="filtro">
+
+                        <label for="calificacion">
+                            Calificación mínima
+                        </label>
+
+                        <select
+                                id="calificacion"
+                                class="form-select"
+                                [(ngModel)]="calificacionMinima"
+                                (ngModelChange)="aplicarFiltros()">
+
+                            <option [ngValue]="0">
+                                Cualquier calificación
+                            </option>
+
+                            <option [ngValue]="4">
+                                4.0 o más
+                            </option>
+
+                            <option [ngValue]="4.5">
+                                4.5 o más
+                            </option>
+
+                            <option [ngValue]="4.7">
+                                4.7 o más
+                            </option>
+
+                            <option [ngValue]="4.8">
+                                4.8 o más
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                            type="button"
+                            class="btn-aplicar"
+                            (click)="aplicarFiltros()">
+
+                        Aplicar filtros
+
+                    </button>
+
+
+                </aside>
+
+
+                <main class="resultados">
+
+
+                    <div class="barra-resultados">
+
+                        <div>
+
+                            @if (
+                                alojamientoFiltrado.length === 1
+                                    ) {
+
+                                <p>
+                                    1 alojamiento encontrado
+                                </p>
+
+                            } @else {
+
+                                <p>
+                                    {{ alojamientoFiltrado.length }}
+                                    alojamientos encontrados
+                                </p>
+
+                            }
+
+                        </div>
+
+
+                        <div class="orden">
+
+                            <label for="orden">
+                                Ordenar por
+                            </label>
+
+                            <select
+                                    id="orden"
+                                    class="form-select"
+                                    [(ngModel)]="ordenSeleccionado"
+                                    (ngModelChange)="aplicarFiltros()">
+
+                                <option value="relevancia">
+                                    Relevancia
+                                </option>
+
+                                <option value="precioAscendente">
+                                    Precio: menor a mayor
+                                </option>
+
+                                <option value="precioDescendente">
+                                    Precio: mayor a menor
+                                </option>
+
+                                <option value="calificacion">
+                                    Mejor calificación
+                                </option>
+
+                                <option value="nombre">
+                                    Nombre
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    @if (alojamientoFiltrado.length > 0) {
+
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-4">
+
+                            @for (
+                                item of alojamientoFiltrado;
+                                track item.id
+                                    ) {
+
+                                <div class="col">
+
+                                    <app-tarjetaalojamientocomponent
+                                            [alojamiento]="item">
+                                    </app-tarjetaalojamientocomponent>
+
+                                </div>
+
+                            }
+
+                        </div>
+
+                    } @else {
+
+                        <div class="sin-resultados">
+
+                            <i class="bi bi-search"></i>
+
+                            <h2>
+                                No encontramos alojamientos
+                            </h2>
+
+                            <p>
+                                Prueba cambiando alguno de los filtros.
+                            </p>
+
+                            <button
+                                    type="button"
+                                    class="btn-aplicar"
+                                    (click)="limpiarFiltros()">
+
+                                Limpiar filtros
+
+                            </button>
+
+                        </div>
+
+                    }
+
+                </main>
+
+            </div>
+
+        }
+
+    </div>
+
+</div>
