@@ -2,8 +2,10 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
 import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
-import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
+import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
 
 const routes: Routes = [
 
@@ -22,6 +24,13 @@ const routes: Routes = [
         component: Detallealojamientocomponent
     },
 
+  
+
+    {
+        path: "eventos",
+        component: Eventoscomponent
+    },
+
     {
         path: "**",
         redirectTo: ""
@@ -30,6 +39,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
+
     imports: [
         RouterModule.forRoot(routes)
     ],
@@ -37,5 +47,6 @@ const routes: Routes = [
     exports: [
         RouterModule
     ]
+
 })
 export class AppRoutingModule {}

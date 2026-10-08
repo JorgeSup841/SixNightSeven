@@ -32,6 +32,7 @@ import {CommonModule} from "@angular/common";
     Footercomponent,
     Confianzacomponent,
     Cierrecomponent,
+    Eventoscomponent,
     Escenciacomponent,
     Serviciociudadescomponent,
     Detallealojamientocomponent,
