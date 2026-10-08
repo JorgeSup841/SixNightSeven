@@ -6,6 +6,9 @@ import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
 import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
 import {Serviciociudadescomponent} from "./components/serviciociudadescomponent/serviciociudadescomponent";
+import {Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
+import {Confirmacionreservacomponent} from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
+import {Misreservascomponent} from "./components/misreservascomponent/misreservascomponent";
 
 const routes: Routes = [
 

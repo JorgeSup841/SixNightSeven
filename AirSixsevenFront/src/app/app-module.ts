@@ -22,7 +22,7 @@ import { Detallealojamientocomponent } from "./components/detallealojamientocomp
 import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
 import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
 import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
-import {CommonModule} from "@angular/common";
+
 
 @NgModule({
     declarations: [
