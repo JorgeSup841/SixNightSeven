@@ -129,6 +129,6 @@ export class Reservascomponent implements OnInit {
         };
 
         this.reservasService.agregar(reserva);
-        this.router.navigate(['/mis-reservas']);
+        this.router.navigate(['/reserva-confirmada', reserva.id]);
     }
 }

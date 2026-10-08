@@ -2,6 +2,7 @@ import { NgModule, provideBrowserGlobalErrorListeners } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
 
 import { AppRoutingModule } from "./app-routing-module";
 import { App } from "./app";
@@ -15,18 +16,13 @@ import { Reservascomponent } from "./components/reservascomponent/reservascompon
 import { Footercomponent } from "./components/footercomponent/footercomponent";
 import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
 import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
-<<<<<<< HEAD
 import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
-=======
->>>>>>> 73665d7 (sixseven)
 import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
-<<<<<<< HEAD
 import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
-=======
-import {CommonModule} from "@angular/common";
->>>>>>> 3dcfa2b (feat: Implement dynamic accommodation detail and booking flow)
+import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
+import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
 
 @NgModule({
   declarations: [
@@ -43,23 +39,10 @@ import {CommonModule} from "@angular/common";
     Eventoscomponent,
     Escenciacomponent,
     Serviciociudadescomponent,
-<<<<<<< HEAD
-<<<<<<< HEAD
     Detallealojamientocomponent,
-      Alojamientocomponent ,
-  ],
-
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
-
-  providers: [provideBrowserGlobalErrorListeners()],
-
-  bootstrap: [App],
-=======
-    Detallealojamientocomponent
-=======
-    Detallealojamientocomponent,
-
->>>>>>> 3dcfa2b (feat: Implement dynamic accommodation detail and booking flow)
+    Alojamientocomponent,
+    Confirmacionreservacomponent,
+    Misreservascomponent,
   ],
 
   imports: [
@@ -70,13 +53,8 @@ import {CommonModule} from "@angular/common";
     CommonModule,
   ],
 
-  providers: [
-    provideBrowserGlobalErrorListeners()
-  ],
+  providers: [provideBrowserGlobalErrorListeners()],
 
-  bootstrap: [
-    App
-  ]
->>>>>>> 73665d7 (sixseven)
+  bootstrap: [App],
 })
 export class AppModule {}

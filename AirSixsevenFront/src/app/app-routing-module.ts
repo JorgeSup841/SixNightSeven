@@ -1,11 +1,13 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import {NgModule} from "@angular/core";
+import {RouterModule, Routes} from "@angular/router";
 
-import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
-import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
-import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
-import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
-import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
+import {Iniciocomponent} from "./components/iniciocomponent/iniciocomponent";
+import {Alojamientocomponent} from "./components/alojamientocomponent/alojamientocomponent";
+import {Detallealojamientocomponent} from "./components/detallealojamientocomponent/detallealojamientocomponent";
+import {Reservascomponent} from "./components/reservascomponent/reservascomponent";
+import {Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
+import {Confirmacionreservacomponent} from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
+import {Misreservascomponent} from "./components/misreservascomponent/misreservascomponent";
 
 const routes: Routes = [
 
@@ -15,13 +17,8 @@ const routes: Routes = [
     },
 
     {
-<<<<<<< HEAD
         path: "alojamientos",
         component: Alojamientocomponent
-=======
-        path: "reservas/:id",
-        component: Reservascomponent
->>>>>>> 3dcfa2b (feat: Implement dynamic accommodation detail and booking flow)
     },
 
     {
@@ -35,9 +32,17 @@ const routes: Routes = [
     },
 
     {
+        path: "reservas/:id",
+        component: Reservascomponent
+    },
+
+    {
         path: "eventos",
         component: Eventoscomponent
     },
+
+    {path: 'reserva-confirmada/:id', component: Confirmacionreservacomponent},
+    {path: 'mis-reservas', component: Misreservascomponent},
 
     {
         path: "**",
@@ -47,7 +52,6 @@ const routes: Routes = [
 ];
 
 @NgModule({
-
     imports: [
         RouterModule.forRoot(routes)
     ],
@@ -55,6 +59,6 @@ const routes: Routes = [
     exports: [
         RouterModule
     ]
-
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}
