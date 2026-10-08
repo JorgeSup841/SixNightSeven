@@ -1,10 +1,10 @@
-import { inject, Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { map, Observable } from "rxjs";
+import {inject, Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+import {map, Observable} from "rxjs";
 
 import {
     Alojamiento,
-    MarketplaceData
+    MarketplaceData, Resena
 } from "../models/alojamientomodel";
 
 @Injectable({
@@ -35,15 +35,20 @@ export class Alojamientosservice {
     ): Observable<Alojamiento | undefined> {
 
         return this.getAlojamientos().pipe(
-
             map(alojamientos =>
                 alojamientos.find(
                     alojamiento => alojamiento.id === id
                 )
             )
-
         );
 
     }
 
+    getResenas(alojamientoId: number): Observable<Resena[]> {
+        return this.http.get<MarketplaceData>(this.URL_BASE).pipe(
+            map(datos => datos.resenas.filter(r => r.alojamientoId === alojamientoId))
+        );
+
+
+    }
 }

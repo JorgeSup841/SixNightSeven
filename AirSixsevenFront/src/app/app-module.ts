@@ -18,6 +18,7 @@ import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
 import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -33,14 +34,16 @@ import { Detallealojamientocomponent } from "./components/detallealojamientocomp
     Cierrecomponent,
     Escenciacomponent,
     Serviciociudadescomponent,
-    Detallealojamientocomponent
+    Detallealojamientocomponent,
+
   ],
 
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
   ],
 
   providers: [

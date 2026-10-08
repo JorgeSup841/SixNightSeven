@@ -13,7 +13,7 @@ const routes: Routes = [
     },
 
     {
-        path: "reservas",
+        path: "reservas/:id",
         component: Reservascomponent
     },
 

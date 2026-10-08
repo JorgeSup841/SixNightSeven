@@ -1,45 +1,56 @@
-import { Component, OnInit } from "@angular/core";
+import {ChangeDetectorRef, Component, inject, OnInit} from "@angular/core";
 
-import { Alojamiento } from "../../models/alojamientomodel";
+import {Alojamiento, Resena} from "../../models/alojamientomodel";
+import {ActivatedRoute} from "@angular/router";
+import {Alojamientosservice} from "../../services/alojamientosservice";
+import {Cotizacionservice} from "../../services/cotizacionservice";
+import {Cotizacionmodel} from "../../models/reservasmodel";
 
 @Component({
-  selector: "app-detallealojamientocomponent",
-  standalone: false,
-  styleUrl: "./detallealojamientocomponent.css",
-  templateUrl: "./detallealojamientocomponent.html"
+    selector: "app-detallealojamientocomponent",
+    standalone: false,
+    styleUrl: "./detallealojamientocomponent.css",
+    templateUrl: "./detallealojamientocomponent.html"
 })
 export class Detallealojamientocomponent implements OnInit {
+    private ruta = inject(ActivatedRoute);
+    private alojamientosService = inject(Alojamientosservice);
+    private cotizacionService = inject(Cotizacionservice);
+    cdr = inject(ChangeDetectorRef);
 
-  alojamiento!: Alojamiento;
+    alojamiento?: Alojamiento;
+    resenas: Resena[] = [];
+    cargando = true;
+    imagenActiva = '';
 
-  cargando: boolean = true;
+    hoy = this.cotizacionService.hoy();
+    llegada = '';
+    salida = '';
+    huespedes = 1;
 
-  ngOnInit(): void {
-
-    const estado = history.state;
-
-    console.log("Estado recibido:", estado);
-
-    if (estado && estado.alojamiento) {
-
-      this.alojamiento = estado.alojamiento;
-      this.cargando = false;
-
-      console.log(
-          "Alojamiento recibido:",
-          this.alojamiento
-      );
-
-    } else {
-
-      this.cargando = false;
-
-      console.error(
-          "No se recibió ningún alojamiento"
-      );
-
+    get cotizacion(): Cotizacionmodel {
+        if (!this.alojamiento) {
+            return {
+                valida: false, errores: [], noches: 0, subtotal: 0,
+                tarifaLimpieza: 0, tarifaServicio: 0, total: 0
+            };
+        }
+        return this.cotizacionService.cotizar(
+            this.alojamiento, this.llegada, this.salida, this.huespedes
+        );
     }
 
-  }
+    ngOnInit() {
+        const id = Number(this.ruta.snapshot.paramMap.get('id'));
 
+        this.alojamientosService.getAlojamientoPorId(id).subscribe(a => {
+            this.alojamiento = a;
+            this.cargando = false;
+            if (a) this.imagenActiva = a.imagenPrincipal;
+            this.cdr.detectChanges();
+        });
+
+        this.alojamientosService.getResenas(id).subscribe(r => this.resenas = r);
+        this.cdr.detectChanges();
+    }
 }
