@@ -1,49 +1,64 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { NgModule, provideBrowserGlobalErrorListeners } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
 
+import { AppRoutingModule } from "./app-routing-module";
+import { App } from "./app";
 
-import {Iniciocomponent} from './components/iniciocomponent/iniciocomponent';
-import {Reservascomponent} from './components/reservascomponent/reservascomponent';
-import {Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
-
-
-
-
-
-import {Detallealojamientocomponent} from "./components/detallealojamientocomponent/detallealojamientocomponent";
-
-
-
-const routes: Routes = [
-
-    {
-        path: "",
-        component: Iniciocomponent
-    },
-
-    {
-        path: "reservas",
-        component: Reservascomponent
-    },
-
-        {
-            path:"eventos",
-
-        component: Eventoscomponent
-        },
-
-
-]
-;
+import { Navbarcomponent } from "./components/navbarcomponent/navbarcomponent";
+import { Barrabusquedacomponente } from "./components/barrabusquedacomponente/barrabusquedacomponente";
+import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
+import { Destacadoscomponent } from "./components/destacadoscomponent/destacadoscomponent";
+import { Tarjetaalojamientocomponent } from "./components/tarjetaalojamientocomponent/tarjetaalojamientocomponent";
+import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { Footercomponent } from "./components/footercomponent/footercomponent";
+import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
+import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
+import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
+import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
+import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
+import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
+import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
+import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
+import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
 
 @NgModule({
-    imports: [
-        RouterModule.forRoot(routes)
+    declarations: [
+        App,
+        Navbarcomponent,
+        Barrabusquedacomponente,
+        Iniciocomponent,
+        Destacadoscomponent,
+        Tarjetaalojamientocomponent,
+        Reservascomponent,
+        Footercomponent,
+        Confianzacomponent,
+        Cierrecomponent,
+        Escenciacomponent,
+        Serviciociudadescomponent,
+        Detallealojamientocomponent,
+        Alojamientocomponent,
+        Confirmacionreservacomponent,
+        Misreservascomponent,
+        Eventoscomponent
     ],
 
-    exports: [
-        RouterModule
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        FormsModule,
+        CommonModule
+    ],
+
+    providers: [
+        provideBrowserGlobalErrorListeners()
+    ],
+
+    bootstrap: [
+        App
     ]
 })
-export class AppRoutingModule {
-}
+export class AppModule {}

@@ -19,18 +19,13 @@
           <li class="nav-item">
             <a class="nav-link nav-link-airbnb active" href="#">Estadías</a>
           </li>
+
           <li class="nav-item">
-              <a class="nav-link nav-link-airbnb" routerLink="/reservas" routerLinkActive="active">Reservas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-airbnb" routerLink="/eventos" routerLinkActive="acitive">Eventos</a>
+              <a class="nav-link nav-link-airbnb" routerLink="/servicios" routerLinkActive="active">Servicios Turisticos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-link-airbnb" href="#">About</a>
           </li>
-            <li class="nav-item">
-                <a class="nav-link nav-link-airbnb" href="#">FAQs</a>
-            </li>
         </ul>
 
         <div class="d-flex align-items-center gap-2">
@@ -44,18 +39,156 @@
               <i class="bi bi-list fs-5"></i>
               <i class="bi bi-person-circle fs-4 text-secondary"></i>
             </button>
-            <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-4 mt-2 p-2">
-              <li><a class="dropdown-item rounded-3 fw-semibold" href="#">Registrarse</a></li>
-              <li><a class="dropdown-item rounded-3" href="#">Iniciar sesión</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item rounded-3" href="#">Centro de ayuda</a></li>
-            </ul>
-          </div>
-        </div>
 
-      </div>
-    </nav>
-  </div>
+            <div
+                    class="collapse navbar-collapse"
+                    id="menuPrincipal">
+
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+
+                        <a
+                                class="nav-link nav-link-airbnb"
+                                [routerLink]="['/alojamientos']"
+                                routerLinkActive="active">
+
+                            Estadías
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                                class="nav-link nav-link-airbnb"
+                                [routerLink]="['/reservas']"
+                                routerLinkActive="active">
+
+                            Reservas
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                                class="nav-link nav-link-airbnb"
+                                [routerLink]="['/eventos']"
+                                routerLinkActive="active">
+
+                            Eventos
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                                class="nav-link nav-link-airbnb"
+                                href="#">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                                class="nav-link nav-link-airbnb"
+                                href="#">
+
+                            FAQs
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+                <div class="d-flex align-items-center gap-2">
+
+                    <a
+                            [routerLink]="['/mis-reservas']"
+                            class="btn btn-link text-dark text-decoration-none fw-medium d-none d-lg-inline">
+
+                        Mis Reservas
+
+                    </a>
+
+                    <div class="dropdown">
+
+                        <button
+                                class="btn user-menu dropdown-toggle-none d-flex align-items-center gap-2"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                            <i class="bi bi-list fs-5"></i>
+
+                            <i class="bi bi-person-circle fs-4 text-secondary"></i>
+
+                        </button>
+
+                        <ul
+                                class="dropdown-menu dropdown-menu-end shadow border-0 rounded-4 mt-2 p-2">
+
+                            <li>
+
+                                <a
+                                        class="dropdown-item rounded-3 fw-semibold"
+                                        href="#">
+
+                                    Registrarse
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a
+                                        class="dropdown-item rounded-3"
+                                        href="#">
+
+                                    Iniciar sesión
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <hr class="dropdown-divider">
+
+                            </li>
+
+                            <li>
+
+                                <a
+                                        class="dropdown-item rounded-3"
+                                        href="#">
+
+                                    Centro de ayuda
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </div>
+
 </header>

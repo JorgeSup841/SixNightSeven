@@ -1,0 +1,79 @@
+<div class="confirmacion-container">
+
+    @if (reserva) {
+
+        <div class="confirmacion-card">
+
+            <div class="icono-exito">
+                <i class="bi bi-check-lg"></i>
+            </div>
+
+            <h1>¡Gracias por reservar!</h1>
+            <p class="subtitulo">
+                Tu reserva quedó <strong>{{ reserva.estado }}</strong>.
+                Te enviaremos los detalles a <strong>{{ reserva.correo }}</strong>.
+            </p>
+
+            <div class="resumen">
+
+                <img [src]="reserva.imagen" [alt]="reserva.alojamientoNombre">
+
+                <div class="resumen-datos">
+                    <h2>{{ reserva.alojamientoNombre }}</h2>
+                    <p class="ciudad">
+                        <i class="bi bi-geo-alt"></i> {{ reserva.ciudad }}
+                    </p>
+
+                    <div class="fila">
+                        <span>Código de reserva</span>
+                        <strong>{{ reserva.id }}</strong>
+                    </div>
+                    <div class="fila">
+                        <span>Huésped</span>
+                        <strong>{{ reserva.nombreHuesped }}</strong>
+                    </div>
+                    <div class="fila">
+                        <span>Llegada</span>
+                        <strong>{{ reserva.fechaLlegada | date:'dd/MM/yyyy':'UTC' }}</strong>
+                    </div>
+                    <div class="fila">
+                        <span>Salida</span>
+                        <strong>{{ reserva.fechaSalida | date:'dd/MM/yyyy':'UTC' }}</strong>
+                    </div>
+                    <div class="fila">
+                        <span>Huéspedes</span>
+                        <strong>{{ reserva.huespedes }}</strong>
+                    </div>
+                    <div class="fila">
+                        <span>Noches</span>
+                        <strong>{{ reserva.noches }}</strong>
+                    </div>
+                    <div class="fila total">
+                        <span>Total pagado</span>
+                        <strong>{{ reserva.total | currency:'COP':'symbol-narrow':'1.0-0' }}</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="acciones">
+                <a routerLink="/mis-reservas" class="btn-principal">Ver mis reservas</a>
+                <a routerLink="/" class="btn-secundario">Volver al inicio</a>
+            </div>
+
+        </div>
+
+    } @else {
+
+        <div class="confirmacion-card">
+            <h1>No encontramos esta reserva</h1>
+            <p class="subtitulo">Puede que el enlace sea incorrecto o que ya no exista.</p>
+            <div class="acciones">
+                <a routerLink="/mis-reservas" class="btn-principal">Ver mis reservas</a>
+                <a routerLink="/" class="btn-secundario">Volver al inicio</a>
+            </div>
+        </div>
+
+    }
+
+</div>
