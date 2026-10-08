@@ -38,6 +38,11 @@ const routes: Routes = [
         component: Reservascomponent
     },
 
+        {
+            path:"eventos",
+
+        component: Eventoscomponent
+        },
     {
         path: "eventos",
         component: Eventoscomponent
