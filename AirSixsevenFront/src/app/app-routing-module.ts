@@ -52,6 +52,7 @@ const routes: Routes = [
         path: "eventos",
         component: Eventoscomponent
     },
+<<<<<<< HEAD
     {
         path: "eventos/:id",
         component: Detalleeventocomponent

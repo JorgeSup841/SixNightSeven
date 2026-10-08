@@ -3,9 +3,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 
-import { AppRoutingModule } from "./app-routing-module";
-import { App } from "./app";
-
+import {AppRoutingModule} from "./app-routing-module";
+import {App} from "./app";
 import { Navbarcomponent } from "./components/navbarcomponent/navbarcomponent";
 import { Barrabusquedacomponente } from "./components/barrabusquedacomponente/barrabusquedacomponente";
 import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
@@ -63,5 +62,5 @@ import { Crearcuentacomponent } from "./components/crearcuentacomponent/crearcue
     bootstrap: [
         App
     ]
-})
+}
 export class AppModule {}
