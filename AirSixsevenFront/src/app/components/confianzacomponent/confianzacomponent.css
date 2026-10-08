@@ -1,0 +1,121 @@
+.confianza {
+    padding: 5rem 0;
+}
+
+/* ---------- Imagen en arco ---------- */
+.arco-wrapper {
+    position: relative; /* referencia para la tarjeta flotante */
+}
+
+.arco {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    /* Esquinas de arriba muy redondeadas = arco; abajo, suaves */
+    border-radius: 999px 999px 24px 24px;
+    display: block;
+}
+
+.nota-flotante {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: white;
+    padding: 14px 18px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(58, 42, 34, 0.15);
+    max-width: 190px;
+}
+
+.nota-etiqueta {
+    display: block;
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    color: var(--terracota);
+}
+
+.nota-texto {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin: 4px 0 0;
+}
+
+/* ---------- Texto ---------- */
+.eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--terracota);
+    margin: 0 0 8px;
+}
+
+.titulo {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0 0 1rem;
+}
+
+.intro {
+    font-size: 0.9rem;
+    color: #7a6a60;
+    margin-bottom: 1.5rem;
+}
+
+/* Lista con checks */
+.lista {
+    list-style: none; /* quita las viñetas */
+    padding: 0;
+    margin: 0 0 1.75rem;
+}
+
+.lista li {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.check {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: #f0d9cd;
+    color: var(--terracota);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.lista strong {
+    font-size: 0.9rem;
+}
+
+.lista p {
+    font-size: 0.8rem;
+    color: #7a6a60;
+    margin: 2px 0 0;
+}
+
+/* Botón con borde */
+.btn-contorno {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #cdbfae;
+    border-radius: 30px;
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    color: var(--marron);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-contorno:hover {
+    background: var(--marron);
+    color: white;
+    border-color: var(--marron);
+}
+

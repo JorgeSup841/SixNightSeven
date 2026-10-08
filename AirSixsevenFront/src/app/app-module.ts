@@ -1,6 +1,7 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from "./app-routing-module";
 import { App } from "./app";
@@ -11,24 +12,45 @@ import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
 import { Destacadoscomponent } from "./components/destacadoscomponent/destacadoscomponent";
 import { Tarjetaalojamientocomponent } from "./components/tarjetaalojamientocomponent/tarjetaalojamientocomponent";
 import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
-import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
+import { Footercomponent } from "./components/footercomponent/footercomponent";
+import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
+import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
+import { Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
+import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
+import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
+import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
 
 @NgModule({
-  declarations: [
-    App,
-    Navbarcomponent,
-    Barrabusquedacomponente,
-    Iniciocomponent,
-    Destacadoscomponent,
-    Tarjetaalojamientocomponent,
-    Reservascomponent,
-    Eventoscomponent,
-  ],
+    declarations: [
+        App,
+        Navbarcomponent,
+        Barrabusquedacomponente,
+        Iniciocomponent,
+        Destacadoscomponent,
+        Tarjetaalojamientocomponent,
+        Reservascomponent,
+        Footercomponent,
+        Confianzacomponent,
+        Cierrecomponent,
+        Eventoscomponent,
+        Escenciacomponent,
+        Serviciociudadescomponent,
+        Detallealojamientocomponent
+    ],
 
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        FormsModule
+    ],
 
-  providers: [provideBrowserGlobalErrorListeners()],
+    providers: [
+        provideBrowserGlobalErrorListeners()
+    ],
 
-  bootstrap: [App],
+    bootstrap: [
+        App
+    ]
 })
 export class AppModule {}
