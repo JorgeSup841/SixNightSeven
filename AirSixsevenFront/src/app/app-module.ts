@@ -2,6 +2,7 @@ import { NgModule, provideBrowserGlobalErrorListeners } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
 
 import { AppRoutingModule } from "./app-routing-module";
 import { App } from "./app";
@@ -15,10 +16,13 @@ import { Reservascomponent } from "./components/reservascomponent/reservascompon
 import { Footercomponent } from "./components/footercomponent/footercomponent";
 import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
 import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
-import { Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
 import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
+import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
+import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
+import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
+
 
 @NgModule({
     declarations: [
@@ -32,7 +36,6 @@ import { Detallealojamientocomponent } from "./components/detallealojamientocomp
         Footercomponent,
         Confianzacomponent,
         Cierrecomponent,
-        Eventoscomponent,
         Escenciacomponent,
         Serviciociudadescomponent,
         Detallealojamientocomponent

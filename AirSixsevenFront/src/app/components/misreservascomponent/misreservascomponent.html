@@ -1,0 +1,75 @@
+<div class="reservas-container">
+
+    <div class="reservas-encabezado">
+        <h1>Mis reservas</h1>
+        @if (reservas.length > 0) {
+            <span class="contador">
+                {{ reservas.length }} {{ reservas.length === 1 ? 'reserva' : 'reservas' }}
+            </span>
+        }
+    </div>
+
+    @if (reservas.length > 0) {
+
+        <div class="lista">
+            @for (reserva of reservas; track reserva.id) {
+
+                <article class="reserva">
+
+                    <img [src]="reserva.imagen" [alt]="reserva.alojamientoNombre">
+
+                    <div class="reserva-info">
+
+                        <div class="reserva-titulo">
+                            <div>
+                                <h2>{{ reserva.alojamientoNombre }}</h2>
+                                <p class="ciudad">
+                                    <i class="bi bi-geo-alt"></i> {{ reserva.ciudad }}
+                                </p>
+                            </div>
+                            <span class="estado">{{ reserva.estado }}</span>
+                        </div>
+
+                        <div class="datos">
+                            <div class="dato">
+                                <span>Llegada</span>
+                                <strong>{{ reserva.fechaLlegada | date:'dd/MM/yyyy':'UTC' }}</strong>
+                            </div>
+                            <div class="dato">
+                                <span>Salida</span>
+                                <strong>{{ reserva.fechaSalida | date:'dd/MM/yyyy':'UTC' }}</strong>
+                            </div>
+                            <div class="dato">
+                                <span>Huéspedes</span>
+                                <strong>{{ reserva.huespedes }}</strong>
+                            </div>
+                            <div class="dato">
+                                <span>Total</span>
+                                <strong class="total">
+                                    {{ reserva.total | currency:'COP':'symbol-narrow':'1.0-0' }}
+                                </strong>
+                            </div>
+                        </div>
+
+                        <p class="codigo">Código: {{ reserva.id }}</p>
+
+                    </div>
+                </article>
+
+            }
+        </div>
+
+    } @else {
+
+        <div class="vacio">
+            <i class="bi bi-calendar-x"></i>
+            <h2>Aún no tienes reservas</h2>
+            <p>Cuando reserves un alojamiento, aparecerá aquí.</p>
+            <a routerLink="/alojamientos" class="btn-principal">
+                Explorar alojamientos
+            </a>
+        </div>
+
+    }
+
+</div>

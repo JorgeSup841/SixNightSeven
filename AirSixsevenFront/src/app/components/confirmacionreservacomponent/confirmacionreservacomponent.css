@@ -1,0 +1,133 @@
+.confirmacion-container {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.confirmacion-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(58, 42, 34, 0.1);
+    padding: 2.5rem;
+    max-width: 640px;
+    width: 100%;
+    text-align: center;
+}
+
+.icono-exito {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1.25rem;
+    border-radius: 50%;
+    background: #e4efe0;
+    color: #3c7a3a;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: aparecer 0.4s ease-out;
+}
+
+@keyframes aparecer {
+    from { transform: scale(0.5); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+.confirmacion-card h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    font-size: 0.9rem;
+    color: #7a6a60;
+    margin-bottom: 1.75rem;
+}
+
+/* Resumen */
+.resumen {
+    display: flex;
+    gap: 1.25rem;
+    text-align: left;
+    background: var(--crema);
+    border-radius: 16px;
+    padding: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.resumen img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.resumen-datos {
+    flex: 1;
+}
+
+.resumen-datos h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ciudad {
+    font-size: 0.8rem;
+    color: #7a6a60;
+    margin: 2px 0 10px;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.82rem;
+    margin-bottom: 4px;
+}
+
+.fila span { color: #7a6a60; }
+
+.fila.total {
+    border-top: 1px solid #e0d5c6;
+    padding-top: 8px;
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+/* Botones */
+.acciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-principal,
+.btn-secundario {
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-principal {
+    background: var(--terracota);
+    color: white;
+}
+
+.btn-principal:hover { background: #8c3722; }
+
+.btn-secundario {
+    border: 1px solid #cdbfae;
+    color: var(--marron);
+}
+
+.btn-secundario:hover {
+    background: var(--marron);
+    color: white;
+}

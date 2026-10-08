@@ -1,0 +1,150 @@
+.reservas-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem 4rem;
+}
+
+.reservas-encabezado {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.reservas-encabezado h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 400;
+    margin: 0;
+}
+
+.contador {
+    font-size: 0.85rem;
+    color: #7a6a60;
+}
+
+.lista {
+    display: grid;
+    gap: 1rem;
+}
+
+.reserva {
+    display: flex;
+    gap: 1.25rem;
+    background: white;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(58, 42, 34, 0.08);
+}
+
+.reserva img {
+    width: 180px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+
+.reserva-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.reserva-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 0.9rem;
+}
+
+.reserva-titulo h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ciudad {
+    font-size: 0.8rem;
+    color: #7a6a60;
+    margin: 2px 0 0;
+}
+
+.estado {
+    background: #e4efe0;
+    color: #3c7a3a;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.datos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.dato span {
+    display: block;
+    font-size: 0.7rem;
+    color: #7a6a60;
+}
+
+.dato strong {
+    font-size: 0.88rem;
+}
+
+.dato .total {
+    color: var(--terracota);
+}
+
+.codigo {
+    font-size: 0.7rem;
+    color: #a39387;
+    margin: 0.9rem 0 0;
+}
+
+.vacio {
+    text-align: center;
+    background: white;
+    border-radius: 24px;
+    padding: 3rem 1.5rem;
+    box-shadow: 0 2px 10px rgba(58, 42, 34, 0.08);
+}
+
+.vacio i {
+    font-size: 2.8rem;
+    color: #cdbfae;
+}
+
+.vacio h2 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin: 0.75rem 0 0.25rem;
+}
+
+.vacio p {
+    font-size: 0.9rem;
+    color: #7a6a60;
+    margin-bottom: 1.5rem;
+}
+
+.btn-principal {
+    display: inline-block;
+    background: var(--terracota);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-principal:hover {
+    background: #8c3722;
+    color: white;
+}

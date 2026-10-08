@@ -1,18 +1,14 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { NgModule } from '@angular/core';
 
+import { RouterModule, Routes } from "@angular/router";
 
-import {Iniciocomponent} from './components/iniciocomponent/iniciocomponent';
-import {Reservascomponent} from './components/reservascomponent/reservascomponent';
+import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
+import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
+import {Serviciociudadescomponent} from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import {Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
-
-
-
-
-
-import {Detallealojamientocomponent} from "./components/detallealojamientocomponent/detallealojamientocomponent";
-
-
+import {Confirmacionreservacomponent} from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
+import {Misreservascomponent} from "./components/misreservascomponent/misreservascomponent";
 
 const routes: Routes = [
 
@@ -22,7 +18,23 @@ const routes: Routes = [
     },
 
     {
-        path: "reservas",
+        path: "reservas/:id",
+        component: Reservascomponent
+    },
+
+    {
+        path: "alojamientos/:id",
+        component: Detallealojamientocomponent
+    },
+    {
+        path: "servicios",
+        component:Serviciociudadescomponent
+    },
+
+  
+
+    {
+        path: "reservas/:id",
         component: Reservascomponent
     },
 
@@ -31,10 +43,22 @@ const routes: Routes = [
 
         component: Eventoscomponent
         },
+    {
+        path: "eventos",
+        component: Eventoscomponent
+    },
+
+    {path: 'reserva-confirmada/:id', component: Confirmacionreservacomponent},
+    {path: 'mis-reservas', component: Misreservascomponent},
+
+    {
+        path: "**",
+        redirectTo: ""
+    }
 
 
-]
-;
+
+];
 
 @NgModule({
     imports: [
