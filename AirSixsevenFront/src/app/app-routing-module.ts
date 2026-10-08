@@ -1,11 +1,18 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
-import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
-import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
+
+import {Iniciocomponent} from './components/iniciocomponent/iniciocomponent';
+import {Reservascomponent} from './components/reservascomponent/reservascomponent';
+import {Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
+
+
+
+
+
+import {Detallealojamientocomponent} from "./components/detallealojamientocomponent/detallealojamientocomponent";
+
+
 
 const routes: Routes = [
 
@@ -19,17 +26,9 @@ const routes: Routes = [
         component: Reservascomponent
     },
 
-    {
-        path: "alojamientos/:id",
-        component: Detallealojamientocomponent
-    },
 
-    {
-        path: "**",
-        redirectTo: ""
-    }
-
-];
+]
+;
 
 @NgModule({
     imports: [
@@ -40,4 +39,5 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

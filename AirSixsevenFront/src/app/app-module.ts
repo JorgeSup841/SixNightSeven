@@ -15,47 +15,42 @@ import { Reservascomponent } from "./components/reservascomponent/reservascompon
 import { Footercomponent } from "./components/footercomponent/footercomponent";
 import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
 import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
-import {Escenciacomponent} from "./components/escenciacomponent/escenciacomponent";
+import { Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
+import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
 
 @NgModule({
-  declarations: [
-    App,
-    Navbarcomponent,
-    Barrabusquedacomponente,
-    Iniciocomponent,
-    Destacadoscomponent,
-    Tarjetaalojamientocomponent,
-    Reservascomponent,
-    Footercomponent,
-    Confianzacomponent,
-    Cierrecomponent,
-    Escenciacomponent,
-  ],
+    declarations: [
+        App,
+        Navbarcomponent,
+        Barrabusquedacomponente,
+        Iniciocomponent,
+        Destacadoscomponent,
+        Tarjetaalojamientocomponent,
+        Reservascomponent,
+        Footercomponent,
+        Confianzacomponent,
+        Cierrecomponent,
+        Eventoscomponent,
+        Escenciacomponent,
+        Serviciociudadescomponent,
+        Detallealojamientocomponent
+    ],
 
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        FormsModule
+    ],
 
-  providers: [provideBrowserGlobalErrorListeners()],
+    providers: [
+        provideBrowserGlobalErrorListeners()
+    ],
 
-  bootstrap: [App],
-    Serviciociudadescomponent,
-    Detallealojamientocomponent
-  ],
-
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-
-  providers: [
-    provideBrowserGlobalErrorListeners()
-  ],
-
-  bootstrap: [
-    App
-  ]
+    bootstrap: [
+        App
+    ]
 })
 export class AppModule {}
