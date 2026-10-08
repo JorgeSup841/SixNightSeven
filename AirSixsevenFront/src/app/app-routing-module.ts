@@ -17,8 +17,8 @@ const routes: Routes = [
     },
 
     {
-        path: "alojamientos",
-        component: Alojamientocomponent
+        path: "reservas/:id",
+        component: Reservascomponent
     },
 
     {
@@ -26,10 +26,7 @@ const routes: Routes = [
         component: Detallealojamientocomponent
     },
 
-    {
-        path: "reservas",
-        component: Reservascomponent
-    },
+  
 
     {
         path: "reservas/:id",
