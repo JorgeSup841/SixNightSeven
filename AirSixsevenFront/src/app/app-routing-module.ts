@@ -15,8 +15,13 @@ const routes: Routes = [
     },
 
     {
+<<<<<<< HEAD
         path: "alojamientos",
         component: Alojamientocomponent
+=======
+        path: "reservas/:id",
+        component: Reservascomponent
+>>>>>>> 3dcfa2b (feat: Implement dynamic accommodation detail and booking flow)
     },
 
     {

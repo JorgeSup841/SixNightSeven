@@ -22,7 +22,11 @@ import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent
 import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
+<<<<<<< HEAD
 import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
+=======
+import {CommonModule} from "@angular/common";
+>>>>>>> 3dcfa2b (feat: Implement dynamic accommodation detail and booking flow)
 
 @NgModule({
   declarations: [
@@ -40,6 +44,7 @@ import { Alojamientocomponent } from "./components/alojamientocomponent/alojamie
     Escenciacomponent,
     Serviciociudadescomponent,
 <<<<<<< HEAD
+<<<<<<< HEAD
     Detallealojamientocomponent,
       Alojamientocomponent ,
   ],
@@ -51,13 +56,18 @@ import { Alojamientocomponent } from "./components/alojamientocomponent/alojamie
   bootstrap: [App],
 =======
     Detallealojamientocomponent
+=======
+    Detallealojamientocomponent,
+
+>>>>>>> 3dcfa2b (feat: Implement dynamic accommodation detail and booking flow)
   ],
 
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
   ],
 
   providers: [
