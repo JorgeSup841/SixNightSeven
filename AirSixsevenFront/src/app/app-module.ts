@@ -24,39 +24,45 @@ import { Confirmacionreservacomponent } from "./components/confirmacionreservaco
 import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
 import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
 import { Pagarservicioscomponent } from "./components/pagarservicioscomponent/pagarservicioscomponent";
+import { Detalleeventocomponent } from "./components/detalleeventocomponent/detalleeventocomponent";
 
 @NgModule({
-  declarations: [
-    App,
-    Navbarcomponent,
-    Barrabusquedacomponente,
-    Iniciocomponent,
-    Destacadoscomponent,
-    Tarjetaalojamientocomponent,
-    Reservascomponent,
-    Footercomponent,
-    Confianzacomponent,
-    Cierrecomponent,
-    Escenciacomponent,
-    Serviciociudadescomponent,
-    Detallealojamientocomponent,
-    Alojamientocomponent,
-    Confirmacionreservacomponent,
-    Misreservascomponent,
-    Eventoscomponent,
-    Pagarservicioscomponent,
-  ],
+    declarations: [
+        App,
+        Navbarcomponent,
+        Barrabusquedacomponente,
+        Iniciocomponent,
+        Destacadoscomponent,
+        Tarjetaalojamientocomponent,
+        Reservascomponent,
+        Footercomponent,
+        Confianzacomponent,
+        Cierrecomponent,
+        Escenciacomponent,
+        Serviciociudadescomponent,
+        Detallealojamientocomponent,
+        Alojamientocomponent,
+        Confirmacionreservacomponent,
+        Misreservascomponent,
+        Eventoscomponent,
+        Pagarservicioscomponent,
+        Detalleeventocomponent
+    ],
 
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    FormsModule,
-    CommonModule,
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        FormsModule,
+        CommonModule
+    ],
 
-  providers: [provideBrowserGlobalErrorListeners()],
+    providers: [
+        provideBrowserGlobalErrorListeners()
+    ],
 
-  bootstrap: [App],
+    bootstrap: [
+        App
+    ]
 })
 export class AppModule {}

@@ -6,6 +6,15 @@ export interface Ciudad {
     unidad: string;
     rating: string;
     imagen: string;
-    activo: boolean;
 }
 
+export interface Horario {
+    id: number;
+    servicioId: number;
+    hora: string;
+}
+
+export interface CiudadData {
+    servicios: Ciudad[];
+    horarios: Horario[];
+}

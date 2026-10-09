@@ -24,10 +24,11 @@
                             <span class="tarjeta-evento-categoria">{{ evento.ciudad }}</span>
                             <h3 class="tarjeta-evento-titulo">{{ evento.nombre }}</h3>
                             <p class="tarjeta-evento-fecha">
-                                Desde {{ evento.precioPersona | currency:'COP':'symbol-narrow':'1.0-0' }} COP por persona
+                                Desde {{ evento.precioPersona | currency:'COP':'symbol-narrow':'1.0-0' }} COP por
+                                persona
                             </p>
                             <p class="tarjeta-evento-texto">{{ evento.descripcion }}</p>
-                            <a href="#" class="tarjeta-evento-link">
+                            <a [routerLink]="['/eventos', evento.id]" class="tarjeta-evento-link">
                                 Conoce más <i class="bi bi-chevron-right"></i>
                             </a>
                         </div>

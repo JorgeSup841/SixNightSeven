@@ -1,0 +1,100 @@
+<section class="evento-detalle">
+    <div class="container">
+
+        <a routerLink="/eventos" class="evento-detalle-volver">
+            <i class="bi bi-arrow-left"></i> Volver a eventos
+        </a>
+
+        @if (cargando) {
+            <p class="evento-detalle-mensaje">Cargando...</p>
+        } @else if (evento) {
+
+            <div class="row g-4">
+
+                <div class="col-lg-7">
+                    <div class="evento-detalle-galeria">
+                        @for (imagen of evento.imagenes; track imagen) {
+                            <img [src]="imagen" [alt]="evento.nombre">
+                        }
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <p class="evento-detalle-eyebrow">{{ evento.ciudad }} · {{ evento.categoria }}</p>
+                    <h1 class="evento-detalle-titulo">{{ evento.nombre }}</h1>
+
+                    <p class="evento-detalle-meta">
+                        <i class="bi bi-star-fill"></i> {{ evento.calificacion }}
+                        · {{ evento.totalValoraciones }} valoraciones
+                    </p>
+
+                    <p class="evento-detalle-descripcion">{{ evento.descripcion }}</p>
+
+                    <ul class="evento-detalle-datos">
+                        <li><i class="bi bi-geo-alt"></i> {{ evento.ubicacion }}</li>
+                        <li><i class="bi bi-clock"></i> Duración: {{ evento.duracionHoras }} horas</li>
+                    </ul>
+
+                    <p class="evento-detalle-precio">
+                        Desde
+                        <strong>{{ evento.precioPersona | currency:'COP':'symbol-narrow':'1.0-0' }}</strong>
+                        por persona
+                    </p>
+
+                    <div class="evento-horarios">
+                        <h2 class="evento-horarios-titulo">Elige fecha y hora</h2>
+
+                        @if (fechas.length > 0) {
+
+                            <div class="evento-horarios-fechas">
+                                @for (fecha of fechas; track fecha) {
+                                    <button class="fecha-chip" [class.activo]="fechaSeleccionada === fecha"
+                                            (click)="seleccionarFecha(fecha)">
+                                        {{ formatearFecha(fecha) }}
+                                    </button>
+                                }
+                            </div>
+
+                            @if (fechaSeleccionada !== '') {
+                                <div class="evento-horarios-horas">
+                                    @for (horario of horariosDelDia; track horario.id) {
+                                        <button class="hora-boton"
+                                                [class.activo]="horarioSeleccionado?.id === horario.id"
+                                                [disabled]="horario.cuposDisponibles === 0"
+                                                (click)="seleccionarHorario(horario)">
+                                            <span class="hora-boton-hora">{{ horario.hora }}</span>
+                                            <span class="hora-boton-cupos">
+                                                @if (horario.cuposDisponibles === 0) {
+                                                    Agotado
+                                                } @else {
+                                                    {{ horario.cuposDisponibles }} cupos
+                                                }
+                                            </span>
+                                        </button>
+                                    }
+                                </div>
+                            } @else {
+                                <p class="evento-detalle-mensaje">Primero elige un día.</p>
+                            }
+
+                            @if (horarioSeleccionado) {
+                                <p class="evento-horarios-resumen">
+                                    <i class="bi bi-check-circle"></i>
+                                    {{ formatearFecha(horarioSeleccionado.fecha) }} a las {{ horarioSeleccionado.hora }}
+                                </p>
+                            }
+
+                        } @else {
+                            <p class="evento-detalle-mensaje">Este evento aún no tiene horarios.</p>
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+        } @else {
+            <p class="evento-detalle-mensaje">No encontramos este evento.</p>
+        }
+
+    </div>
+</section>
