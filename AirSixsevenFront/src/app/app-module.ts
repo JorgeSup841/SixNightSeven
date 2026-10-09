@@ -23,7 +23,37 @@ import { Alojamientocomponent } from "./components/alojamientocomponent/alojamie
 import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
 import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
 import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
-import { Pagarservicioscomponent } from "./components/pagarservicioscomponent/pagarservicioscomponent";
+import { Detalleeventocomponent } from "./components/detalleeventocomponent/detalleeventocomponent";
+
+@NgModule({
+  declarations: [
+    App,
+    Navbarcomponent,
+    Barrabusquedacomponente,
+    Iniciocomponent,
+    Destacadoscomponent,
+    Tarjetaalojamientocomponent,
+    Reservascomponent,
+    Footercomponent,
+    Confianzacomponent,
+    Cierrecomponent,
+    Escenciacomponent,
+    Serviciociudadescomponent,
+    Detallealojamientocomponent,
+    Alojamientocomponent,
+    Confirmacionreservacomponent,
+    Misreservascomponent,
+    Eventoscomponent,
+    Detalleeventocomponent,
+  ],
+
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    CommonModule,
+  ],
 
 @NgModule({
   declarations: [

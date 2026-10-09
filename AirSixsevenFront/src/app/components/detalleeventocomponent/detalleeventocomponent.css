@@ -1,0 +1,223 @@
+.evento-detalle {
+    padding: 2rem 0 3rem;
+}
+
+.evento-detalle-volver {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--terracota);
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.evento-detalle-volver:hover {
+    text-decoration: underline;
+}
+
+.evento-detalle-mensaje {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #7a6a60;
+}
+
+.evento-detalle-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.evento-detalle-galeria img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.evento-detalle-galeria img:only-child {
+    grid-column: 1 / -1;
+    height: 480px;
+}
+
+.evento-detalle-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--terracota);
+    margin: 0 0 0.5rem;
+}
+
+.evento-detalle-titulo {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--marron);
+    margin: 0 0 0.75rem;
+}
+
+.evento-detalle-meta {
+    font-size: 0.9rem;
+    color: #7a6a60;
+    margin: 0 0 1rem;
+}
+
+.evento-detalle-meta i {
+    color: var(--terracota);
+}
+
+.evento-detalle-descripcion {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #6b5b52;
+    margin: 0 0 1rem;
+}
+
+.evento-detalle-datos {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+    color: var(--marron);
+}
+
+.evento-detalle-datos li {
+    margin-bottom: 0.4rem;
+}
+
+.evento-detalle-datos i {
+    color: var(--terracota);
+    margin-right: 6px;
+}
+
+.evento-detalle-precio {
+    font-size: 0.95rem;
+    color: #6b5b52;
+    margin: 0 0 1.5rem;
+}
+
+.evento-detalle-precio strong {
+    font-size: 1.3rem;
+    color: var(--marron);
+}
+
+.evento-horarios {
+    background: white;
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 10px rgba(58, 42, 34, 0.08);
+}
+
+.evento-horarios-titulo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--marron);
+    margin: 0 0 1rem;
+}
+
+.evento-horarios-fechas,
+.evento-horarios-horas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.fecha-chip {
+    border: 1px solid #ddd2c2;
+    background: white;
+    border-radius: 30px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    color: var(--marron);
+    transition: all 0.2s;
+}
+
+.fecha-chip:hover {
+    border-color: var(--terracota);
+}
+
+.fecha-chip.activo {
+    background: var(--terracota);
+    border-color: var(--terracota);
+    color: white;
+}
+
+.hora-boton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 90px;
+    border: 1px solid #ddd2c2;
+    background: white;
+    border-radius: 12px;
+    padding: 8px 14px;
+    color: var(--marron);
+    transition: all 0.2s;
+}
+
+.hora-boton:hover:not(:disabled) {
+    border-color: var(--terracota);
+}
+
+.hora-boton.activo {
+    border-color: var(--terracota);
+    background: var(--terracota);
+    color: white;
+}
+
+.hora-boton:disabled {
+    background: #f1ebe2;
+    color: #a99b91;
+    cursor: not-allowed;
+}
+
+.hora-boton-hora {
+    font-weight: 600;
+}
+
+.hora-boton-cupos {
+    font-size: 0.75rem;
+}
+
+.evento-horarios-resumen {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--terracota);
+}
+
+
+.btn-pagar-personalizado {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #f43f5e;
+    color: #fbf8f2;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    margin-top: 12px;
+}
+
+.btn-pagar-personalizado:hover {
+    background-color: #e11d48;
+}
+
+.alerta-exito {
+    margin-top: 15px;
+    padding: 12px 16px;
+    background-color: #d1fae5;
+    color: #065f46;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
