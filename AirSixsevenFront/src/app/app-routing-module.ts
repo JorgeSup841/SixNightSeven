@@ -9,6 +9,7 @@ import {Serviciociudadescomponent} from "./components/serviciociudadescomponent/
 import {Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
 import {Confirmacionreservacomponent} from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
 import {Misreservascomponent} from "./components/misreservascomponent/misreservascomponent";
+import {Detalleeventocomponent} from "./components/detalleeventocomponent/detalleeventocomponent";
 
 const routes: Routes = [
 
@@ -31,21 +32,25 @@ const routes: Routes = [
         component:Serviciociudadescomponent
     },
 
-  
+
 
     {
         path: "reservas/:id",
         component: Reservascomponent
     },
 
-        {
-            path:"eventos",
+    {
+        path:"eventos",
 
         component: Eventoscomponent
-        },
+    },
     {
         path: "eventos",
         component: Eventoscomponent
+    },
+    {
+        path: "eventos/:id",
+        component: Detalleeventocomponent
     },
 
     {path: 'reserva-confirmada/:id', component: Confirmacionreservacomponent},
