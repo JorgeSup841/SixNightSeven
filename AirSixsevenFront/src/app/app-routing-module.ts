@@ -9,6 +9,7 @@ import {Serviciociudadescomponent} from "./components/serviciociudadescomponent/
 import {Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
 import {Confirmacionreservacomponent} from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
 import {Misreservascomponent} from "./components/misreservascomponent/misreservascomponent";
+import {Pagarservicioscomponent} from "./components/pagarservicioscomponent/pagarservicioscomponent";
 
 const routes: Routes = [
 
@@ -29,6 +30,9 @@ const routes: Routes = [
     {
         path: "servicios",
         component:Serviciociudadescomponent
+    },
+    {
+     path: 'pagar/:id', component: Pagarservicioscomponent
     },
 
   

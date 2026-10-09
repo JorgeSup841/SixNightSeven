@@ -1,0 +1,25 @@
+<section class="pagar" *ngIf="servicio">
+
+    <h2>Confirma tu servicio</h2>
+
+    <div class="resumen">
+        <img [src]="servicio.imagen" [alt]="servicio.titulo">
+
+        <div class="datos">
+            <h3>{{ servicio.titulo }}</h3>
+            <p class="gris">{{ servicio.ciudad }}</p>
+            <p class="gris">{{ servicio.unidad }}</p>
+            <p class="gris">★ {{ servicio.rating }}</p>
+        </div>
+    </div>
+
+    <label for="fecha">Elige la fecha</label>
+    <input id="fecha" type="date" [min]="hoy" [(ngModel)]="fecha">
+
+    <p class="total">Total a pagar: <strong>{{ servicio.precio }} COP</strong></p>
+
+    <button class="btn-pagar" type="button" [disabled]="!fecha" (click)="confirmar()">
+        Confirmar pago
+    </button>
+
+</section>

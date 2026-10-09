@@ -17,48 +17,46 @@ import { Footercomponent } from "./components/footercomponent/footercomponent";
 import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
 import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
 import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
-import {Serviciociudadescomponent} from "./components/serviciociudadescomponent/serviciociudadescomponent";
+import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
 import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
 import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
 import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
 import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
+import { Pagarservicioscomponent } from "./components/pagarservicioscomponent/pagarservicioscomponent";
 
 @NgModule({
-    declarations: [
-        App,
-        Navbarcomponent,
-        Barrabusquedacomponente,
-        Iniciocomponent,
-        Destacadoscomponent,
-        Tarjetaalojamientocomponent,
-        Reservascomponent,
-        Footercomponent,
-        Confianzacomponent,
-        Cierrecomponent,
-        Escenciacomponent,
-        Serviciociudadescomponent,
-        Detallealojamientocomponent,
-        Alojamientocomponent,
-        Confirmacionreservacomponent,
-        Misreservascomponent,
-        Eventoscomponent
-    ],
+  declarations: [
+    App,
+    Navbarcomponent,
+    Barrabusquedacomponente,
+    Iniciocomponent,
+    Destacadoscomponent,
+    Tarjetaalojamientocomponent,
+    Reservascomponent,
+    Footercomponent,
+    Confianzacomponent,
+    Cierrecomponent,
+    Escenciacomponent,
+    Serviciociudadescomponent,
+    Detallealojamientocomponent,
+    Alojamientocomponent,
+    Confirmacionreservacomponent,
+    Misreservascomponent,
+    Eventoscomponent,
+    Pagarservicioscomponent,
+  ],
 
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        AppRoutingModule,
-        FormsModule,
-        CommonModule
-    ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    CommonModule,
+  ],
 
-    providers: [
-        provideBrowserGlobalErrorListeners()
-    ],
+  providers: [provideBrowserGlobalErrorListeners()],
 
-    bootstrap: [
-        App
-    ]
+  bootstrap: [App],
 })
 export class AppModule {}

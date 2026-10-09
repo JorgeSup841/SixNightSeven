@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable , map } from 'rxjs';
 
 import { Ciudad } from '../models/ciudadesmodel';
 
@@ -15,5 +15,10 @@ export class Ciudadesservice {
 
     getTarjetas(): Observable<Ciudad[]> {
         return this.http.get<Ciudad[]>(this.URL_BASE);
+    }
+    getTarjetaPorId(id: number): Observable<Ciudad | undefined> {
+        return this.getTarjetas().pipe(
+            map(lista => lista.find(t => t.id === id))
+        );
     }
 }
