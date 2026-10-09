@@ -1,64 +1,73 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
-import { CommonModule } from "@angular/common";
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from "./app-routing-module";
-import { App } from "./app";
+import { RouterModule, Routes } from "@angular/router";
 
-import { Navbarcomponent } from "./components/navbarcomponent/navbarcomponent";
-import { Barrabusquedacomponente } from "./components/barrabusquedacomponente/barrabusquedacomponente";
 import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
-import { Destacadoscomponent } from "./components/destacadoscomponent/destacadoscomponent";
-import { Tarjetaalojamientocomponent } from "./components/tarjetaalojamientocomponent/tarjetaalojamientocomponent";
 import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
-import { Footercomponent } from "./components/footercomponent/footercomponent";
-import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
-import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
-import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
-import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
-import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
-import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
-import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
-import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
+import {Serviciociudadescomponent} from "./components/serviciociudadescomponent/serviciociudadescomponent";
+import {Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
+import {Confirmacionreservacomponent} from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
+import {Misreservascomponent} from "./components/misreservascomponent/misreservascomponent";
+
+const routes: Routes = [
+
+    {
+        path: "",
+        component: Iniciocomponent
+    },
+
+    {
+        path: "reservas/:id",
+        component: Reservascomponent
+    },
+
+    {
+        path: "alojamientos/:id",
+        component: Detallealojamientocomponent
+    },
+    {
+        path: "servicios",
+        component:Serviciociudadescomponent
+    },
+
+
+
+    {
+        path: "reservas/:id",
+        component: Reservascomponent
+    },
+
+    {
+        path:"eventos",
+
+        component: Eventoscomponent
+    },
+    {
+        path: "eventos",
+        component: Eventoscomponent
+    },
+
+    {path: 'reserva-confirmada/:id', component: Confirmacionreservacomponent},
+    {path: 'mis-reservas', component: Misreservascomponent},
+
+    {
+        path: "**",
+        redirectTo: ""
+    }
+
+
+
+];
 
 @NgModule({
-    declarations: [
-        App,
-        Navbarcomponent,
-        Barrabusquedacomponente,
-        Iniciocomponent,
-        Destacadoscomponent,
-        Tarjetaalojamientocomponent,
-        Reservascomponent,
-        Footercomponent,
-        Confianzacomponent,
-        Cierrecomponent,
-        Escenciacomponent,
-        Serviciociudadescomponent,
-        Detallealojamientocomponent,
-        Alojamientocomponent,
-        Confirmacionreservacomponent,
-        Misreservascomponent,
-        Eventoscomponent
-    ],
-
     imports: [
-        BrowserModule,
-        HttpClientModule,
-        AppRoutingModule,
-        FormsModule,
-        CommonModule
+        RouterModule.forRoot(routes)
     ],
 
-    providers: [
-        provideBrowserGlobalErrorListeners()
-    ],
-
-    bootstrap: [
-        App
+    exports: [
+        RouterModule
     ]
 })
-export class AppModule {}
+export class AppRoutingModule {
+}
