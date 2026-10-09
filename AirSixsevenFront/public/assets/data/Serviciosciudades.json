@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "ciudad": "Bogotá",
+    "titulo": "Sesión de fotos en Monserrate",
+    "precio": "$100.000",
+    "unidad": "12 fotos Lunes - Viernes 11:00 - 17:00",
+    "rating": "4,5",
+    "imagen": "assets/images/monserrate.jpg"
+  },
+  {
+    "id": 2,
+    "ciudad": "Bogotá",
+    "titulo": "Tour fotográfico por La Candelaria",
+    "precio": "$120.000",
+    "unidad": "Lunes - Viernes 8:00 - 15:00",
+    "rating": "4,9",
+    "imagen": "assets/images/candelaria.jpg"
+  },
+  {
+    "id": 3,
+    "ciudad": "Bogotá",
+    "titulo": "Retratos en la Plaza de Bolívar",
+    "precio": "$75.000",
+    "unidad": "Viernes - Domingo 11:00 - 19:00",
+    "rating": "4,8",
+    "imagen": "assets/images/plazabolivar.jpg"
+  },
+  {
+    "id": 4,
+    "ciudad": "Bogotá",
+    "titulo": "Sesión de fotos en Usaquén",
+    "precio": "$100.000",
+    "unidad": "10 fotos Lunes - Miercoles 13:00 - 18:00",
+    "rating": "4,4",
+    "imagen": "assets/images/usaquen.jpg"
+  },
+  {
+    "id": 5,
+    "ciudad": "Bogotá",
+    "titulo": "Fotos en la Catedral de Sal",
+    "precio": "$160.000",
+    "unidad": "10 fotos Sabado-Domingo 10:00 - 18:00",
+    "rating": "4,7",
+    "imagen": "assets/images/catedral.jpg"
+  },
+  {
+    "id": 6,
+    "ciudad": "Bogotá",
+    "titulo": "Clase de cocina bogotana",
+    "precio": "$180.000",
+    "unidad": "Por persona",
+    "rating": "4,7",
+    "imagen": "assets/images/clasecocina.jpg"
+  },
+  {
+    "id": 8,
+    "ciudad": "Medellín",
+    "titulo": "Sesión de fotos en la Comuna 13",
+    "precio": "$140.000",
+    "unidad": "12 fotos Viernes - Domingo 11:00 - 18:00",
+    "rating": "4,8",
+    "imagen": "assets/images/comuna.jpg"
+  },
+  {
+    "id": 9,
+    "ciudad": "Medellín",
+    "titulo": "Retratos en la Piedra del Peñol",
+    "precio": "$180.000",
+    "unidad": "Por retrato Lunes - Viernes 11:00 - 19:00",
+    "rating": "4,7",
+    "imagen": "assets/images/retratospeñol.jpg"
+  },
+  {
+    "id": 10,
+    "ciudad": "Medellín",
+    "titulo": "Fotos en la Plaza Botero",
+    "precio": "$150.000",
+    "unidad": "15 fotos Lunes - Viernes ",
+    "rating": "4,3",
+    "imagen": "assets/images/plazabotero.jpg"
+  },
+  {
+    "id": 11,
+    "ciudad": "Medellín",
+    "titulo": "Sesión de fotos en el Pueblito Paisa",
+    "precio": "$150.000",
+    "unidad": "12 fotos Viernes - Domingo 11:00 - 18:00",
+    "rating": "4,6",
+    "imagen": "assets/images/fotospaisa.jpg"
+  },
+  {
+    "id": 13,
+    "ciudad": "Medellín",
+    "titulo": "Clases de baile parque el Rio",
+    "precio": "$110.000",
+    "unidad": "Por persona Lunes - Viernes 16:00 - 18:00",
+    "rating": "4,6",
+    "imagen": "assets/images/bailerio.jpg"
+  },
+  {
+    "id": 14,
+    "ciudad": "Medellín",
+    "titulo": "Clase de baile en El Poblado",
+    "precio": "$155.000",
+    "unidad": "Por persona Lunes - Viernes 13:00 - 15:00",
+    "rating": "4,5",
+    "imagen": "assets/images/clasebaile.jpg"
+  },
+  {
+    "id": 15,
+    "ciudad": "Barranquilla",
+    "titulo": "Sesión de fotos en el Gran Malecón",
+    "precio": "$100.000",
+    "unidad": "10 fotos Viernes - Domingo 11:00 - 18:00",
+    "rating": "4,9",
+    "imagen": "assets/images/barranquilla.jpeg"
+  },
+  {
+    "id": 16,
+    "ciudad": "Barranquilla",
+    "titulo": "Sesion de fotos en la Casa del Carnaval",
+    "precio": "$150.000",
+    "unidad": "Por persona",
+    "rating": "4,7",
+    "imagen": "assets/images/casacarnaval.jpg"
+  },
+  {
+    "id": 17,
+    "ciudad": "Barranquilla",
+    "titulo": "Retratos en Bocas de Ceniza",
+    "precio": "$170.000",
+    "unidad": "Por retrato",
+    "rating": "4,7",
+    "imagen": "assets/images/bocaceniza.jpg"
+  },
+  {
+    "id": 18,
+    "ciudad": "Barranquilla",
+    "titulo": "Fotos en el Muelle de Puerto Colombia",
+    "precio": "$180.000",
+    "unidad": "12 fotos Viernes - Domingo 11:00 - 18:00",
+    "rating": "4,8",
+    "imagen": "assets/images/puertocolombia.jpg"
+  },
+  {
+    "id": 19,
+    "ciudad": "Barranquilla",
+    "titulo": "Sesión de fotos en el Castillo de Salgar",
+    "precio": "$160.000",
+    "unidad": "12 fotos Viernes - Domingo 11:00 - 18:00",
+    "rating": "4,8",
+    "imagen": "assets/images/castillosalgar.jpg"
+  },
+  {
+    "id": 20,
+    "ciudad": "Barranquilla",
+    "titulo": "Clase de baile de carnaval",
+    "precio": "$140.000",
+    "unidad": "12 fotos Viernes - Domingo 12:00 - 17:00",
+    "rating": "4,4",
+    "imagen": "assets/images/clasecarnval.jpg"
+  },
+  {
+    "id": 21,
+    "ciudad": "Cartagena",
+    "titulo": "Sesion de fotos en la playa",
+    "precio": "$200.000",
+    "unidad": "Por grupo (4 personas) Lunes - Viernes",
+    "rating": "4,9",
+    "imagen": "assets/images/playita.jpg"
+  },
+  {
+    "id": 22,
+    "ciudad": "Cartagena",
+    "titulo": "Clases de baile",
+    "precio": "$130.000",
+    "unidad": "Por persona Lunes - Viernes",
+    "rating": "4,4",
+    "imagen": "assets/images/bailecartagena.jpg"
+  },
+  {
+    "id": 23,
+    "ciudad": "Cartagena",
+    "titulo": "Sesion de fotos en plaza de Santo Domingo",
+    "precio": "$150.000 ",
+    "unidad": "10 fotos Lunes - Viernes",
+    "rating": "4,4",
+    "imagen": "assets/images/plazadomingo.jpg"
+  },
+  {
+    "id": 24,
+    "ciudad": "Cartagena",
+    "titulo": "Retratos en la playa",
+    "precio": "$150.000 ",
+    "unidad": "1 retrato Lunes - Viernes",
+    "rating": "4,6",
+    "imagen": "assets/images/retratoscartagena.jpg"
+  },
+  {
+    "id": 25,
+    "ciudad": "Cartagena",
+    "titulo": "Tienda de recuerdos Torre del Reloj",
+    "precio": "Precio de tienda",
+    "unidad": "Lunes - Viernes",
+    "rating": "4,8",
+    "imagen": "assets/images/torrerelo.jpg"
+  },
+  {
+    "id": 26,
+    "ciudad": "Cartagena",
+    "titulo": "Practicas de futbol Parque Chci",
+    "precio": "70.000",
+    "unidad": "2 horas 16:00 - 18:00 Lunes - Viernes",
+    "rating": "4,8",
+    "imagen": "assets/images/chci.jpg"
+  }
+]

@@ -1,18 +1,19 @@
 <section class="servicios">
 
-    <div class="ciudad" *ngFor="let ciudad of ciudades">
+    <div class="ciudad" *ngFor="let ciudad of ciudades()">
         <h2>Servicios en {{ ciudad.nombre }}</h2>
 
         <div class="fila">
             <article class="card" *ngFor="let s of ciudad.servicios">
                 <div class="foto">
                     <img [src]="s.imagen" [alt]="s.titulo">
-
                 </div>
                 <h3>{{ s.titulo }}</h3>
                 <p class="gris">Desde {{ s.precio }} COP</p>
                 <p class="gris">{{ s.unidad }}</p>
                 <p class="gris">★ {{ s.rating }}</p>
+
+                <button class="btn-pagar" type="button">Pagar</button>
             </article>
         </div>
     </div>
