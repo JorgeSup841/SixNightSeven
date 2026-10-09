@@ -19,7 +19,7 @@
     font-size: 30px;
 }
 
-/* Fila horizontal con scroll */
+
 .fila {
     display: flex;
     gap: 18px;
@@ -27,7 +27,7 @@
     padding: 6px 4px 18px;
 }
 
-/* Tarjeta redondeadita */
+
 .card {
     flex: 0 0 220px;
     background: #fff;
@@ -87,4 +87,28 @@
     margin: 2px 8px 0;
     color: #7a6e66;
     font-size: 13px;
+}
+.btn-pagar {
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 12px;
+    background: #ff385c;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-pagar:hover {
+    background: #e0304f;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-pagar {
+    margin-top: auto;
 }
