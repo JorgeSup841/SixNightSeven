@@ -82,6 +82,16 @@
                                     <i class="bi bi-check-circle"></i>
                                     {{ formatearFecha(horarioSeleccionado.fecha) }} a las {{ horarioSeleccionado.hora }}
                                 </p>
+
+                                @if (!pagoExitoso) {
+                                    <button type="button" class="btn-pagar-personalizado" (click)="realizarPago()">
+                                        Pagar
+                                    </button>
+                                } @else {
+                                    <div class="alerta-exito">
+                                        <i class="bi bi-check-circle-fill"></i> ¡Su pago fue exitoso!
+                                    </div>
+                                }
                             }
 
                         } @else {

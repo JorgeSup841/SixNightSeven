@@ -64,4 +64,10 @@ export class Detalleeventocomponent {
         });
         return formatoFecha.charAt(0).toUpperCase() + formatoFecha.slice(1);
     }
+
+    pagoExitoso = false;
+
+    realizarPago() {
+        this.pagoExitoso = true;
+    }
 }
