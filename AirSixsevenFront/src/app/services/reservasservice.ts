@@ -30,10 +30,10 @@ export class Reservasservice {
         );
     }
 
+
     getReservaPorId(id: string): Reservasmodel | undefined {
         return this.reservas.find(r => r.id === id);
     }
-
 
 
 }

@@ -17,7 +17,7 @@ import { Footercomponent } from "./components/footercomponent/footercomponent";
 import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
 import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
 import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
-import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
+import {Serviciociudadescomponent} from "./components/serviciociudadescomponent/serviciociudadescomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
 import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
 import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
@@ -54,6 +54,35 @@ import { Detalleeventocomponent } from "./components/detalleeventocomponent/deta
     FormsModule,
     CommonModule,
   ],
+
+@NgModule({
+    declarations: [
+        App,
+        Navbarcomponent,
+        Barrabusquedacomponente,
+        Iniciocomponent,
+        Destacadoscomponent,
+        Tarjetaalojamientocomponent,
+        Reservascomponent,
+        Footercomponent,
+        Confianzacomponent,
+        Cierrecomponent,
+        Escenciacomponent,
+        Serviciociudadescomponent,
+        Detallealojamientocomponent,
+        Alojamientocomponent,
+        Confirmacionreservacomponent,
+        Misreservascomponent,
+        Eventoscomponent
+    ],
+
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        FormsModule,
+        CommonModule
+    ],
 
   providers: [provideBrowserGlobalErrorListeners()],
 
