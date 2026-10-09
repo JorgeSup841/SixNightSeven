@@ -31,6 +31,9 @@ const routes: Routes = [
         path: "servicios",
         component:Serviciociudadescomponent
     },
+    {
+     path: 'pagar/:id', component: Pagarservicioscomponent
+    },
 
 
 
