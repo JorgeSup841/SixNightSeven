@@ -48,7 +48,11 @@
             </p>
 
             <div class="servicios">
-
+                @if (temperatura !== null) {
+                    <span class="servicio clima">
+        {{ temperatura }} °C
+    </span>
+                }
                 @for (servicio of alojamiento.servicios.slice(0, 3);
                     track servicio) {
 

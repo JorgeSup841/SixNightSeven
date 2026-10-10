@@ -208,6 +208,63 @@
       "imagenes": [
         "assets/images/rosario.jpg"
       ]
+    },
+    {
+      "id": 12,
+      "nombre": "Tour de Graffitis y Arte Urbano en la Comuna 13",
+      "descripcion": "Recorre las coloridas calles de la Comuna 13 en metrocable y a pie, conociendo su profunda transformación social a través del arte urbano y el hip hop.",
+      "ciudad": "Medellín",
+      "categoria": "Cultura y Arte",
+      "ubicacion": "Comuna 13, San Javier, Medellín",
+      "latitud": 6.2442,
+      "longitud": -75.5812,
+      "duracionHoras": 4,
+      "precioPersona": 45000,
+      "calificacion": 4.9,
+      "totalValoraciones": 120,
+      "activo": true,
+      "imagenPrincipal": "assets/images/comuna13.jpg",
+      "imagenes": [
+        "assets/images/comuna13.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "nombre": "Excursión ecológica al Valle de Cocora",
+      "descripcion": "Caminata guiada por los imponentes paisajes del Quindío, admirando las palmas de cera más altas del mundo y la biodiversidad de la región cafetera.",
+      "ciudad": "Salento",
+      "categoria": "Naturaleza",
+      "ubicacion": "Valle de Cocora, Salento, Quindío",
+      "latitud": 4.6375,
+      "longitud": -75.5714,
+      "duracionHoras": 5,
+      "precioPersona": 60000,
+      "calificacion": 4.8,
+      "totalValoraciones": 95,
+      "activo": true,
+      "imagenPrincipal": "assets/images/cocora.jpg",
+      "imagenes": [
+        "assets/images/cocora.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "nombre": "Expedición fluvial y avistamiento de delfines rosados",
+      "descripcion": "Navega por el río Amazonas descubriendo la riqueza de la selva, visitando comunidades indígenas y observando delfines rosados en su hábitat natural.",
+      "ciudad": "Leticia",
+      "categoria": "Aventura y Naturaleza",
+      "ubicacion": "Río Amazonas, Leticia, Amazonas",
+      "latitud": -4.2153,
+      "longitud": -69.9406,
+      "duracionHoras": 6,
+      "precioPersona": 120000,
+      "calificacion": 4.9,
+      "totalValoraciones": 78,
+      "activo": true,
+      "imagenPrincipal": "assets/images/delfinesr.jpg",
+      "imagenes": [
+        "assets/images/delfinesr.jpg"
+      ]
     }
   ],
   "horarios": [
@@ -243,6 +300,12 @@
     {"id": 30, "eventoId": 10, "fecha": "2026-10-17", "hora": "09:00", "cuposDisponibles": 6},
     {"id": 31, "eventoId": 11, "fecha": "2026-10-16", "hora": "10:00", "cuposDisponibles": 15},
     {"id": 32, "eventoId": 11, "fecha": "2026-10-16", "hora": "15:00", "cuposDisponibles": 12},
-    {"id": 33, "eventoId": 11, "fecha": "2026-10-17", "hora": "10:00", "cuposDisponibles": 9}
+    {"id": 33, "eventoId": 11, "fecha": "2026-10-17", "hora": "10:00", "cuposDisponibles": 9},
+    {"id": 56, "eventoId": 12, "fecha": "2026-10-18", "hora": "09:00", "cuposDisponibles": 15},
+    {"id": 57, "eventoId": 12, "fecha": "2026-10-20", "hora": "14:00", "cuposDisponibles": 10},
+    {"id": 58, "eventoId": 13, "fecha": "2026-10-19", "hora": "08:30", "cuposDisponibles": 12},
+    {"id": 59, "eventoId": 13, "fecha": "2026-10-22", "hora": "09:00", "cuposDisponibles": 8},
+    {"id": 60, "eventoId": 14, "fecha": "2026-10-21", "hora": "07:30", "cuposDisponibles": 10},
+    {"id": 61, "eventoId": 14, "fecha": "2026-10-25", "hora": "10:00", "cuposDisponibles": 14}
   ]
 }

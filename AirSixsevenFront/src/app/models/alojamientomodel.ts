@@ -4,6 +4,8 @@ export interface Alojamiento {
     descripcion: string;
     ciudad: string;
     ubicacion: string;
+    latitud: number;
+    longitud: number;
     tipo: string;
     capacidad: number;
     habitaciones: number;
