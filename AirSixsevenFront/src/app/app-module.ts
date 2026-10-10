@@ -3,8 +3,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 
-import {AppRoutingModule} from "./app-routing-module";
-import {App} from "./app";
+import { AppRoutingModule } from "./app-routing-module";
+import { App } from "./app";
 import { Navbarcomponent } from "./components/navbarcomponent/navbarcomponent";
 import { Barrabusquedacomponente } from "./components/barrabusquedacomponente/barrabusquedacomponente";
 import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
@@ -25,43 +25,42 @@ import { Serviciociudadescomponent } from "./components/serviciociudadescomponen
 import { Pagarservicioscomponent } from "./components/pagarservicioscomponent/pagarservicioscomponent";
 import { Iniciosesioncomponent } from "./components/iniciosesioncomponent/iniciosesioncomponent";
 import { Crearcuentacomponent } from "./components/crearcuentacomponent/crearcuentacomponent";
+import { Paginanoencontradacomponent } from "./components/paginanoencontradacomponent/paginanoencontradacomponent";
+import { Contactocomponent } from "./components/contactocomponent/contactocomponent";
+import { Comoreservarcomponent } from "./components/comoreservarcomponent/comoreservarcomponent";
+import { Preguntasfrecuentescomponent } from "./components/preguntasfrecuentescomponent/preguntasfrecuentescomponent";
 
 @NgModule({
-    declarations: [
-        App,
-        Navbarcomponent,
-        Pagarservicioscomponent,
-        Barrabusquedacomponente,
-        Iniciocomponent,
-        Destacadoscomponent,
-        Tarjetaalojamientocomponent,
-        Alojamientocomponent,
-        Detallealojamientocomponent,
-        Reservascomponent,
-        Confirmacionreservacomponent,
-        Misreservascomponent,
-        Footercomponent,
-        Confianzacomponent,
-        Cierrecomponent,
-        Eventoscomponent,
-        Detalleeventocomponent,
-        Escenciacomponent,
-        Serviciociudadescomponent,
-        Pagarservicioscomponent,
-        Iniciosesioncomponent,
-        Crearcuentacomponent
-    ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        AppRoutingModule,
-        FormsModule
-    ],
-    providers: [
-        provideBrowserGlobalErrorListeners()
-    ],
-    bootstrap: [
-        App
-    ]
-}
+  declarations: [
+    App,
+    Navbarcomponent,
+    Pagarservicioscomponent,
+    Barrabusquedacomponente,
+    Iniciocomponent,
+    Destacadoscomponent,
+    Tarjetaalojamientocomponent,
+    Alojamientocomponent,
+    Detallealojamientocomponent,
+    Reservascomponent,
+    Confirmacionreservacomponent,
+    Misreservascomponent,
+    Footercomponent,
+    Confianzacomponent,
+    Cierrecomponent,
+    Eventoscomponent,
+    Detalleeventocomponent,
+    Escenciacomponent,
+    Serviciociudadescomponent,
+    Pagarservicioscomponent,
+    Iniciosesioncomponent,
+    Crearcuentacomponent,
+    Paginanoencontradacomponent,
+    Contactocomponent,
+    Comoreservarcomponent,
+    Preguntasfrecuentescomponent,
+  ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
+  providers: [provideBrowserGlobalErrorListeners()],
+  bootstrap: [App],
+})
 export class AppModule {}
