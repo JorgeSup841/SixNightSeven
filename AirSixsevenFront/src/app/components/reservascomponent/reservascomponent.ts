@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import {Component, inject, OnInit} from "@angular/core";
 import { Router } from "@angular/router";
 
 import { Alojamiento } from "../../models/alojamientomodel";
@@ -54,12 +54,10 @@ export class Reservascomponent implements OnInit {
 
     errorReserva = "";
 
-    constructor(
-        private cotizacionService: Cotizacionservice,
-        private reservasService: Reservasservice,
-        private authService: Authservice,
-        private router: Router
-    ) {}
+    private cotizacionService = inject(Cotizacionservice);
+    private reservasService = inject(Reservasservice);
+    private authService = inject(Authservice);
+    private router = inject(Router);
 
     ngOnInit(): void {
 

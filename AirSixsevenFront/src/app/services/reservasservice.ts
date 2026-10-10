@@ -5,7 +5,7 @@ import { Reservasmodel } from "../models/reservasmodel";
 export class Reservasservice {
     private readonly clave = "reservas";
 
-    private leer(): Reservasmodel[] {
+     leer(): Reservasmodel[] {
         try {
             const contenido = localStorage.getItem(this.clave);
             if (!contenido) return [];
@@ -17,7 +17,7 @@ export class Reservasservice {
         }
     }
 
-    private guardar(reservas: Reservasmodel[]): void {
+     guardar(reservas: Reservasmodel[]): void {
         localStorage.setItem(this.clave, JSON.stringify(reservas));
     }
 
