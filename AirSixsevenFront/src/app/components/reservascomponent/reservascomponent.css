@@ -113,3 +113,69 @@
     outline: none;
     font: inherit
 }
+
+.boton-container {
+    width: 100%;
+    margin-top: 1.25rem;
+}
+
+.boton-container .btn-reservar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 54px;
+    padding: 15px 24px;
+    box-sizing: border-box;
+
+    background: linear-gradient(135deg, #ad4930, #89351f);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+
+    box-shadow: 0 5px 14px rgba(137, 53, 31, 0.2);
+    cursor: pointer;
+
+    transition: background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.boton-container .btn-reservar:not(:disabled):hover {
+    background: linear-gradient(135deg, #bd563a, #963c25);
+    box-shadow: 0 8px 18px rgba(137, 53, 31, 0.28);
+    transform: translateY(-2px);
+}
+
+.boton-container .btn-reservar:not(:disabled):active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(137, 53, 31, 0.2);
+}
+
+.boton-container .btn-reservar:disabled {
+    background: #ded6d0;
+    color: #81756d;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.boton-container .btn-reservar:focus-visible {
+    outline: 3px solid rgba(173, 73, 48, 0.35);
+    outline-offset: 3px;
+}
+
+.enlace-reservar {
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .boton-container .btn-reservar {
+        transition: none;
+    }
+}

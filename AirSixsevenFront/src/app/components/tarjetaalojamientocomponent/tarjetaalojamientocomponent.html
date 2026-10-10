@@ -49,10 +49,8 @@
 
             <div class="servicios">
 
-                @for (
-                    servicio of alojamiento.servicios.slice(0, 3);
-                    track servicio
-                        ) {
+                @for (servicio of alojamiento.servicios.slice(0, 3);
+                    track servicio) {
 
                     <span class="servicio">
                         {{ servicio }}

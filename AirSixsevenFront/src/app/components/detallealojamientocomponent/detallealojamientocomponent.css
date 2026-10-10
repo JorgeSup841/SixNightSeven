@@ -219,10 +219,6 @@
 }
 
 
-/* =========================
-   REGLAS
-   ========================= */
-
 .lista-reglas {
     display: flex;
 
@@ -387,7 +383,6 @@
 
 }
 
-/* Miniaturas */
 .miniaturas {
     display: flex;
     gap: 8px;
@@ -416,7 +411,6 @@
     opacity: 1;
 }
 
-/* Campos de la tarjeta de reserva */
 .campos-reserva {
     display: grid;
     gap: 10px;
@@ -465,7 +459,6 @@
     margin: 0 0 4px;
 }
 
-/* El botón ya no es <a>, así que se le quitan los estilos nativos */
 button.btn-reservar {
     width: 100%;
     border: none;
@@ -477,7 +470,6 @@ button.btn-reservar:disabled {
     cursor: not-allowed;
 }
 
-/* Reseñas */
 .resena {
     padding: 12px 0;
     border-bottom: 1px solid #e5dccf;

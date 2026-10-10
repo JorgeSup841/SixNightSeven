@@ -29,8 +29,14 @@
 }
 
 @keyframes aparecer {
-    from { transform: scale(0.5); opacity: 0; }
-    to   { transform: scale(1);   opacity: 1; }
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .confirmacion-card h1 {
@@ -46,7 +52,6 @@
     margin-bottom: 1.75rem;
 }
 
-/* Resumen */
 .resumen {
     display: flex;
     gap: 1.25rem;
@@ -89,7 +94,9 @@
     margin-bottom: 4px;
 }
 
-.fila span { color: #7a6a60; }
+.fila span {
+    color: #7a6a60;
+}
 
 .fila.total {
     border-top: 1px solid #e0d5c6;
@@ -98,7 +105,6 @@
     font-size: 0.95rem;
 }
 
-/* Botones */
 .acciones {
     display: flex;
     justify-content: center;
@@ -120,7 +126,9 @@
     color: white;
 }
 
-.btn-principal:hover { background: #8c3722; }
+.btn-principal:hover {
+    background: #8c3722;
+}
 
 .btn-secundario {
     border: 1px solid #cdbfae;

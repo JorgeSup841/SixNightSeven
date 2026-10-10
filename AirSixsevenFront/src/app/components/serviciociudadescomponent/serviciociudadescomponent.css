@@ -88,6 +88,7 @@
     color: #7a6e66;
     font-size: 13px;
 }
+
 .btn-pagar {
     margin-top: 12px;
     width: 100%;
@@ -104,6 +105,7 @@
 .btn-pagar:hover {
     background: #e0304f;
 }
+
 .card {
     display: flex;
     flex-direction: column;
