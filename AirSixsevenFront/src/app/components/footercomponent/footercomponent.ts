@@ -6,4 +6,7 @@ import { Component } from "@angular/core";
   styleUrl: "./footercomponent.css",
   templateUrl: "./footercomponent.html",
 })
-export class Footercomponent {}
+export class Footercomponent {
+
+    correo =  'Skibidi67deatention@gmail.com'
+}
