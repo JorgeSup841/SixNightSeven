@@ -75,9 +75,9 @@
       "tarifaLimpieza": 50000,
       "calificacion": 4.3,
       "activo": true,
-      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
+      "imagenPrincipal": "assets/images/crtgn.jpg",
       "imagenes": [
-        "assets/images/CabañaGuatape.jpeg"
+        "assets/images/crtgn.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -105,9 +105,9 @@
       "tarifaLimpieza": 55000,
       "calificacion": 4.6,
       "activo": true,
-      "imagenPrincipal": "assets/images/VillaDeLeyva.jpeg",
+      "imagenPrincipal": "assets/images/suitemedallo.jpg",
       "imagenes": [
-        "assets/images/VillaDeLeyva.jpeg"
+        "assets/images/suitemedallo.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -135,9 +135,9 @@
       "tarifaLimpieza": 60000,
       "calificacion": 4.9,
       "activo": true,
-      "imagenPrincipal": "assets/images/Medallo.jpeg",
+      "imagenPrincipal": "assets/images/cabañaguatape.jpg",
       "imagenes": [
-        "assets/images/Medallo.jpeg"
+        "assets/images/cabañaguatape.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -165,9 +165,9 @@
       "tarifaLimpieza": 65000,
       "calificacion": 4.4,
       "activo": true,
-      "imagenPrincipal": "assets/images/FotoHero1.jpg",
+      "imagenPrincipal": "assets/images/casaleyva.jpg",
       "imagenes": [
-        "assets/images/FotoHero1.jpg"
+        "assets/images/casaleyva.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -195,9 +195,9 @@
       "tarifaLimpieza": 70000,
       "calificacion": 4.7,
       "activo": true,
-      "imagenPrincipal": "assets/images/Chapinero.jpeg",
+      "imagenPrincipal": "assets/images/suitemarta.jpg",
       "imagenes": [
-        "assets/images/Chapinero.jpeg"
+        "assets/images/suitemarta.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -225,9 +225,9 @@
       "tarifaLimpieza": 75000,
       "calificacion": 4.2,
       "activo": true,
-      "imagenPrincipal": "assets/images/Cartagena.jpeg",
+      "imagenPrincipal": "assets/images/suitesalento.jpg",
       "imagenes": [
-        "assets/images/Cartagena.jpeg"
+        "assets/images/suitesalento.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -256,9 +256,9 @@
       "tarifaLimpieza": 80000,
       "calificacion": 4.5,
       "activo": true,
-      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
+      "imagenPrincipal": "assets/images/aptocali.jpg",
       "imagenes": [
-        "assets/images/CabañaGuatape.jpeg"
+        "assets/images/aptocali.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -286,9 +286,9 @@
       "tarifaLimpieza": 85000,
       "calificacion": 4.8,
       "activo": true,
-      "imagenPrincipal": "assets/images/VillaDeLeyva.jpeg",
+      "imagenPrincipal": "assets/images/cabañapaipa.jpg",
       "imagenes": [
-        "assets/images/VillaDeLeyva.jpeg"
+        "assets/images/cabañapaipa.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -316,9 +316,9 @@
       "tarifaLimpieza": 90000,
       "calificacion": 4.3,
       "activo": true,
-      "imagenPrincipal": "assets/images/Medallo.jpeg",
+      "imagenPrincipal": "assets/images/casasanandres.jpg",
       "imagenes": [
-        "assets/images/Medallo.jpeg"
+        "assets/images/casasanandres.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -346,9 +346,9 @@
       "tarifaLimpieza": 35000,
       "calificacion": 4.6,
       "activo": true,
-      "imagenPrincipal": "assets/images/FotoHero1.jpg",
+      "imagenPrincipal": "assets/images/casabarichara.jpg",
       "imagenes": [
-        "assets/images/FotoHero1.jpg"
+        "assets/images/casabarichara.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -376,9 +376,9 @@
       "tarifaLimpieza": 40000,
       "calificacion": 4.9,
       "activo": true,
-      "imagenPrincipal": "assets/images/Chapinero.jpeg",
+      "imagenPrincipal": "assets/images/suitesangil.jpg",
       "imagenes": [
-        "assets/images/Chapinero.jpeg"
+        "assets/images/suitesangil.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -406,9 +406,9 @@
       "tarifaLimpieza": 45000,
       "calificacion": 4.4,
       "activo": true,
-      "imagenPrincipal": "assets/images/Cartagena.jpeg",
+      "imagenPrincipal": "assets/images/aptomanizales.jpg",
       "imagenes": [
-        "assets/images/Cartagena.jpeg"
+        "assets/images/aptomanizales.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -436,9 +436,9 @@
       "tarifaLimpieza": 50000,
       "calificacion": 4.7,
       "activo": true,
-      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
+      "imagenPrincipal": "assets/images/fincapereira.jpg",
       "imagenes": [
-        "assets/images/CabañaGuatape.jpeg"
+        "assets/images/fincapereira.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -467,9 +467,9 @@
       "tarifaLimpieza": 55000,
       "calificacion": 4.2,
       "activo": true,
-      "imagenPrincipal": "assets/images/VillaDeLeyva.jpeg",
+      "imagenPrincipal": "assets/images/suitepoblado.jpg",
       "imagenes": [
-        "assets/images/VillaDeLeyva.jpeg"
+        "assets/images/suitepoblado.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -497,9 +497,9 @@
       "tarifaLimpieza": 60000,
       "calificacion": 4.5,
       "activo": true,
-      "imagenPrincipal": "assets/images/Medallo.jpeg",
+      "imagenPrincipal": "assets/images/suitecartagena.jpg",
       "imagenes": [
-        "assets/images/Medallo.jpeg"
+        "assets/images/suitecartagena.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -527,9 +527,9 @@
       "tarifaLimpieza": 65000,
       "calificacion": 4.8,
       "activo": true,
-      "imagenPrincipal": "assets/images/FotoHero1.jpg",
+      "imagenPrincipal": "assets/images/aptousaquen.jpg",
       "imagenes": [
-        "assets/images/FotoHero1.jpg"
+        "assets/images/aptousaquen.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -557,9 +557,9 @@
       "tarifaLimpieza": 70000,
       "calificacion": 4.3,
       "activo": true,
-      "imagenPrincipal": "assets/images/Chapinero.jpeg",
+      "imagenPrincipal": "assets/images/cabañagtp.jpg",
       "imagenes": [
-        "assets/images/Chapinero.jpeg"
+        "assets/images/cabañagtp.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -587,9 +587,9 @@
       "tarifaLimpieza": 75000,
       "calificacion": 4.6,
       "activo": true,
-      "imagenPrincipal": "assets/images/Cartagena.jpeg",
+      "imagenPrincipal": "assets/images/fincaarmenia.jpg",
       "imagenes": [
-        "assets/images/Cartagena.jpeg"
+        "assets/images/fincaarmenia.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -618,9 +618,9 @@
       "tarifaLimpieza": 80000,
       "calificacion": 4.9,
       "activo": true,
-      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
+      "imagenPrincipal": "assets/images/refugiominca.jpg",
       "imagenes": [
-        "assets/images/CabañaGuatape.jpeg"
+        "assets/images/refugiominca.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -648,9 +648,9 @@
       "tarifaLimpieza": 85000,
       "calificacion": 4.4,
       "activo": true,
-      "imagenPrincipal": "assets/images/VillaDeLeyva.jpeg",
+      "imagenPrincipal": "assets/images/suitebucaros.jpg",
       "imagenes": [
-        "assets/images/VillaDeLeyva.jpeg"
+        "assets/images/suitebucaros.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -678,9 +678,9 @@
       "tarifaLimpieza": 90000,
       "calificacion": 4.7,
       "activo": true,
-      "imagenPrincipal": "assets/images/Medallo.jpeg",
+      "imagenPrincipal": "assets/images/casasantafea.jpg",
       "imagenes": [
-        "assets/images/Medallo.jpeg"
+        "assets/images/casasantafea.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -708,9 +708,9 @@
       "tarifaLimpieza": 35000,
       "calificacion": 4.2,
       "activo": true,
-      "imagenPrincipal": "assets/images/FotoHero1.jpg",
+      "imagenPrincipal": "assets/images/refnuqui.jpg",
       "imagenes": [
-        "assets/images/FotoHero1.jpg"
+        "assets/images/refnuqui.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -738,9 +738,9 @@
       "tarifaLimpieza": 40000,
       "calificacion": 4.5,
       "activo": true,
-      "imagenPrincipal": "assets/images/Chapinero.jpeg",
+      "imagenPrincipal": "assets/images/suitebnosaires.jpg",
       "imagenes": [
-        "assets/images/Chapinero.jpeg"
+        "assets/images/suitebnosaires.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -768,9 +768,9 @@
       "tarifaLimpieza": 45000,
       "calificacion": 4.8,
       "activo": true,
-      "imagenPrincipal": "assets/images/Cartagena.jpeg",
+      "imagenPrincipal": "assets/images/suitecdmx.jpg",
       "imagenes": [
-        "assets/images/Cartagena.jpeg"
+        "assets/images/suitecdmx.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -798,9 +798,9 @@
       "tarifaLimpieza": 50000,
       "calificacion": 4.3,
       "activo": true,
-      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
+      "imagenPrincipal": "assets/images/aptomadrid.jpg",
       "imagenes": [
-        "assets/images/CabañaGuatape.jpeg"
+        "assets/images/aptomadrid.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -828,9 +828,9 @@
       "tarifaLimpieza": 55000,
       "calificacion": 4.6,
       "activo": true,
-      "imagenPrincipal": "assets/images/VillaDeLeyva.jpeg",
+      "imagenPrincipal": "assets/images/suitelisboa.jpg",
       "imagenes": [
-        "assets/images/VillaDeLeyva.jpeg"
+        "assets/images/suitelisboa.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -858,9 +858,9 @@
       "tarifaLimpieza": 60000,
       "calificacion": 4.9,
       "activo": true,
-      "imagenPrincipal": "assets/images/Medallo.jpeg",
+      "imagenPrincipal": "assets/images/casacusco.jpg",
       "imagenes": [
-        "assets/images/Medallo.jpeg"
+        "assets/images/casacusco.jpg"
       ],
       "servicios": [
         "Wi-Fi",
@@ -888,9 +888,9 @@
       "tarifaLimpieza": 65000,
       "calificacion": 4.4,
       "activo": true,
-      "imagenPrincipal": "assets/images/FotoHero1.jpg",
+      "imagenPrincipal": "assets/images/casacancun.jpg",
       "imagenes": [
-        "assets/images/FotoHero1.jpg"
+        "assets/images/casacancun.jpg"
       ],
       "servicios": [
         "Wi-Fi",
