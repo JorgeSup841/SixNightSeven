@@ -6,6 +6,8 @@
       "descripcion": "Alojamiento acogedor en Charalá, Santander, ideal para descansar y conocer la región.",
       "ciudad": "Charalá",
       "ubicacion": "Centro de Charalá, Santander",
+      "latitud": 6.2878,
+      "longitud": -73.1466,
       "tipo": "Casa",
       "capacidad": 2,
       "habitaciones": 1,
