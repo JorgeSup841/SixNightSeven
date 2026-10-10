@@ -68,3 +68,15 @@
     font-size: 0.72rem;
     color: #7a6a60;
 }
+.correo strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #2b1d16;
+}
+
+.correo span {
+    font-size: 21px;
+    color: #a8452f;
+}
