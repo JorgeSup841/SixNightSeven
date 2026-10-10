@@ -1,0 +1,26 @@
+<section class="auth-pagina">
+    <div class="auth-card">
+        <a routerLink="/" class="auth-marca"><i class="bi bi-house-heart-fill"></i> mistays</a>
+        <h1>Bienvenido de nuevo</h1>
+        <p class="auth-descripcion">Inicia sesión para administrar tus reservas.</p>
+
+        <form (ngSubmit)="iniciarSesion()">
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" name="correo" type="email" autocomplete="email" [(ngModel)]="correo" required>
+
+            <label for="contrasena">Contraseña</label>
+            <input id="contrasena" name="contrasena" type="password" autocomplete="current-password"
+                   [(ngModel)]="contrasena" required>
+
+            @if (error) {
+                <p class="auth-error" role="alert">{{ error }}</p>
+            }
+
+            <button type="submit" [disabled]="cargando">{{ cargando ? 'Ingresando...' : 'Iniciar sesión' }}</button>
+        </form>
+
+        <p class="auth-pie">¿No tienes una cuenta? <a [routerLink]="['/crear-cuenta']"
+                                                      [queryParams]="returnUrl !== '/' ? { returnUrl: returnUrl } : {}">Crear
+            cuenta</a></p>
+    </div>
+</section>

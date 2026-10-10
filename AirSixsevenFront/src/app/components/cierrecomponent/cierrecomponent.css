@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;                /* en móvil el botón baja debajo del texto */
+    flex-wrap: wrap;
     gap: 1.5rem;
 }
 

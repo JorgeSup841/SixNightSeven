@@ -1,138 +1,311 @@
-import {Component, OnInit, inject, ChangeDetectorRef} from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Alojamiento } from '../../models/alojamientomodel';
-import { Cotizacionmodel, Reservasmodel } from '../../models/reservasmodel';
-import {Alojamientosservice} from "../../services/alojamientosservice";
-import {Cotizacionservice} from "../../services/cotizacionservice";
-import {Reservasservice} from "../../services/reservasservice";
+import {Component, inject, OnInit} from "@angular/core";
+import { Router } from "@angular/router";
+
+import { Alojamiento } from "../../models/alojamientomodel";
+import {
+    Cotizacionmodel,
+    Reservasmodel
+} from "../../models/reservasmodel";
+
+import { Cotizacionservice } from "../../services/cotizacionservice";
+import { Reservasservice } from "../../services/reservasservice";
+import { Authservice } from "../../services/authservice";
+
+interface BorradorReserva {
+    alojamiento: Alojamiento;
+    llegada?: string;
+    salida?: string;
+    huespedes?: number;
+}
 
 @Component({
     selector: "app-reservascomponent",
     standalone: false,
     styleUrl: "./reservascomponent.css",
-    templateUrl: "./reservascomponent.html",
+    templateUrl: "./reservascomponent.html"
 })
 export class Reservascomponent implements OnInit {
-    private ruta = inject(ActivatedRoute);
-    private router = inject(Router);
-    private alojamientosService = inject(Alojamientosservice);
-    private cotizacionService = inject(Cotizacionservice);
-    private reservasService = inject(Reservasservice);
-    cdr = inject(ChangeDetectorRef);
 
+    alojamiento: Alojamiento | null = null;
 
-    alojamiento?: Alojamiento;
     cargando = true;
-    hoy = this.cotizacionService.hoy();
 
-    nombre = "";
-    correo = "";
-    telefono = "";
-    cedula = "";
-
+    fechaMinima = "";
     fechaLlegada = "";
     fechaSalida = "";
     numeroHuespedes = 1;
 
-    cotizacion: Cotizacionmodel = {
-        valida: false, errores: [], noches: 0, subtotal: 0,
-        tarifaLimpieza: 0, tarifaServicio: 0, total: 0
-    };
+    nombreHuesped = "";
+    correo = "";
+    telefonoHuesped = "";
+    documentoHuesped = "";
 
     esNombreValido = false;
-    nombreError = "";
-
     esCorreoValido = false;
-    correoError = "";
-
     esTelefonoValido = false;
-    telefonoError = "";
-
     esCedulaValida = false;
-    cedulaError = "";
 
-    ngOnInit() {
-        const id = Number(this.ruta.snapshot.paramMap.get('id'));
-        const q = this.ruta.snapshot.queryParamMap;
+    nombreValidado = "";
+    correoValidado = "";
+    telefonoCorrecto = "";
+    cedulaCorrecta = "";
 
-        this.fechaLlegada = q.get('llegada') ?? '';
-        this.fechaSalida = q.get('salida') ?? '';
-        this.numeroHuespedes = Number(q.get('huespedes')) || 1;
+    cotizacion: Cotizacionmodel | null = null;
 
-        this.alojamientosService.getAlojamientoPorId(id).subscribe(a => {
-            this.alojamiento = a;
+    errorReserva = "";
+
+    private cotizacionService = inject(Cotizacionservice);
+    private reservasService = inject(Reservasservice);
+    private authService = inject(Authservice);
+    private router = inject(Router);
+
+    ngOnInit(): void {
+
+        this.fechaMinima = this.cotizacionService.hoy();
+
+        const estado = history.state as Partial<BorradorReserva>;
+        let borrador: BorradorReserva | null = estado?.alojamiento
+            ? estado as BorradorReserva
+            : null;
+
+        const usuario = this.authService.getUsuarioActual();
+        if (!usuario) {
+            if (borrador?.alojamiento) {
+                try {
+                    localStorage.setItem("reservaPendiente", JSON.stringify(borrador));
+                } catch (error) {
+                    console.error("No fue posible guardar la selección de reserva:", error);
+                }
+            }
+
             this.cargando = false;
-            this.calcularReserva();
-            this.cdr.detectChanges();
-        });
-        this.cdr.detectChanges();
+            this.router.navigate(["/iniciar-sesion"], {
+                queryParams: { returnUrl: "/reservas" }
+            });
+            return;
+        }
+
+        if (!borrador) {
+            try {
+                const guardado = localStorage.getItem("reservaPendiente");
+                if (guardado) borrador = JSON.parse(guardado) as BorradorReserva;
+            } catch (error) {
+                console.error("No fue posible recuperar la selección de reserva:", error);
+            }
+        }
+
+        if (borrador?.alojamiento) {
+            this.alojamiento = borrador.alojamiento;
+            this.fechaLlegada = borrador.llegada || "";
+            this.fechaSalida = borrador.salida || "";
+            this.numeroHuespedes = borrador.huespedes ? Number(borrador.huespedes) : 1;
+            localStorage.removeItem("reservaPendiente");
+
+            this.verificarNombre(usuario.nombre);
+            this.verificarCorreo(usuario.correo);
+            this.actualizarCotizacion();
+        } else {
+            this.router.navigate(["/alojamientos"]);
+        }
+
+        this.cargando = false;
+
     }
 
-    calcularReserva() {
-        if (!this.alojamiento) return;
+    verificarNombre(nombre: string): void {
+
+        this.nombreHuesped = nombre;
+
+        const valor = nombre.trim();
+
+        this.esNombreValido =
+            /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s'-]{3,}$/.test(valor);
+
+        this.nombreValidado = this.esNombreValido
+            ? ""
+            : "Introduce un nombre válido.";
+
+    }
+
+    verificarCorreo(correo: string): void {
+
+        this.correo = correo;
+
+        this.esCorreoValido =
+            /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(correo.trim());
+
+        this.correoValidado = this.esCorreoValido
+            ? ""
+            : "Introduce un correo válido.";
+
+    }
+
+    verificarTelefono(telefono: string): void {
+
+        this.telefonoHuesped = telefono;
+
+        const digitos = telefono.replace(/\D/g, "");
+
+        this.esTelefonoValido =
+            /^[+\d\s()-]+$/.test(telefono.trim()) &&
+            digitos.length >= 7 &&
+            digitos.length <= 15;
+
+        this.telefonoCorrecto = this.esTelefonoValido
+            ? ""
+            : "Introduce un teléfono válido.";
+
+    }
+
+    verificarCedula(cedula: string): void {
+
+        this.documentoHuesped = cedula;
+
+        this.esCedulaValida =
+            /^\d{5,15}$/.test(cedula.trim());
+
+        this.cedulaCorrecta = this.esCedulaValida
+            ? ""
+            : "El documento debe contener entre 5 y 15 dígitos.";
+
+    }
+
+    actualizarCotizacion(): void {
+
+        if (!this.alojamiento) {
+            this.cotizacion = null;
+            return;
+        }
+
         this.cotizacion = this.cotizacionService.cotizar(
-            this.alojamiento, this.fechaLlegada, this.fechaSalida, this.numeroHuespedes
+            this.alojamiento,
+            this.fechaLlegada,
+            this.fechaSalida,
+            Number(this.numeroHuespedes)
         );
+
     }
 
-    verificarNombre(valor: string) {
-        this.nombre = valor.trim();
-        this.esNombreValido = /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]{3,}$/.test(this.nombre);
-        this.nombreError = this.esNombreValido || valor === ""
-            ? "" : "Solo letras, mínimo 3 caracteres.";
-    }
+    get puedeConfirmar(): boolean {
 
-    verificarCorreo(valor: string) {
-        this.correo = valor.trim();
-        this.esCorreoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.correo);
-        this.correoError = this.esCorreoValido || valor === ""
-            ? "" : "Escribe un correo válido.";
-    }
-
-    verificarTelefono(valor: string) {
-        this.telefono = valor.trim();
-        this.esTelefonoValido = /^\+?[0-9 ]{7,15}$/.test(this.telefono);
-        this.telefonoError = this.esTelefonoValido || valor === ""
-            ? "" : "Solo números, con + opcional al inicio.";
-    }
-
-    verificarCedula(valor: string) {
-        this.cedula = valor.trim();
-        this.esCedulaValida = /^[0-9]{6,12}$/.test(this.cedula);
-        this.cedulaError = this.esCedulaValida || valor === ""
-            ? "" : "Solo números, entre 6 y 12 dígitos.";
-    }
-
-    get formularioValido(): boolean {
-        return this.esNombreValido && this.esCorreoValido &&
-            this.esTelefonoValido && this.esCedulaValida &&
+        return this.authService.estaAutenticado() &&
+            !!this.alojamiento &&
+            this.esNombreValido &&
+            this.esCorreoValido &&
+            this.esTelefonoValido &&
+            this.esCedulaValida &&
+            !!this.cotizacion &&
             this.cotizacion.valida;
+
     }
 
-    confirmar() {
-        if (!this.alojamiento || !this.formularioValido) return;
+    confirmarReserva(): void {
+
+        this.errorReserva = "";
+
+        const usuario = this.authService.getUsuarioActual();
+        if (!usuario) {
+            this.router.navigate(["/iniciar-sesion"], {
+                queryParams: { returnUrl: "/reservas" }
+            });
+            return;
+        }
+
+        this.actualizarCotizacion();
+
+        const cotizacion = this.cotizacion;
+        if (!this.alojamiento || !cotizacion) {
+            this.errorReserva = "Selecciona primero un alojamiento.";
+            return;
+        }
+
+        if (!this.puedeConfirmar) {
+            this.errorReserva = cotizacion.errores.length > 0
+                ? cotizacion.errores.join(" ")
+                : "Revisa tus datos, las fechas y el número de huéspedes.";
+            return;
+        }
 
         const reserva: Reservasmodel = {
-            id: 'RES-' + Date.now(),
+
+            id: "RES-" +
+                Date.now().toString(36).toUpperCase() +
+                "-" +
+                Math.random().toString(36).slice(2, 7).toUpperCase(),
+
+            usuarioId: usuario.id,
+
             alojamientoId: this.alojamiento.id,
+
             alojamientoNombre: this.alojamiento.nombre,
+
             ciudad: this.alojamiento.ciudad,
+
             imagen: this.alojamiento.imagenPrincipal,
+
             fechaLlegada: this.fechaLlegada,
+
             fechaSalida: this.fechaSalida,
-            huespedes: this.numeroHuespedes,
-            noches: this.cotizacion.noches,
-            total: this.cotizacion.total,
-            nombreHuesped: this.nombre,
-            correo: this.correo,
-            estado: 'CONFIRMADA'
+
+            huespedes: Number(this.numeroHuespedes),
+
+            noches: cotizacion.noches,
+
+            total: cotizacion.total,
+
+            nombreHuesped: this.nombreHuesped.trim(),
+
+            correo: this.correo.trim(),
+
+            telefonoHuesped: this.telefonoHuesped.trim(),
+
+            documentoHuesped: this.documentoHuesped.trim(),
+
+            estado: "CONFIRMADA"
+
         };
 
-        this.reservasService.agregar(reserva);
+        try {
 
-        this.router.navigate(['/reserva-confirmada', reserva.id]);
+            this.reservasService.agregar(reserva);
 
-        this.router.navigate(['/mis-reservas']);
+            this.router.navigate([
+                "/reserva-confirmada",
+                reserva.id
+            ]).then(correcto => {
+
+                if (!correcto) {
+
+                    this.errorReserva =
+                        "La reserva se guardó, pero no se pudo abrir la confirmación.";
+
+                }
+
+            }).catch(error => {
+
+                console.error(
+                    "Error abriendo la confirmación:",
+                    error
+                );
+
+                this.errorReserva =
+                    "La reserva se guardó, pero no se pudo abrir la confirmación.";
+
+            });
+
+        } catch (error) {
+
+            console.error(
+                "Error guardando la reserva:",
+                error
+            );
+
+            this.errorReserva = error instanceof Error
+                ? error.message
+                : "No se pudo guardar la reserva en este navegador.";
+
+        }
 
     }
+
 }

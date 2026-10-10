@@ -2,7 +2,6 @@
     padding: 5rem 0;
 }
 
-/* ---------- Imagen en arco ---------- */
 .arco-wrapper {
     position: relative; /* referencia para la tarjeta flotante */
 }
@@ -96,7 +95,6 @@
     margin: 2px 0 0;
 }
 
-/* Botón con borde */
 .btn-contorno {
     display: inline-flex;
     align-items: center;

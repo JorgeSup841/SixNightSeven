@@ -20,10 +20,6 @@
                 <h4>Explora</h4>
                 <ul>
                     <li><a routerLink="/alojamientos">Todos los alojamientos</a></li>
-                    <li><a routerLink="/alojamientos" [queryParams]="{ ciudad: 'Cartagena' }">Cartagena</a></li>
-                    <li><a routerLink="/alojamientos" [queryParams]="{ ciudad: 'Guatapé' }">Guatapé</a></li>
-                    <li><a routerLink="/alojamientos" [queryParams]="{ ciudad: 'Villa de Leyva' }">Villa de Leyva</a>
-                    </li>
                 </ul>
             </div>
 
@@ -32,16 +28,16 @@
                 <ul>
                     <li><a href="#">Nuestra esencia</a></li>
                     <li><a routerLink="/mis-reservas">Mis reservas</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a routerLink="/contacto">Contacto</a></li>
                 </ul>
             </div>
 
             <div class="col-6 col-lg-2">
                 <h4>Te ayudamos</h4>
                 <ul>
-                    <li><a href="#">Cómo reservar</a></li>
+                    <li><a routerLink="/comoreservar">Cómo reservar</a></li>
                     <li><a href="#">Cancelaciones</a></li>
-                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a routerLink="/faq">Preguntas frecuentes</a></li>
                     <li><a href="#">Centro de ayuda</a></li>
                 </ul>
             </div>

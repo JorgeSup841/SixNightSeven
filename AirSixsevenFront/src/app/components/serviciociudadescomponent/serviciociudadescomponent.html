@@ -13,7 +13,7 @@
                 <p class="gris">{{ s.unidad }}</p>
                 <p class="gris">★ {{ s.rating }}</p>
 
-                <button class="btn-pagar" type="button">Pagar</button>
+                <button class="btn-pagar" type="button" [routerLink]="['/servicios', s.id]">Pagar</button>
             </article>
         </div>
     </div>

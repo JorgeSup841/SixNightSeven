@@ -1,0 +1,64 @@
+{
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Cómo hago una reserva?",
+      "respuesta": "Elige un alojamiento, selecciona tus fechas y el número de huéspedes en su página de detalle y revisa la cotización. Si todo está bien, pulsa \"Reservar ahora\", completa tu nombre y correo, y confirma."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Dónde veo mis reservas?",
+      "respuesta": "En la sección \"Mis reservas\". Allí aparecen todas las que hiciste, con el alojamiento, la ciudad, las fechas, los huéspedes, el valor total y su estado."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué significa el estado CONFIRMADA?",
+      "respuesta": "Significa que tu reserva quedó registrada correctamente. Todas las reservas nuevas se crean con este estado."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Puedo cancelar o modificar una reserva?",
+      "respuesta": "En esta versión todavía no es posible hacerlo desde la plataforma. Si necesitas un cambio, escríbenos desde la página de contacto y lo revisamos contigo."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cómo se calcula el precio total?",
+      "respuesta": "Multiplicamos las noches por el precio de la noche y a ese subtotal le sumamos la tarifa de limpieza del alojamiento y una tarifa de servicio del 10 % del subtotal."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué es la tarifa de limpieza?",
+      "respuesta": "Es un valor fijo que define cada alojamiento y se cobra una sola vez por estancia, sin importar cuántas noches te quedes."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Qué es la tarifa de servicio?",
+      "respuesta": "Es el 10 % del subtotal (noches por precio de la noche). Se muestra siempre en la cotización, antes de que confirmes."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Cuántas personas pueden hospedarse?",
+      "respuesta": "Cada alojamiento tiene una capacidad máxima visible en su ficha. Si indicas más huéspedes de los permitidos, la cotización te avisará y no podrás continuar."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Cómo filtro los alojamientos?",
+      "respuesta": "En el listado puedes filtrar por ciudad, número de huéspedes, tipo de alojamiento y precio máximo. Los resultados cambian al instante y puedes limpiar todos los filtros con un clic."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Por qué un alojamiento dejó de aparecer?",
+      "respuesta": "Cuando reservas un alojamiento deja de mostrarse como disponible. También ocultamos los que están temporalmente fuera de servicio."
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Puedo elegir fechas pasadas?",
+      "respuesta": "No. La llegada no puede ser anterior a hoy y la salida debe ser posterior a la llegada. Si las fechas no son válidas, verás un aviso y el botón de reservar permanecerá bloqueado."
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Dónde se guardan mis datos?",
+      "respuesta": "Tus reservas se guardan únicamente en tu navegador. Si borras los datos del sitio o cambias de dispositivo, no las verás en esta versión de la plataforma."
+    }
+  ]
+}

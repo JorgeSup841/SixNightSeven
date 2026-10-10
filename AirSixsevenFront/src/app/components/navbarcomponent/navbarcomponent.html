@@ -1,68 +1,86 @@
 <header class="airbnb-header border-bottom">
     <div class="container">
         <nav class="navbar navbar-expand-lg py-3">
-
-            <a class="navbar-brand d-flex align-items-center fw-bold" href="/" style="color: #ff385c;">
+            <a class="navbar-brand d-flex align-items-center fw-bold" [routerLink]="['/']" style="color: #ff385c;">
                 <i class="bi bi-house-heart-fill fs-3 me-2"></i>
-                <span class="d-none d-md-inline fs-4">mistays</span>
+                <span class="d-none d-md-inline fs-4">Skibirnbn</span>
             </a>
 
-            <button class="navbar-toggler border-0" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false"
+                    aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <button
+                    class="navbar-toggler border-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="menuPrincipal">
-
                 <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-airbnb" [routerLink]="['/']" routerLinkActive="active"
+                           [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-airbnb" [routerLink]="['/alojamientos']" routerLinkActive="active">Estadías</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-airbnb" routerLink="/servicios" routerLinkActive="active">Servicios Turisticos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-airbnb" [routerLink]="['/reservas']" routerLinkActive="active">Reservas</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link nav-link-airbnb" [routerLink]="['/eventos']" routerLinkActive="active">Eventos</a>
                     </li>
-
-
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-airbnb" [routerLink]="['/servicios']" routerLinkActive="active">Servicios</a>
+                    </li>
                 </ul>
 
-                <div class="d-flex align-items-center gap-2">
-
-                    <a [routerLink]="['/mis-reservas']"
-                       class="btn btn-link text-dark text-decoration-none fw-medium d-none d-lg-inline">
-                        Mis Reservas
-                    </a>
-
-                    <div class="dropdown">
-                        <button class="btn user-menu dropdown-toggle-none d-flex align-items-center gap-2"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-list fs-5"></i>
-                            <i class="bi bi-person-circle fs-4 text-secondary"></i>
-                        </button>
-
-                        <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-4 mt-2 p-2">
-                            <li>
-                                <a class="dropdown-item rounded-3 fw-semibold" href="#">Registrarse</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item rounded-3" href="#">Iniciar sesión</a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                        </ul>
-                    </div>
-
+                <div class="d-flex align-items-center flex-wrap gap-2">
+                    @if (usuarioActual; as usuario) {
+                        <a [routerLink]="['/mis-reservas']" routerLinkActive="active"
+                           class="btn btn-link text-dark text-decoration-none fw-medium">Mis reservas</a>
+                        <div class="dropdown">
+                            <button class="btn user-menu dropdown-toggle-none d-flex align-items-center gap-2"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                    aria-label="Abrir menú de usuario">
+                                <i class="bi bi-list fs-5"></i>
+                                <i class="bi bi-person-circle fs-4 text-secondary"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-4 mt-2 p-2">
+                                <li class="px-3 py-2">
+                                    <strong>{{ usuario.nombre }}</strong>
+                                    <small class="d-block text-secondary">{{ usuario.correo }}</small>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item rounded-3" [routerLink]="['/mis-reservas']">Mis reservas</a>
+                                </li>
+                                <li><a class="dropdown-item rounded-3" [routerLink]="['/alojamientos']">Explorar
+                                    alojamientos</a></li>
+                                <li><a class="dropdown-item rounded-3" [routerLink]="['/eventos']">Explorar eventos</a>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item rounded-3 text-danger" type="button"
+                                            (click)="cerrarSesion()">Cerrar sesión
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    } @else {
+                        <a [routerLink]="['/iniciar-sesion']"
+                           class="btn btn-link text-dark text-decoration-none fw-medium">Iniciar sesión</a>
+                        <a [routerLink]="['/crear-cuenta']" class="btn btn-sm px-3 rounded-pill text-white"
+                           style="background:#ff385c">Crear cuenta</a>
+                    }
                 </div>
-
             </div>
-
         </nav>
     </div>
 </header>
