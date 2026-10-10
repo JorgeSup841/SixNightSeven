@@ -89,10 +89,8 @@
                                 Todos los destinos
                             </option>
 
-                            @for (
-                                ciudad of ciudades;
-                                track ciudad
-                                    ) {
+                            @for (ciudad of ciudades;
+                                track ciudad) {
 
                                 <option [value]="ciudad">
                                     {{ ciudad }}
@@ -113,10 +111,8 @@
 
                         <div class="chips-filtro">
 
-                            @for (
-                                tipo of tipos;
-                                track tipo
-                                    ) {
+                            @for (tipo of tipos;
+                                track tipo) {
 
                                 <button
                                         type="button"
@@ -235,10 +231,8 @@
 
                         <div class="lista-servicios-filtro">
 
-                            @for (
-                                servicio of servicios;
-                                track servicio
-                                    ) {
+                            @for (servicio of servicios;
+                                track servicio) {
 
                                 <label
                                         class="servicio-filtro">
@@ -326,9 +320,7 @@
 
                         <div>
 
-                            @if (
-                                alojamientoFiltrado.length === 1
-                                    ) {
+                            @if (alojamientoFiltrado.length === 1) {
 
                                 <p>
                                     1 alojamiento encontrado
@@ -389,10 +381,8 @@
 
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-4">
 
-                            @for (
-                                item of alojamientoFiltrado;
-                                track item.id
-                                    ) {
+                            @for (item of alojamientoFiltrado;
+                                track item.id) {
 
                                 <div class="col">
 
