@@ -1,4 +1,4 @@
-
+<p *ngIf="cargando">Cargando...</p>
 
 <section class="pagar" *ngIf="servicio">
 
@@ -6,7 +6,6 @@
 
     <div class="contenido">
 
-        <!-- Columna izquierda: servicio, fecha y hora -->
         <div class="columna-izq">
 
             <div class="resumen">
@@ -21,7 +20,7 @@
             </div>
 
             <label for="fecha">Elige la fecha</label>
-            <input id="fecha" type="date" [min]="hoy" [(ngModel)]="fecha">
+            <input id="fecha" type="date" [min]="hoy" [(ngModel)]="fecha" (ngModelChange)="pagado = false">
 
             <label>Elige la hora</label>
             <div class="horas">
@@ -36,29 +35,36 @@
 
         </div>
 
-        <!-- Columna derecha: pago -->
         <div class="columna-der">
 
             <h3 class="subtitulo">Datos de pago</h3>
 
             <label for="nombre">Nombre del titular</label>
             <input id="nombre" type="text" placeholder="Como aparece en la tarjeta"
+                   autocomplete="off"
+                   [(ngModel)]="nombre"
                    (keypress)="permitir($event, 'letra')">
 
             <label for="tarjeta">Número de tarjeta</label>
             <input id="tarjeta" type="text" placeholder="1234 5678 9012 3456" maxlength="16"
+                   autocomplete="off"
+                   [(ngModel)]="tarjeta"
                    (keypress)="permitir($event, 'numero')">
 
             <div class="dos-columnas">
                 <div class="columna">
                     <label for="vence">Vencimiento</label>
                     <input id="vence" type="text" placeholder="MM/AA" maxlength="5"
+                           autocomplete="off"
+                           [(ngModel)]="vencimiento"
                            (keypress)="permitir($event, 'fecha')">
                 </div>
 
                 <div class="columna">
                     <label for="cvv">CVV</label>
                     <input id="cvv" type="password" placeholder="123" maxlength="4"
+                           autocomplete="new-password"
+                           [(ngModel)]="cvv"
                            (keypress)="permitir($event, 'numero')">
                 </div>
             </div>
@@ -66,9 +72,13 @@
             <p class="total">Total a pagar: <strong>{{ servicio.precio }} COP</strong></p>
 
             <button class="btn-pagar" type="button"
-                    [disabled]="!fecha || !horarioSeleccionado"
+                    [class.exitoso]="pagado"
+                    [disabled]="!fecha || !horarioSeleccionado || !nombre || !tarjeta || !vencimiento || !cvv"
                     (click)="confirmar()">
-                Pagar {{ servicio.precio }}
+
+                <i class="bi bi-check-circle-fill" *ngIf="pagado"></i>
+                {{ pagado ? '¡Pago exitoso!' : 'Pagar ' + servicio.precio }}
+
             </button>
 
         </div>
