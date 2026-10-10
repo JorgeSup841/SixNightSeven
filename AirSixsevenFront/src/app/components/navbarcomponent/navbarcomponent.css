@@ -1,45 +1,45 @@
 .nav-link-airbnb {
-  color: #6a6a6a ;
-  font-weight: 500;
-  padding: 0.5rem 1rem !important;
-  position: relative;
-  transition: color 0.2s;
+    color: #6a6a6a;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+    transition: color 0.2s;
 }
 
 .nav-link-airbnb:hover,
 .nav-link-airbnb.active {
-  color: #222 ;
+    color: #222;
 }
 
 .nav-link-airbnb::after {
-  content: "";
-  position: absolute;
-  left: 1rem;
-  right: 1rem;
-  bottom: 0;
-  height: 2px;
-  background: #222;
-  transform: scaleX(0);
-  transition: transform 0.2s;
+    content: "";
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0;
+    height: 2px;
+    background: #222;
+    transform: scaleX(0);
+    transition: transform 0.2s;
 }
 
 .nav-link-airbnb:hover::after,
 .nav-link-airbnb.active::after {
-  transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .user-menu {
-  border: 1px solid #ddd;
-  border-radius: 40px;
-  padding: 6px 10px 6px 14px;
-  background: white;
-  transition: box-shadow 0.2s;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    padding: 6px 10px 6px 14px;
+    background: white;
+    transition: box-shadow 0.2s;
 }
 
 .user-menu:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-toggle-none::after {
-  display: none;
+    display: none;
 }
