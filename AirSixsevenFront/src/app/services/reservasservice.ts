@@ -24,8 +24,11 @@ export class Reservasservice {
         }
     }
 
-     guardar(reservas: Reservasmodel[]): void {
-        localStorage.setItem(this.clave, JSON.stringify(reservas));
+    private guardar(reservas: Reservasmodel[]): void {
+        localStorage.setItem(
+            this.clave,
+            JSON.stringify(reservas)
+        );
     }
 
     getReservas(): Reservasmodel[] {

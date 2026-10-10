@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { Alojamiento } from "../../models/alojamientomodel";

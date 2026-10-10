@@ -111,8 +111,7 @@
     border: 1px solid #ded3c9;
     border-radius: 9px;
     outline: none;
-    font: inherit;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    font: inherit
 }
 
 .boton-container {
