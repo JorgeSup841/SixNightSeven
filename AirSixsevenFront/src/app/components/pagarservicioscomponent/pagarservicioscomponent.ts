@@ -41,6 +41,18 @@ export class Pagarservicioscomponent implements OnInit {
 
     seleccionarHorario(horario: Horario) {
         this.horarioSeleccionado = horario;
+
+    }
+    private patrones = {
+        numero: /[0-9]/,
+        letra: /[a-zA-ZáéíóúÁÉÍÓÚñÑ ]/,
+        fecha: /[0-9/]/
+    };
+
+    permitir(event: KeyboardEvent, tipo: 'numero' | 'letra' | 'fecha') {
+        if (!this.patrones[tipo].test(event.key)) {
+            event.preventDefault();
+        }
     }
 
     confirmar() {
@@ -49,5 +61,7 @@ export class Pagarservicioscomponent implements OnInit {
             return;
         }
 
+
     }
+
 }
