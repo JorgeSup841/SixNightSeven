@@ -1,5 +1,6 @@
 export interface Reservasmodel {
     id: string;
+    usuarioId?: string;
     alojamientoId: number;
     alojamientoNombre: string;
     ciudad: string;
@@ -11,7 +12,9 @@ export interface Reservasmodel {
     total: number;
     nombreHuesped: string;
     correo: string;
-    estado: 'CONFIRMADA';
+    telefonoHuesped?: string;
+    documentoHuesped?: string;
+    estado: "CONFIRMADA";
 }
 
 export interface Cotizacionmodel {

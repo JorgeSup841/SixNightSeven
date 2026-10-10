@@ -2,7 +2,6 @@ import { NgModule, provideBrowserGlobalErrorListeners } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
-import { CommonModule } from "@angular/common";
 
 import { AppRoutingModule } from "./app-routing-module";
 import { App } from "./app";
@@ -12,19 +11,21 @@ import { Barrabusquedacomponente } from "./components/barrabusquedacomponente/ba
 import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
 import { Destacadoscomponent } from "./components/destacadoscomponent/destacadoscomponent";
 import { Tarjetaalojamientocomponent } from "./components/tarjetaalojamientocomponent/tarjetaalojamientocomponent";
+import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
+import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
 import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
+import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
 import { Footercomponent } from "./components/footercomponent/footercomponent";
 import { Confianzacomponent } from "./components/confianzacomponent/confianzacomponent";
 import { Cierrecomponent } from "./components/cierrecomponent/cierrecomponent";
+import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
+import { Detalleeventocomponent } from "./components/detalleeventocomponent/detalleeventocomponent";
 import { Escenciacomponent } from "./components/escenciacomponent/escenciacomponent";
 import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
-import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
-import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
-import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
-import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
-import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
 import { Pagarservicioscomponent } from "./components/pagarservicioscomponent/pagarservicioscomponent";
-import { Detalleeventocomponent } from "./components/detalleeventocomponent/detalleeventocomponent";
+import { Iniciosesioncomponent } from "./components/iniciosesioncomponent/iniciosesioncomponent";
+import { Crearcuentacomponent } from "./components/crearcuentacomponent/crearcuentacomponent";
 
 @NgModule({
     declarations: [
@@ -34,33 +35,31 @@ import { Detalleeventocomponent } from "./components/detalleeventocomponent/deta
         Iniciocomponent,
         Destacadoscomponent,
         Tarjetaalojamientocomponent,
+        Alojamientocomponent,
+        Detallealojamientocomponent,
         Reservascomponent,
+        Confirmacionreservacomponent,
+        Misreservascomponent,
         Footercomponent,
         Confianzacomponent,
         Cierrecomponent,
+        Eventoscomponent,
+        Detalleeventocomponent,
         Escenciacomponent,
         Serviciociudadescomponent,
-        Detallealojamientocomponent,
-        Alojamientocomponent,
-        Confirmacionreservacomponent,
-        Misreservascomponent,
-        Eventoscomponent,
         Pagarservicioscomponent,
-        Detalleeventocomponent
+        Iniciosesioncomponent,
+        Crearcuentacomponent
     ],
-
     imports: [
         BrowserModule,
         HttpClientModule,
         AppRoutingModule,
-        FormsModule,
-        CommonModule
+        FormsModule
     ],
-
     providers: [
         provideBrowserGlobalErrorListeners()
     ],
-
     bootstrap: [
         App
     ]

@@ -1,59 +1,52 @@
-import { NgModule } from '@angular/core';
-
+import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
 import { Iniciocomponent } from "./components/iniciocomponent/iniciocomponent";
-import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { Alojamientocomponent } from "./components/alojamientocomponent/alojamientocomponent";
 import { Detallealojamientocomponent } from "./components/detallealojamientocomponent/detallealojamientocomponent";
-import {Serviciociudadescomponent} from "./components/serviciociudadescomponent/serviciociudadescomponent";
-import {Eventoscomponent} from "./components/eventoscomponent/eventoscomponent";
-import {Confirmacionreservacomponent} from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
-import {Misreservascomponent} from "./components/misreservascomponent/misreservascomponent";
-
-
-import {Pagarservicioscomponent} from "./components/pagarservicioscomponent/pagarservicioscomponent";
-
-import {Detalleeventocomponent} from "./components/detalleeventocomponent/detalleeventocomponent";
-
-
-
-
+import { Reservascomponent } from "./components/reservascomponent/reservascomponent";
+import { Confirmacionreservacomponent } from "./components/confirmacionreservacomponent/confirmacionreservacomponent";
+import { Misreservascomponent } from "./components/misreservascomponent/misreservascomponent";
+import { Eventoscomponent } from "./components/eventoscomponent/eventoscomponent";
+import { Detalleeventocomponent } from "./components/detalleeventocomponent/detalleeventocomponent";
+import { Serviciociudadescomponent } from "./components/serviciociudadescomponent/serviciociudadescomponent";
+import { Pagarservicioscomponent } from "./components/pagarservicioscomponent/pagarservicioscomponent";
+import { Iniciosesioncomponent } from "./components/iniciosesioncomponent/iniciosesioncomponent";
+import { Crearcuentacomponent } from "./components/crearcuentacomponent/crearcuentacomponent";
 
 const routes: Routes = [
-
     {
         path: "",
-        component: Iniciocomponent
+        component: Iniciocomponent,
+        pathMatch: "full"
     },
-
     {
-        path: "reservas/:id",
-        component: Reservascomponent
+        path: "alojamientos",
+        component: Alojamientocomponent
     },
-
     {
         path: "alojamientos/:id",
         component: Detallealojamientocomponent
     },
     {
-        path: "servicios",
-        component:Serviciociudadescomponent
+        path: "iniciar-sesion",
+        component: Iniciosesioncomponent
     },
     {
-     path: 'pagar/:id', component: Pagarservicioscomponent
+        path: "crear-cuenta",
+        component: Crearcuentacomponent
     },
-
-
-
     {
-        path: "reservas/:id",
+        path: "reservas",
         component: Reservascomponent
     },
-
     {
-        path:"eventos",
-
-        component: Eventoscomponent
+        path: "reserva-confirmada/:id",
+        component: Confirmacionreservacomponent
+    },
+    {
+        path: "mis-reservas",
+        component: Misreservascomponent
     },
     {
         path: "eventos",
@@ -63,27 +56,26 @@ const routes: Routes = [
         path: "eventos/:id",
         component: Detalleeventocomponent
     },
-
-    {path: 'reserva-confirmada/:id', component: Confirmacionreservacomponent},
-    {path: 'mis-reservas', component: Misreservascomponent},
-
+    {
+        path: "servicios",
+        component: Serviciociudadescomponent
+    },
+    {
+        path: "servicios/:id",
+        component: Pagarservicioscomponent
+    },
     {
         path: "**",
         redirectTo: ""
     }
-
-
-
 ];
 
 @NgModule({
     imports: [
         RouterModule.forRoot(routes)
     ],
-
     exports: [
         RouterModule
     ]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

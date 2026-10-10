@@ -1,122 +1,252 @@
 <div class="contenedor-principal">
 
-    <p *ngIf="cargando" class="text-center py-5">Cargando...</p>
+    @if (cargando) {
 
-    <div *ngIf="!cargando && !alojamiento" class="text-center py-5">
-        <p>Este alojamiento ya no está disponible.</p>
-        <a routerLink="/alojamientos">Ver otros alojamientos</a>
-    </div>
-
-    <div *ngIf="!cargando && alojamiento" class="formulario-card-horizontal">
-        <h2>Reserva: {{ alojamiento.nombre }}</h2>
-
-        <div class="grid-layout">
-
-            <div class="columna-inputs">
-                <div class="campo">
-                    <label for="nombre">Nombre completo: <span class="error-msg">{{ nombreError }}</span></label>
-                    <input type="text" id="nombre" placeholder="Tu nombre real"
-                           #inputNombre (input)="verificarNombre(inputNombre.value)">
-                </div>
-
-                <div class="campo">
-                    <label for="correo">Correo electrónico: <span class="error-msg">{{ correoError }}</span></label>
-                    <input type="email" id="correo" placeholder="ejemplo@gmail.com"
-                           #inputCorreo (input)="verificarCorreo(inputCorreo.value)">
-                </div>
-
-                <div class="campo">
-                    <label for="telefono">Número de teléfono: <span class="error-msg">{{ telefonoError }}</span></label>
-                    <input type="tel" id="telefono" placeholder="+57 300 000 0000"
-                           #inputTelefono (input)="verificarTelefono(inputTelefono.value)">
-                </div>
-
-                <div class="campo">
-                    <label for="cedula">Documento de identidad: <span class="error-msg">{{ cedulaError }}</span></label>
-                    <input type="text" id="cedula" placeholder="Número de cédula"
-                           #inputCedula (input)="verificarCedula(inputCedula.value)">
-                </div>
-
-                <hr class="separador">
-
-                <div class="campo">
-                    <label for="llegada">Fecha de llegada:</label>
-                    <input type="date" id="llegada"
-                           [min]="hoy"
-                           [(ngModel)]="fechaLlegada"
-                           (ngModelChange)="calcularReserva()">
-                </div>
-
-                <div class="campo">
-                    <label for="salida">Fecha de salida:</label>
-                    <input type="date" id="salida"
-                           [min]="fechaLlegada || hoy"
-                           [(ngModel)]="fechaSalida"
-                           (ngModelChange)="calcularReserva()">
-                </div>
-
-                <div class="campo">
-                    <label for="huespedes">
-                        Número de huéspedes (máx. {{ alojamiento.capacidad }}):
-                    </label>
-                    <input type="number" id="huespedes" min="1"
-                           [max]="alojamiento.capacidad"
-                           [(ngModel)]="numeroHuespedes"
-                           (ngModelChange)="calcularReserva()">
-                </div>
-            </div>
-
-
-            <div class="columna-cotizacion">
-                <div class="cotizacion-card">
-                    <h3 class="cotizacion-titulo">Detalles de la cotización</h3>
-
-                    <div class="cotizacion-row">
-                        <span class="label">Precio por noche</span>
-                        <span class="value">{{ alojamiento.precioNoche | currency:'COP':'symbol-narrow':'1.0-0' }}</span>
-                    </div>
-
-                    <div class="cotizacion-row">
-                        <span class="label">Número de noches</span>
-                        <span class="value">{{ cotizacion.noches }}</span>
-                    </div>
-
-                    <div class="cotizacion-row">
-                        <span class="label">Subtotal</span>
-                        <span class="value">{{ cotizacion.subtotal | currency:'COP':'symbol-narrow':'1.0-0' }}</span>
-                    </div>
-
-                    <div class="cotizacion-row">
-                        <span class="label">Tarifa de limpieza</span>
-                        <span class="value">{{ cotizacion.tarifaLimpieza | currency:'COP':'symbol-narrow':'1.0-0' }}</span>
-                    </div>
-
-                    <div class="cotizacion-row">
-                        <span class="label">Tarifa de servicio (10%)</span>
-                        <span class="value">{{ cotizacion.tarifaServicio | currency:'COP':'symbol-narrow':'1.0-0' }}</span>
-                    </div>
-
-                    <div class="cotizacion-divider"></div>
-
-                    <div class="cotizacion-total-row">
-                        <span class="total-label">Total a pagar</span>
-                        <span class="total-value">{{ cotizacion.total | currency:'COP':'symbol-narrow':'1.0-0' }}</span>
-                    </div>
-
-                    <!-- Aquí salen los errores de las reglas de negocio -->
-                    <div class="cotizacion-alert" *ngIf="!cotizacion.valida">
-                        <div *ngFor="let error of cotizacion.errores">{{ error }}</div>
-                    </div>
-                </div>
-
-                <div class="boton-container">
-                    <button class="btn-reservar"
-                            [disabled]="!formularioValido"
-                            (click)="confirmar()">
-                        Confirmar y pagar
-                    </button>
-                </div>
-            </div>
+        <div class="formulario-card-horizontal">
+            <h2>Cargando reserva...</h2>
         </div>
-    </div>
+
+    } @else if (alojamiento) {
+
+        <div class="formulario-card-horizontal">
+
+            <h2>Reserva tu alojamiento</h2>
+
+            <div class="alojamiento-seleccionado">
+                <img
+                        [src]="alojamiento.imagenPrincipal"
+                        [alt]="alojamiento.nombre">
+
+                <div>
+                    <h3>{{ alojamiento.nombre }}</h3>
+                    <p>{{ alojamiento.ciudad }}</p>
+                    <p>
+                        {{ alojamiento.precioNoche | currency:'COP':'symbol-narrow':'1.0-0' }}
+                        por noche
+                    </p>
+                    <p>
+                        Capacidad máxima: {{ alojamiento.capacidad }} huéspedes
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid-layout">
+
+                <div class="columna-inputs">
+
+                    <div class="campo">
+                        <label for="nombre">
+                            Nombre completo:
+                            <span class="error-msg">{{ nombreValidado }}</span>
+                        </label>
+
+                        <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Tu nombre completo"
+                                autocomplete="name"
+                                [(ngModel)]="nombreHuesped"
+                                (ngModelChange)="verificarNombre($event)">
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">
+                            Correo electrónico:
+                            <span class="error-msg">{{ correoValidado }}</span>
+                        </label>
+
+                        <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="ejemplo@gmail.com"
+                                autocomplete="email"
+                                [(ngModel)]="correo"
+                                (ngModelChange)="verificarCorreo($event)">
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">
+                            Número de teléfono:
+                            <span class="error-msg">{{ telefonoCorrecto }}</span>
+                        </label>
+
+                        <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="+57 300 000 0000"
+                                autocomplete="tel"
+                                [(ngModel)]="telefonoHuesped"
+                                (ngModelChange)="verificarTelefono($event)">
+                    </div>
+
+                    <div class="campo">
+                        <label for="cedula">
+                            Documento de identidad:
+                            <span class="error-msg">{{ cedulaCorrecta }}</span>
+                        </label>
+
+                        <input
+                                type="text"
+                                id="cedula"
+                                name="cedula"
+                                placeholder="Número de cédula"
+                                [(ngModel)]="documentoHuesped"
+                                (ngModelChange)="verificarCedula($event)">
+                    </div>
+
+                    <hr class="separador">
+
+                    <div class="campo">
+                        <label for="llegada">Fecha de llegada:</label>
+
+                        <input
+                                type="date"
+                                id="llegada"
+                                name="llegada"
+                                [min]="fechaMinima"
+                                [(ngModel)]="fechaLlegada"
+                                (ngModelChange)="actualizarCotizacion()">
+                    </div>
+
+                    <div class="campo">
+                        <label for="salida">Fecha de salida:</label>
+
+                        <input
+                                type="date"
+                                id="salida"
+                                name="salida"
+                                [min]="fechaLlegada || fechaMinima"
+                                [(ngModel)]="fechaSalida"
+                                (ngModelChange)="actualizarCotizacion()">
+                    </div>
+
+                    <div class="campo">
+                        <label for="huespedes">Número de huéspedes:</label>
+
+                        <input
+                                type="number"
+                                id="huespedes"
+                                name="huespedes"
+                                min="1"
+                                step="1"
+                                [max]="alojamiento.capacidad"
+                                [(ngModel)]="numeroHuespedes"
+                                (ngModelChange)="actualizarCotizacion()">
+                    </div>
+
+                </div>
+
+                <div class="columna-cotizacion">
+
+                    <div class="cotizacion-card">
+
+                        <h3 class="cotizacion-titulo">
+                            Detalles de la cotización
+                        </h3>
+
+                        <div class="cotizacion-row">
+                            <span class="label">Precio por noche</span>
+                            <span class="value">
+                                {{ alojamiento.precioNoche | currency:'COP':'symbol-narrow':'1.0-0' }}
+                            </span>
+                        </div>
+
+                        <div class="cotizacion-row">
+                            <span class="label">Número de noches</span>
+                            <span class="value">{{ cotizacion?.noches ?? 0 }}</span>
+                        </div>
+
+                        <div class="cotizacion-row">
+                            <span class="label">Subtotal</span>
+                            <span class="value">
+                                {{ (cotizacion?.subtotal ?? 0) | currency:'COP':'symbol-narrow':'1.0-0' }}
+                            </span>
+                        </div>
+
+                        <div class="cotizacion-row">
+                            <span class="label">Tarifa de limpieza</span>
+                            <span class="value">
+                                {{ (cotizacion?.tarifaLimpieza ?? 0) | currency:'COP':'symbol-narrow':'1.0-0' }}
+                            </span>
+                        </div>
+
+                        <div class="cotizacion-row">
+                            <span class="label">Tarifa de servicio (10%)</span>
+                            <span class="value">
+                                {{ (cotizacion?.tarifaServicio ?? 0) | currency:'COP':'symbol-narrow':'1.0-0' }}
+                            </span>
+                        </div>
+
+                        <div class="cotizacion-divider"></div>
+
+                        <div class="cotizacion-total-row">
+                            <span class="total-label">Total a pagar</span>
+                            <span class="total-value">
+                                {{ (cotizacion?.total ?? 0) | currency:'COP':'symbol-narrow':'1.0-0' }}
+                            </span>
+                        </div>
+
+                        @if (!fechaLlegada || !fechaSalida) {
+
+                            <div class="cotizacion-alert">
+                                Selecciona las fechas de llegada y salida para calcular el total.
+                            </div>
+
+                        } @else if (cotizacion && !cotizacion.valida) {
+
+                            <div class="cotizacion-alert cotizacion-error">
+                                @for (error of cotizacion.errores; track error) {
+                                    <p>{{ error }}</p>
+                                }
+                            </div>
+
+                        }
+
+                    </div>
+
+                    @if (errorReserva) {
+                        <p class="error-reserva">{{ errorReserva }}</p>
+                    }
+
+                    <div class="boton-container">
+                        <button
+                                type="button"
+                                class="btn-reservar"
+                                [disabled]="!puedeConfirmar"
+                                (click)="confirmarReserva()">
+
+                            Confirmar reserva
+
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    } @else {
+
+        <div class="formulario-card-horizontal reserva-sin-alojamiento">
+            <h2>Primero selecciona un alojamiento</h2>
+
+            <p>
+                Entra al detalle de un alojamiento y pulsa «Reservar ahora» para continuar.
+            </p>
+
+            <a
+                    class="btn-reservar enlace-reservar"
+                    [routerLink]="['/alojamientos']">
+
+                Explorar alojamientos
+
+            </a>
+        </div>
+
+    }
+
 </div>

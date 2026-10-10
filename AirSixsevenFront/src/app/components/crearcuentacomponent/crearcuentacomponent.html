@@ -1,0 +1,30 @@
+<section class="auth-pagina">
+    <div class="auth-card">
+        <a routerLink="/" class="auth-marca"><i class="bi bi-house-heart-fill"></i> mistays</a>
+        <h1>Crea tu cuenta</h1>
+        <p class="auth-descripcion">Guarda tus reservas y consúltalas cuando vuelvas a iniciar sesión.</p>
+
+        <form (ngSubmit)="crearCuenta()">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" [(ngModel)]="nombre" required minlength="3">
+
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" name="correo" type="email" autocomplete="email" [(ngModel)]="correo" required>
+
+            <label for="contrasena">Contraseña</label>
+            <input id="contrasena" name="contrasena" type="password" autocomplete="new-password" [(ngModel)]="contrasena" required minlength="8">
+            <small>Usa al menos 8 caracteres.</small>
+
+            <label for="confirmarContrasena">Confirma la contraseña</label>
+            <input id="confirmarContrasena" name="confirmarContrasena" type="password" autocomplete="new-password" [(ngModel)]="confirmarContrasena" required minlength="8">
+
+            @if (error) {
+                <p class="auth-error" role="alert">{{ error }}</p>
+            }
+
+            <button type="submit" [disabled]="cargando">{{ cargando ? 'Creando cuenta...' : 'Crear cuenta' }}</button>
+        </form>
+
+        <p class="auth-pie">¿Ya tienes una cuenta? <a [routerLink]="['/iniciar-sesion']" [queryParams]="returnUrl !== '/' ? { returnUrl: returnUrl } : {}">Iniciar sesión</a></p>
+    </div>
+</section>
