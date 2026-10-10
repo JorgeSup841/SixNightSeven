@@ -5,7 +5,7 @@ import { Reservasmodel } from "../models/reservasmodel";
 export class Reservasservice {
     private readonly clave = "reservas";
 
-    private leer(): Reservasmodel[] {
+     leer(): Reservasmodel[] {
         try {
             const contenido = localStorage.getItem(this.clave);
 

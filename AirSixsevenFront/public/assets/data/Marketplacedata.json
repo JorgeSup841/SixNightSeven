@@ -2,16 +2,46 @@
   "alojamientos": [
     {
       "id": 1,
-      "nombre": "Loft moderno en Chapinero",
-      "descripcion": "Loft moderno ubicado en una zona tranquila de Bogotá.",
+      "nombre": "Casa de descanso en Charalá",
+      "descripcion": "Alojamiento acogedor en Charalá, Santander, ideal para descansar y conocer la región.",
+      "ciudad": "Charalá",
+      "ubicacion": "Centro de Charalá, Santander",
+      "tipo": "Casa",
+      "capacidad": 2,
+      "habitaciones": 1,
+      "camas": 2,
+      "banos": 1,
+      "precioNoche": 157000,
+      "tarifaLimpieza": 40000,
+      "calificacion": 4.9,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Charala.jpeg",
+      "imagenes": [
+        "assets/images/Charala.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Jardín",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Apartamento moderno en Bogotá",
+      "descripcion": "Apartamento cómodo ubicado en Chapinero, Bogotá, ideal para disfrutar una estancia agradable.",
       "ciudad": "Bogotá",
       "ubicacion": "Chapinero, Bogotá",
       "tipo": "Apartamento",
-      "capacidad": 2,
-      "habitaciones": 1,
-      "camas": 1,
+      "capacidad": 3,
+      "habitaciones": 2,
+      "camas": 3,
       "banos": 1,
-      "precioNoche": 180000,
+      "precioNoche": 194000,
       "tarifaLimpieza": 45000,
       "calificacion": 4.8,
       "activo": true,
@@ -27,44 +57,73 @@
       ],
       "reglas": [
         "No fumar",
-        "No se permiten fiestas"
-      ]
-    },
-    {
-      "id": 2,
-      "nombre": "Apartamento frente al mar",
-      "descripcion": "Apartamento con vista al mar en Cartagena.",
-      "ciudad": "Cartagena",
-      "ubicacion": "Bocagrande, Cartagena",
-      "tipo": "Apartamento",
-      "capacidad": 5,
-      "habitaciones": 2,
-      "camas": 3,
-      "banos": 2,
-      "precioNoche": 420000,
-      "tarifaLimpieza": 70000,
-      "calificacion": 4.9,
-      "activo": true,
-      "imagenPrincipal": "assets/images/Cartagena.jpeg",
-      "imagenes": [
-        "assets/images/Cartagena.jpeg"
-      ],
-      "servicios": [
-        "Wi-Fi",
-        "Piscina",
-        "Aire acondicionado",
-        "Cocina",
-        "Parqueadero"
-      ],
-      "reglas": [
-        "No fumar",
-        "No mascotas"
+        "Respetar los horarios de descanso"
       ]
     },
     {
       "id": 3,
-      "nombre": "Cabaña en Guatapé",
-      "descripcion": "Cabaña rodeada de naturaleza con vista al embalse.",
+      "nombre": "Apartamento céntrico en Cartagena",
+      "descripcion": "Apartamento cómodo ubicado en Bocagrande, Cartagena, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Cartagena",
+      "ubicacion": "Bocagrande, Cartagena",
+      "tipo": "Apartamento",
+      "capacidad": 4,
+      "habitaciones": 2,
+      "camas": 3,
+      "banos": 2,
+      "precioNoche": 231000,
+      "tarifaLimpieza": 50000,
+      "calificacion": 4.3,
+      "activo": true,
+      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
+      "imagenes": [
+        "assets/images/CabañaGuatape.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Suite urbana en Medellín",
+      "descripcion": "Apartamento cómodo ubicado en El Poblado, Medellín, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Medellín",
+      "ubicacion": "El Poblado, Medellín",
+      "tipo": "Apartamento",
+      "capacidad": 5,
+      "habitaciones": 3,
+      "camas": 4,
+      "banos": 2,
+      "precioNoche": 268000,
+      "tarifaLimpieza": 55000,
+      "calificacion": 4.6,
+      "activo": true,
+      "imagenPrincipal": "assets/images/VillaDeLeyva.jpeg",
+      "imagenes": [
+        "assets/images/VillaDeLeyva.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Cabaña natural en Guatapé",
+      "descripcion": "Cabaña cómodo ubicado en Guatapé, Antioquia, ideal para disfrutar una estancia agradable.",
       "ciudad": "Guatapé",
       "ubicacion": "Guatapé, Antioquia",
       "tipo": "Cabaña",
@@ -72,39 +131,160 @@
       "habitaciones": 3,
       "camas": 4,
       "banos": 2,
-      "precioNoche": 350000,
+      "precioNoche": 305000,
       "tarifaLimpieza": 60000,
-      "calificacion": 4.7,
+      "calificacion": 4.9,
       "activo": true,
-      "imagenPrincipal": "assets/images/CabanaGuatape.jpeg",
+      "imagenPrincipal": "assets/images/Medallo.jpeg",
       "imagenes": [
-        "assets/images/CabanaGuatape.jpeg"
+        "assets/images/Medallo.jpeg"
       ],
       "servicios": [
         "Wi-Fi",
         "Cocina",
-        "Parqueadero",
-        "BBQ"
+        "Chimenea",
+        "Parqueadero"
       ],
       "reglas": [
         "No fumar",
-        "Silencio después de las 10 PM"
+        "Respetar los horarios de descanso"
       ]
     },
     {
-      "id": 4,
-      "nombre": "Casa colonial en Villa de Leyva",
-      "descripcion": "Casa colonial cerca de la plaza principal.",
+      "id": 6,
+      "nombre": "Casa de descanso en Villa de Leyva",
+      "descripcion": "Casa cómodo ubicado en Centro histórico, Villa de Leyva, ideal para disfrutar una estancia agradable.",
       "ciudad": "Villa de Leyva",
-      "ubicacion": "Centro histórico",
+      "ubicacion": "Centro histórico, Villa de Leyva",
       "tipo": "Casa",
       "capacidad": 8,
       "habitaciones": 4,
       "camas": 5,
       "banos": 3,
-      "precioNoche": 520000,
-      "tarifaLimpieza": 90000,
-      "calificacion": 4.6,
+      "precioNoche": 342000,
+      "tarifaLimpieza": 65000,
+      "calificacion": 4.4,
+      "activo": true,
+      "imagenPrincipal": "assets/images/FotoHero1.jpg",
+      "imagenes": [
+        "assets/images/FotoHero1.jpg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Jardín",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Suite urbana en Santa Marta",
+      "descripcion": "Apartamento cómodo ubicado en El Rodadero, Santa Marta, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Santa Marta",
+      "ubicacion": "El Rodadero, Santa Marta",
+      "tipo": "Apartamento",
+      "capacidad": 2,
+      "habitaciones": 1,
+      "camas": 2,
+      "banos": 1,
+      "precioNoche": 379000,
+      "tarifaLimpieza": 70000,
+      "calificacion": 4.7,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Chapinero.jpeg",
+      "imagenes": [
+        "assets/images/Chapinero.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "Finca campestre en Salento",
+      "descripcion": "Finca cómodo ubicado en Zona rural, Salento, Quindío, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Salento",
+      "ubicacion": "Zona rural, Salento, Quindío",
+      "tipo": "Finca",
+      "capacidad": 3,
+      "habitaciones": 2,
+      "camas": 3,
+      "banos": 1,
+      "precioNoche": 416000,
+      "tarifaLimpieza": 75000,
+      "calificacion": 4.2,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Cartagena.jpeg",
+      "imagenes": [
+        "assets/images/Cartagena.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Piscina",
+        "BBQ",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 9,
+      "nombre": "Apartamento céntrico en Cali",
+      "descripcion": "Apartamento cómodo ubicado en Granada, Cali, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Cali",
+      "ubicacion": "Granada, Cali",
+      "tipo": "Apartamento",
+      "capacidad": 4,
+      "habitaciones": 2,
+      "camas": 3,
+      "banos": 2,
+      "precioNoche": 453000,
+      "tarifaLimpieza": 80000,
+      "calificacion": 4.5,
+      "activo": true,
+      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
+      "imagenes": [
+        "assets/images/CabañaGuatape.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 10,
+      "nombre": "Cabaña con encanto en Paipa",
+      "descripcion": "Cabaña cómodo ubicado en Afueras de Paipa, Boyacá, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Paipa",
+      "ubicacion": "Afueras de Paipa, Boyacá",
+      "tipo": "Cabaña",
+      "capacidad": 5,
+      "habitaciones": 3,
+      "camas": 4,
+      "banos": 2,
+      "precioNoche": 490000,
+      "tarifaLimpieza": 85000,
+      "calificacion": 4.8,
       "activo": true,
       "imagenPrincipal": "assets/images/VillaDeLeyva.jpeg",
       "imagenes": [
@@ -117,23 +297,204 @@
         "Parqueadero"
       ],
       "reglas": [
-        "No fiestas",
-        "Máximo 8 huéspedes"
+        "No fumar",
+        "Respetar los horarios de descanso"
       ]
     },
     {
-      "id": 5,
-      "nombre": "Apartamento ejecutivo Medellín",
-      "descripcion": "Apartamento moderno en una zona empresarial de Medellín.",
-      "ciudad": "Medellín",
-      "ubicacion": "El Poblado, Medellín",
+      "id": 11,
+      "nombre": "Casa acogedora en San Andrés",
+      "descripcion": "Casa cómodo ubicado en San Luis, San Andrés, ideal para disfrutar una estancia agradable.",
+      "ciudad": "San Andrés",
+      "ubicacion": "San Luis, San Andrés",
+      "tipo": "Casa",
+      "capacidad": 6,
+      "habitaciones": 3,
+      "camas": 4,
+      "banos": 2,
+      "precioNoche": 527000,
+      "tarifaLimpieza": 90000,
+      "calificacion": 4.3,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Medallo.jpeg",
+      "imagenes": [
+        "assets/images/Medallo.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Jardín",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 12,
+      "nombre": "Casa de descanso en Barichara",
+      "descripcion": "Casa cómodo ubicado en Centro histórico, Barichara, Santander, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Barichara",
+      "ubicacion": "Centro histórico, Barichara, Santander",
+      "tipo": "Casa",
+      "capacidad": 8,
+      "habitaciones": 4,
+      "camas": 5,
+      "banos": 3,
+      "precioNoche": 134000,
+      "tarifaLimpieza": 35000,
+      "calificacion": 4.6,
+      "activo": true,
+      "imagenPrincipal": "assets/images/FotoHero1.jpg",
+      "imagenes": [
+        "assets/images/FotoHero1.jpg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Jardín",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 13,
+      "nombre": "Suite urbana en San Gil",
+      "descripcion": "Apartamento cómodo ubicado en Centro, San Gil, Santander, ideal para disfrutar una estancia agradable.",
+      "ciudad": "San Gil",
+      "ubicacion": "Centro, San Gil, Santander",
       "tipo": "Apartamento",
-      "capacidad": 3,
+      "capacidad": 2,
       "habitaciones": 1,
       "camas": 2,
       "banos": 1,
-      "precioNoche": 230000,
+      "precioNoche": 171000,
+      "tarifaLimpieza": 40000,
+      "calificacion": 4.9,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Chapinero.jpeg",
+      "imagenes": [
+        "assets/images/Chapinero.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 14,
+      "nombre": "Apartamento moderno en Manizales",
+      "descripcion": "Apartamento cómodo ubicado en Palogrande, Manizales, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Manizales",
+      "ubicacion": "Palogrande, Manizales",
+      "tipo": "Apartamento",
+      "capacidad": 3,
+      "habitaciones": 2,
+      "camas": 3,
+      "banos": 1,
+      "precioNoche": 208000,
+      "tarifaLimpieza": 45000,
+      "calificacion": 4.4,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Cartagena.jpeg",
+      "imagenes": [
+        "assets/images/Cartagena.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 15,
+      "nombre": "Finca de descanso en Pereira",
+      "descripcion": "Finca cómodo ubicado en Cerritos, Pereira, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Pereira",
+      "ubicacion": "Cerritos, Pereira",
+      "tipo": "Finca",
+      "capacidad": 4,
+      "habitaciones": 2,
+      "camas": 3,
+      "banos": 2,
+      "precioNoche": 245000,
       "tarifaLimpieza": 50000,
+      "calificacion": 4.7,
+      "activo": true,
+      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
+      "imagenes": [
+        "assets/images/CabañaGuatape.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Piscina",
+        "BBQ",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 16,
+      "nombre": "Suite urbana en Medellín",
+      "descripcion": "Apartamento cómodo ubicado en Laureles, Medellín, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Medellín",
+      "ubicacion": "Laureles, Medellín",
+      "tipo": "Apartamento",
+      "capacidad": 5,
+      "habitaciones": 3,
+      "camas": 4,
+      "banos": 2,
+      "precioNoche": 282000,
+      "tarifaLimpieza": 55000,
+      "calificacion": 4.2,
+      "activo": true,
+      "imagenPrincipal": "assets/images/VillaDeLeyva.jpeg",
+      "imagenes": [
+        "assets/images/VillaDeLeyva.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 17,
+      "nombre": "Casa acogedora en Cartagena",
+      "descripcion": "Casa cómodo ubicado en Getsemaní, Cartagena, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Cartagena",
+      "ubicacion": "Getsemaní, Cartagena",
+      "tipo": "Casa",
+      "capacidad": 6,
+      "habitaciones": 3,
+      "camas": 4,
+      "banos": 2,
+      "precioNoche": 319000,
+      "tarifaLimpieza": 60000,
       "calificacion": 4.5,
       "activo": true,
       "imagenPrincipal": "assets/images/Medallo.jpeg",
@@ -143,40 +504,403 @@
       "servicios": [
         "Wi-Fi",
         "Cocina",
-        "Gimnasio",
+        "Jardín",
         "Parqueadero"
       ],
       "reglas": [
-        "No fumar"
+        "No fumar",
+        "Respetar los horarios de descanso"
       ]
     },
     {
-      "id": 6,
-      "nombre": "Casa campestre",
-      "descripcion": "Casa campestre en Armenia.",
-      "ciudad": "Armenia",
-      "ubicacion": "Zona rural",
-      "tipo": "Casa",
-      "capacidad": 10,
-      "habitaciones": 5,
-      "camas": 7,
-      "banos": 4,
-      "precioNoche": 650000,
-      "tarifaLimpieza": 120000,
-      "calificacion": 4.4,
-      "activo": false,
+      "id": 18,
+      "nombre": "Apartamento céntrico en Bogotá",
+      "descripcion": "Apartamento cómodo ubicado en Usaquén, Bogotá, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Bogotá",
+      "ubicacion": "Usaquén, Bogotá",
+      "tipo": "Apartamento",
+      "capacidad": 8,
+      "habitaciones": 4,
+      "camas": 5,
+      "banos": 3,
+      "precioNoche": 356000,
+      "tarifaLimpieza": 65000,
+      "calificacion": 4.8,
+      "activo": true,
       "imagenPrincipal": "assets/images/FotoHero1.jpg",
       "imagenes": [
         "assets/images/FotoHero1.jpg"
       ],
       "servicios": [
-        "Piscina",
-        "Parqueadero",
-        "BBQ"
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
       ],
       "reglas": [
         "No fumar",
-        "No mascotas"
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 19,
+      "nombre": "Cabaña con encanto en Guatapé",
+      "descripcion": "Cabaña cómodo ubicado en Orillas del embalse, Guatapé, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Guatapé",
+      "ubicacion": "Orillas del embalse, Guatapé",
+      "tipo": "Cabaña",
+      "capacidad": 2,
+      "habitaciones": 1,
+      "camas": 2,
+      "banos": 1,
+      "precioNoche": 393000,
+      "tarifaLimpieza": 70000,
+      "calificacion": 4.3,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Chapinero.jpeg",
+      "imagenes": [
+        "assets/images/Chapinero.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Chimenea",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 20,
+      "nombre": "Finca campestre en Armenia",
+      "descripcion": "Finca cómodo ubicado en Zona rural, Armenia, Quindío, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Armenia",
+      "ubicacion": "Zona rural, Armenia, Quindío",
+      "tipo": "Finca",
+      "capacidad": 3,
+      "habitaciones": 2,
+      "camas": 3,
+      "banos": 1,
+      "precioNoche": 430000,
+      "tarifaLimpieza": 75000,
+      "calificacion": 4.6,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Cartagena.jpeg",
+      "imagenes": [
+        "assets/images/Cartagena.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Piscina",
+        "BBQ",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 21,
+      "nombre": "Refugio de montaña en Minca",
+      "descripcion": "Cabaña cómodo ubicado en Montañas de Minca, Magdalena, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Minca",
+      "ubicacion": "Montañas de Minca, Magdalena",
+      "tipo": "Cabaña",
+      "capacidad": 4,
+      "habitaciones": 2,
+      "camas": 3,
+      "banos": 2,
+      "precioNoche": 467000,
+      "tarifaLimpieza": 80000,
+      "calificacion": 4.9,
+      "activo": true,
+      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
+      "imagenes": [
+        "assets/images/CabañaGuatape.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Chimenea",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 22,
+      "nombre": "Suite urbana en Bucaramanga",
+      "descripcion": "Apartamento cómodo ubicado en Cabecera, Bucaramanga, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Bucaramanga",
+      "ubicacion": "Cabecera, Bucaramanga",
+      "tipo": "Apartamento",
+      "capacidad": 5,
+      "habitaciones": 3,
+      "camas": 4,
+      "banos": 2,
+      "precioNoche": 504000,
+      "tarifaLimpieza": 85000,
+      "calificacion": 4.4,
+      "activo": true,
+      "imagenPrincipal": "assets/images/VillaDeLeyva.jpeg",
+      "imagenes": [
+        "assets/images/VillaDeLeyva.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 23,
+      "nombre": "Casa acogedora en Santa Fe de Antioquia",
+      "descripcion": "Casa cómodo ubicado en Centro histórico, Antioquia, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Santa Fe de Antioquia",
+      "ubicacion": "Centro histórico, Antioquia",
+      "tipo": "Casa",
+      "capacidad": 6,
+      "habitaciones": 3,
+      "camas": 4,
+      "banos": 2,
+      "precioNoche": 541000,
+      "tarifaLimpieza": 90000,
+      "calificacion": 4.7,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Medallo.jpeg",
+      "imagenes": [
+        "assets/images/Medallo.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Jardín",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 24,
+      "nombre": "Refugio de montaña en Nuquí",
+      "descripcion": "Cabaña cómodo ubicado en Costa del Pacífico, Nuquí, Chocó, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Nuquí",
+      "ubicacion": "Costa del Pacífico, Nuquí, Chocó",
+      "tipo": "Cabaña",
+      "capacidad": 8,
+      "habitaciones": 4,
+      "camas": 5,
+      "banos": 3,
+      "precioNoche": 148000,
+      "tarifaLimpieza": 35000,
+      "calificacion": 4.2,
+      "activo": true,
+      "imagenPrincipal": "assets/images/FotoHero1.jpg",
+      "imagenes": [
+        "assets/images/FotoHero1.jpg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Chimenea",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 25,
+      "nombre": "Suite urbana en Buenos Aires",
+      "descripcion": "Apartamento cómodo ubicado en Palermo, Buenos Aires, Argentina, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Buenos Aires",
+      "ubicacion": "Palermo, Buenos Aires, Argentina",
+      "tipo": "Apartamento",
+      "capacidad": 2,
+      "habitaciones": 1,
+      "camas": 2,
+      "banos": 1,
+      "precioNoche": 185000,
+      "tarifaLimpieza": 40000,
+      "calificacion": 4.5,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Chapinero.jpeg",
+      "imagenes": [
+        "assets/images/Chapinero.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 26,
+      "nombre": "Apartamento moderno en Ciudad de México",
+      "descripcion": "Apartamento cómodo ubicado en Roma Norte, Ciudad de México, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Ciudad de México",
+      "ubicacion": "Roma Norte, Ciudad de México",
+      "tipo": "Apartamento",
+      "capacidad": 3,
+      "habitaciones": 2,
+      "camas": 3,
+      "banos": 1,
+      "precioNoche": 222000,
+      "tarifaLimpieza": 45000,
+      "calificacion": 4.8,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Cartagena.jpeg",
+      "imagenes": [
+        "assets/images/Cartagena.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 27,
+      "nombre": "Apartamento céntrico en Madrid",
+      "descripcion": "Apartamento cómodo ubicado en Centro, Madrid, España, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Madrid",
+      "ubicacion": "Centro, Madrid, España",
+      "tipo": "Apartamento",
+      "capacidad": 4,
+      "habitaciones": 2,
+      "camas": 3,
+      "banos": 2,
+      "precioNoche": 259000,
+      "tarifaLimpieza": 50000,
+      "calificacion": 4.3,
+      "activo": true,
+      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
+      "imagenes": [
+        "assets/images/CabañaGuatape.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 28,
+      "nombre": "Suite urbana en Lisboa",
+      "descripcion": "Apartamento cómodo ubicado en Alfama, Lisboa, Portugal, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Lisboa",
+      "ubicacion": "Alfama, Lisboa, Portugal",
+      "tipo": "Apartamento",
+      "capacidad": 5,
+      "habitaciones": 3,
+      "camas": 4,
+      "banos": 2,
+      "precioNoche": 296000,
+      "tarifaLimpieza": 55000,
+      "calificacion": 4.6,
+      "activo": true,
+      "imagenPrincipal": "assets/images/VillaDeLeyva.jpeg",
+      "imagenes": [
+        "assets/images/VillaDeLeyva.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 29,
+      "nombre": "Casa acogedora en Cusco",
+      "descripcion": "Casa cómodo ubicado en Centro histórico, Cusco, Perú, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Cusco",
+      "ubicacion": "Centro histórico, Cusco, Perú",
+      "tipo": "Casa",
+      "capacidad": 6,
+      "habitaciones": 3,
+      "camas": 4,
+      "banos": 2,
+      "precioNoche": 333000,
+      "tarifaLimpieza": 60000,
+      "calificacion": 4.9,
+      "activo": true,
+      "imagenPrincipal": "assets/images/Medallo.jpeg",
+      "imagenes": [
+        "assets/images/Medallo.jpeg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Jardín",
+        "Parqueadero"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
+      ]
+    },
+    {
+      "id": 30,
+      "nombre": "Apartamento céntrico en Cancún",
+      "descripcion": "Apartamento cómodo ubicado en Zona hotelera, Cancún, México, ideal para disfrutar una estancia agradable.",
+      "ciudad": "Cancún",
+      "ubicacion": "Zona hotelera, Cancún, México",
+      "tipo": "Apartamento",
+      "capacidad": 8,
+      "habitaciones": 4,
+      "camas": 5,
+      "banos": 3,
+      "precioNoche": 370000,
+      "tarifaLimpieza": 65000,
+      "calificacion": 4.4,
+      "activo": true,
+      "imagenPrincipal": "assets/images/FotoHero1.jpg",
+      "imagenes": [
+        "assets/images/FotoHero1.jpg"
+      ],
+      "servicios": [
+        "Wi-Fi",
+        "Cocina",
+        "Televisión",
+        "Lavadora"
+      ],
+      "reglas": [
+        "No fumar",
+        "Respetar los horarios de descanso"
       ]
     }
   ],
