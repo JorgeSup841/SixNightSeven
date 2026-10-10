@@ -8,9 +8,16 @@ export class Reservasservice {
     private leer(): Reservasmodel[] {
         try {
             const contenido = localStorage.getItem(this.clave);
-            if (!contenido) return [];
+
+            if (!contenido) {
+                return [];
+            }
+
             const datos: unknown = JSON.parse(contenido);
-            return Array.isArray(datos) ? datos as Reservasmodel[] : [];
+
+            return Array.isArray(datos)
+                ? datos as Reservasmodel[]
+                : [];
         } catch (error) {
             console.error("Error leyendo las reservas:", error);
             return [];
@@ -18,7 +25,10 @@ export class Reservasservice {
     }
 
     private guardar(reservas: Reservasmodel[]): void {
-        localStorage.setItem(this.clave, JSON.stringify(reservas));
+        localStorage.setItem(
+            this.clave,
+            JSON.stringify(reservas)
+        );
     }
 
     getReservas(): Reservasmodel[] {
@@ -26,17 +36,30 @@ export class Reservasservice {
     }
 
     getReservasUsuario(usuarioId: string): Reservasmodel[] {
-        return this.leer().filter(reserva => reserva.usuarioId === usuarioId);
+        return this.leer().filter(
+            reserva => reserva.usuarioId === usuarioId
+        );
     }
 
     agregar(reserva: Reservasmodel): void {
         if (!reserva.usuarioId) {
-            throw new Error("La reserva debe estar asociada a una cuenta iniciada.");
+            throw new Error(
+                "La reserva debe estar asociada a una cuenta iniciada."
+            );
         }
 
         const reservas = this.leer();
-        if (this.haySolapamiento(reserva.alojamientoId, reserva.fechaLlegada, reserva.fechaSalida)) {
-            throw new Error("El alojamiento ya tiene una reserva confirmada en esas fechas.");
+
+        if (
+            this.haySolapamiento(
+                reserva.alojamientoId,
+                reserva.fechaLlegada,
+                reserva.fechaSalida
+            )
+        ) {
+            throw new Error(
+                "El alojamiento ya tiene una reserva confirmada en esas fechas."
+            );
         }
 
         if (reservas.some(item => item.id === reserva.id)) {
@@ -47,45 +70,97 @@ export class Reservasservice {
         this.guardar(reservas);
     }
 
-    getReservaPorId(id: string): Reservasmodel | undefined {
-        return this.leer().find(reserva => reserva.id === id);
+    eliminarReserva(id: string, usuarioId: string): boolean {
+        const reservas = this.leer();
+
+        const existe = reservas.some(
+            reserva =>
+                reserva.id === id &&
+                reserva.usuarioId === usuarioId
+        );
+
+        if (!existe) {
+            return false;
+        }
+
+        const reservasActualizadas = reservas.filter(
+            reserva =>
+                !(
+                    reserva.id === id &&
+                    reserva.usuarioId === usuarioId
+                )
+        );
+
+        this.guardar(reservasActualizadas);
+
+        return true;
     }
 
-    migrarReservasAntiguas(usuarioId: string, correo: string): void {
+    getReservaPorId(id: string): Reservasmodel | undefined {
+        return this.leer().find(
+            reserva => reserva.id === id
+        );
+    }
+
+    migrarReservasAntiguas(
+        usuarioId: string,
+        correo: string
+    ): void {
         const correoNormalizado = correo.trim().toLowerCase();
         const reservas = this.leer();
         let cambio = false;
 
         for (const reserva of reservas) {
-            if (!reserva.usuarioId && reserva.correo?.trim().toLowerCase() === correoNormalizado) {
+            if (
+                !reserva.usuarioId &&
+                reserva.correo?.trim().toLowerCase() === correoNormalizado
+            ) {
                 reserva.usuarioId = usuarioId;
                 cambio = true;
             }
         }
 
-        if (cambio) this.guardar(reservas);
+        if (cambio) {
+            this.guardar(reservas);
+        }
     }
 
-    getReservaPorIdUsuario(id: string, usuarioId: string): Reservasmodel | undefined {
-        return this.leer().find(reserva => reserva.id === id && reserva.usuarioId === usuarioId);
+    getReservaPorIdUsuario(
+        id: string,
+        usuarioId: string
+    ): Reservasmodel | undefined {
+        return this.leer().find(
+            reserva =>
+                reserva.id === id &&
+                reserva.usuarioId === usuarioId
+        );
     }
 
-    haySolapamiento(alojamientoId: number, llegada: string, salida: string): boolean {
-        if (!llegada || !salida || salida <= llegada) return false;
+    haySolapamiento(
+        alojamientoId: number,
+        llegada: string,
+        salida: string
+    ): boolean {
+        if (!llegada || !salida || salida <= llegada) {
+            return false;
+        }
 
-        return this.leer().some(reserva =>
-            reserva.alojamientoId === alojamientoId &&
-            reserva.estado === "CONFIRMADA" &&
-            Boolean(reserva.fechaLlegada) &&
-            Boolean(reserva.fechaSalida) &&
-            llegada < reserva.fechaSalida &&
-            salida > reserva.fechaLlegada
+        return this.leer().some(
+            reserva =>
+                reserva.alojamientoId === alojamientoId &&
+                reserva.estado === "CONFIRMADA" &&
+                Boolean(reserva.fechaLlegada) &&
+                Boolean(reserva.fechaSalida) &&
+                llegada < reserva.fechaSalida &&
+                salida > reserva.fechaLlegada
         );
     }
 
     estaReservado(alojamientoId: number): boolean {
         return this.leer().some(
-            reserva => reserva.alojamientoId === alojamientoId && reserva.estado === "CONFIRMADA"
+            reserva =>
+                reserva.alojamientoId === alojamientoId &&
+                reserva.estado === "CONFIRMADA"
         );
     }
 }
