@@ -23,6 +23,12 @@ export class Pagarservicioscomponent implements OnInit {
     fecha = '';
     hoy = this.ciudadesService.hoy();
     horarioSeleccionado?: Horario;
+    pagado = false;
+
+    nombre = '';
+    tarjeta = '';
+    vencimiento = '';
+    cvv = '';
 
     ngOnInit() {
         const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -41,8 +47,9 @@ export class Pagarservicioscomponent implements OnInit {
 
     seleccionarHorario(horario: Horario) {
         this.horarioSeleccionado = horario;
-
+        this.pagado = false;
     }
+
     private patrones = {
         numero: /[0-9]/,
         letra: /[a-zA-ZáéíóúÁÉÍÓÚñÑ ]/,
@@ -55,13 +62,21 @@ export class Pagarservicioscomponent implements OnInit {
         }
     }
 
+    get formularioCompleto(): boolean {
+        return !!this.fecha
+            && !!this.horarioSeleccionado
+            && this.nombre.trim() !== ''
+            && this.tarjeta.trim() !== ''
+            && this.vencimiento.trim() !== ''
+            && this.cvv.trim() !== '';
+    }
+
     confirmar() {
-        if (!this.fecha || this.fecha < this.hoy || !this.horarioSeleccionado) {
-            alert('Elige una fecha y una hora');
+        if (!this.formularioCompleto || this.fecha < this.hoy) {
+            alert('Completa todos los campos');
             return;
         }
-
-
+        this.pagado = true;
     }
 
 }
