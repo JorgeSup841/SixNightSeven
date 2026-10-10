@@ -1,9 +1,9 @@
+
 export interface Usuariomodel {
     id: string;
     nombre: string;
     correo: string;
-    contrasenaHash: string;
-    contrasenaSalt: string;
+    contrasena: string;
     fechaRegistro: string;
 }
 

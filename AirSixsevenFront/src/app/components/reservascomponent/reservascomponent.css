@@ -1,3 +1,4 @@
+
 :host {
     display: block;
 }
@@ -18,7 +19,7 @@
     max-width: 1100px;
     margin: 0 auto;
     padding: clamp(1.5rem, 4vw, 3rem);
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #eee5dc;
     border-radius: 20px;
     box-shadow: 0 8px 30px rgba(58, 42, 34, 0.09);
@@ -26,11 +27,10 @@
 
 .formulario-card-horizontal > h2 {
     margin: 0 0 1.75rem;
-    color: var(--marron, #46352c);
+    color: var(--terracota);
     font-size: clamp(1.7rem, 3vw, 2.25rem);
     font-weight: 700;
     line-height: 1.25;
-    text-align: left;
 }
 
 .alojamiento-seleccionado {
@@ -55,7 +55,7 @@
 
 .alojamiento-seleccionado h3 {
     margin: 0 0 0.5rem;
-    color: var(--marron, #46352c);
+    color: var(--terracota);
     font-size: 1.15rem;
     font-weight: 700;
 }
@@ -69,7 +69,7 @@
 
 .grid-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
     gap: clamp(1.5rem, 4vw, 3rem);
     align-items: start;
 }
@@ -107,7 +107,7 @@
     min-height: 46px;
     padding: 0.7rem 0.85rem;
     color: #40342e;
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #ded3c9;
     border-radius: 9px;
     outline: none;
@@ -172,10 +172,4 @@
 
 .enlace-reservar {
     text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .boton-container .btn-reservar {
-        transition: none;
-    }
 }
