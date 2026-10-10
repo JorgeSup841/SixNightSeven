@@ -76,9 +76,9 @@
       "tarifaLimpieza": 60000,
       "calificacion": 4.7,
       "activo": true,
-      "imagenPrincipal": "assets/images/CabañaGuatape.jpeg",
+      "imagenPrincipal": "assets/images/CabanaGuatape.jpeg",
       "imagenes": [
-        "assets/images/CabañaGuatape.jpeg"
+        "assets/images/CabanaGuatape.jpeg"
       ],
       "servicios": [
         "Wi-Fi",

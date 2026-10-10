@@ -90,9 +90,9 @@
       "calificacion": 4.7,
       "totalValoraciones": 110,
       "activo": true,
-      "imagenPrincipal": "assets/images/peñol.jpg",
+      "imagenPrincipal": "assets/images/penol.jpg",
       "imagenes": [
-        "assets/images/peñol.jpg"
+        "assets/images/penol.jpg"
       ]
     },
     {
