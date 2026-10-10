@@ -1,0 +1,64 @@
+<section class="faq">
+    <div class="container">
+        <div class="row g-5">
+
+            <div class="col-lg-4">
+                <div class="intro">
+                    <p class="eyebrow">RESOLVEMOS TUS DUDAS</p>
+                    <h1 class="titulo">Preguntas frecuentes</h1>
+                    <p class="descripcion">
+                        Lo que más nos preguntan antes de reservar. Si no encuentras tu
+                        respuesta, escríbenos.
+                    </p>
+
+                    <div class="ayuda">
+                        <i class="bi bi-chat-heart"></i>
+                        <div>
+                            <strong>¿Sigues con dudas?</strong>
+                            <a routerLink="/contacto">Contáctanos <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+
+                @if (cargando) {
+
+                    <p class="estado">Cargando preguntas...</p>
+
+                } @else if (preguntas.length === 0) {
+
+                    <p class="estado">Por ahora no hay preguntas disponibles.</p>
+
+                } @else {
+
+                    <div class="acordeon">
+                        @for (item of preguntas; track item.id) {
+
+                            <div class="item" [class.abierto]="abierta === item.id">
+
+                                <button type="button" class="pregunta"
+                                        [attr.aria-expanded]="abierta === item.id"
+                                        (click)="alternar(item.id)">
+                                    <span>{{ item.pregunta }}</span>
+                                    <i class="bi bi-plus-lg icono"></i>
+                                </button>
+
+                                <div class="respuesta" [class.visible]="abierta === item.id">
+                                    <div>
+                                        <p>{{ item.respuesta }}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        }
+                    </div>
+
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
