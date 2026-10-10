@@ -30,6 +30,7 @@ import { Crearcuentacomponent } from "./components/crearcuentacomponent/crearcue
     declarations: [
         App,
         Navbarcomponent,
+        Pagarservicioscomponent,
         Barrabusquedacomponente,
         Iniciocomponent,
         Destacadoscomponent,
