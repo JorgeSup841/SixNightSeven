@@ -1,52 +1,53 @@
-import { Injectable } from "@angular/core";
-import { Usuariomodel, Usuariosesionmodel } from "../models/usuariomodel";
+import {Injectable} from "@angular/core";
+import {Usuariomodel, Usuariosesionmodel} from "../models/usuariomodel";
 
-@Injectable({ providedIn: "root" })
+@Injectable({
+    providedIn: "root"
+})
 export class Authservice {
-    private readonly claveUsuarios = "mistays_usuarios";
-    private readonly claveSesion = "mistays_usuario_activo";
 
-    private leerUsuarios(): Usuariomodel[] {
-        try {
-            const contenido = localStorage.getItem(this.claveUsuarios);
-            if (!contenido) return [];
-            const datos: unknown = JSON.parse(contenido);
-            return Array.isArray(datos) ? datos as Usuariomodel[] : [];
-        } catch (error) {
-            console.error("No fue posible leer las cuentas guardadas:", error);
-            return [];
+    private claveUsuarios = "mistays_usuarios";
+    private claveSesion = "mistays_usuario_activo";
+
+    registrar(nombre: string, correo: string, contrasena: string): Usuariosesionmodel {
+        nombre = nombre.trim();
+        correo = correo.trim().toLowerCase();
+
+        if (nombre.length < 3) {
+            throw new Error("El nombre debe tener al menos 3 caracteres.");
         }
-    }
 
-    private guardarUsuarios(usuarios: Usuariomodel[]): void {
-        localStorage.setItem(this.claveUsuarios, JSON.stringify(usuarios));
-    }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(correo)) {
+            throw new Error("Escribe un correo válido.");
+        }
 
-    private crearSal(): string {
-        const bytes = crypto.getRandomValues(new Uint8Array(16));
-        return Array.from(bytes).map(byte => byte.toString(16).padStart(2, "0")).join("");
-    }
+        if (contrasena.length < 8) {
+            throw new Error("La contraseña debe tener al menos 8 caracteres.");
+        }
 
-    private async crearHash(contrasena: string, sal: string): Promise<string> {
-        const clave = await crypto.subtle.importKey(
-            "raw",
-            new TextEncoder().encode(contrasena),
-            "PBKDF2",
-            false,
-            ["deriveBits"]
+        const usuarios: Usuariomodel[] = JSON.parse(
+            localStorage.getItem(this.claveUsuarios) || "[]"
         );
-        const hash = await crypto.subtle.deriveBits({
-            name: "PBKDF2",
-            salt: new TextEncoder().encode(sal),
-            iterations: 100000,
-            hash: "SHA-256"
-        }, clave, 256);
-        return Array.from(new Uint8Array(hash))
-            .map(byte => byte.toString(16).padStart(2, "0"))
-            .join("");
-    }
 
-    private datosSesion(usuario: Usuariomodel): Usuariosesionmodel {
+        const existe = usuarios.find(u => u.correo === correo);
+
+        if (existe) {
+            throw new Error("Ese correo ya está registrado.");
+        }
+
+        const usuario: Usuariomodel = {
+            id: Date.now().toString(),
+            nombre: nombre,
+            correo: correo,
+            contrasena: contrasena,
+            fechaRegistro: new Date().toISOString()
+        };
+
+        usuarios.push(usuario);
+
+        localStorage.setItem(this.claveUsuarios, JSON.stringify(usuarios));
+        localStorage.setItem(this.claveSesion, usuario.id);
+
         return {
             id: usuario.id,
             nombre: usuario.nombre,
@@ -54,70 +55,52 @@ export class Authservice {
         };
     }
 
-    async registrar(nombre: string, correo: string, contrasena: string): Promise<Usuariosesionmodel> {
-        const nombreLimpio = nombre.trim();
-        const correoLimpio = correo.trim().toLowerCase();
+    iniciarSesion(correo: string, contrasena: string): Usuariosesionmodel {
+        correo = correo.trim().toLowerCase();
 
-        if (nombreLimpio.length < 3) {
-            throw new Error("Escribe un nombre de al menos 3 caracteres.");
-        }
+        const usuarios: Usuariomodel[] = JSON.parse(
+            localStorage.getItem(this.claveUsuarios) || "[]"
+        );
 
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(correoLimpio)) {
-            throw new Error("Escribe un correo electrónico válido.");
-        }
-
-        if (contrasena.length < 8) {
-            throw new Error("La contraseña debe tener al menos 8 caracteres.");
-        }
-
-        const usuarios = this.leerUsuarios();
-        if (usuarios.some(usuario => usuario.correo.toLowerCase() === correoLimpio)) {
-            throw new Error("Ya existe una cuenta registrada con ese correo.");
-        }
-
-        const sal = this.crearSal();
-        const usuario: Usuariomodel = {
-            id: "USR-" + Date.now().toString(36).toUpperCase() + "-" + Math.random().toString(36).slice(2, 7).toUpperCase(),
-            nombre: nombreLimpio,
-            correo: correoLimpio,
-            contrasenaHash: await this.crearHash(contrasena, sal),
-            contrasenaSalt: sal,
-            fechaRegistro: new Date().toISOString()
-        };
-
-        usuarios.push(usuario);
-        this.guardarUsuarios(usuarios);
-        localStorage.setItem(this.claveSesion, usuario.id);
-        return this.datosSesion(usuario);
-    }
-
-    async iniciarSesion(correo: string, contrasena: string): Promise<Usuariosesionmodel> {
-        const correoLimpio = correo.trim().toLowerCase();
-        const usuario = this.leerUsuarios().find(item => item.correo.toLowerCase() === correoLimpio);
+        const usuario = usuarios.find(
+            u => u.correo === correo && u.contrasena === contrasena
+        );
 
         if (!usuario) {
-            throw new Error("El correo o la contraseña no son correctos.");
-        }
-
-        const hash = await this.crearHash(contrasena, usuario.contrasenaSalt);
-        if (hash !== usuario.contrasenaHash) {
-            throw new Error("El correo o la contraseña no son correctos.");
+            throw new Error("Correo o contraseña incorrectos.");
         }
 
         localStorage.setItem(this.claveSesion, usuario.id);
-        return this.datosSesion(usuario);
+
+        return {
+            id: usuario.id,
+            nombre: usuario.nombre,
+            correo: usuario.correo
+        };
     }
 
     getUsuarioActual(): Usuariosesionmodel | null {
-        try {
-            const id = localStorage.getItem(this.claveSesion);
-            if (!id) return null;
-            const usuario = this.leerUsuarios().find(item => item.id === id);
-            return usuario ? this.datosSesion(usuario) : null;
-        } catch (error) {
-            console.error("No fue posible recuperar la sesión:", error);
+        const id = localStorage.getItem(this.claveSesion);
+
+        if (!id) {
             return null;
         }
+
+        const usuarios: Usuariomodel[] = JSON.parse(
+            localStorage.getItem(this.claveUsuarios) || "[]"
+        );
+
+        const usuario = usuarios.find(u => u.id === id);
+
+        if (!usuario) {
+            return null;
+        }
+
+        return {
+            id: usuario.id,
+            nombre: usuario.nombre,
+            correo: usuario.correo
+        };
     }
 
     estaAutenticado(): boolean {

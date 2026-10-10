@@ -888,9 +888,9 @@
       "tarifaLimpieza": 65000,
       "calificacion": 4.4,
       "activo": true,
-      "imagenPrincipal": "assets/images/FotoHero1.jpg",
+      "imagenPrincipal": "assets/images/Cancun.jpeg",
       "imagenes": [
-        "assets/images/FotoHero1.jpg"
+        "assets/images/Cancun.jpeg"
       ],
       "servicios": [
         "Wi-Fi",
