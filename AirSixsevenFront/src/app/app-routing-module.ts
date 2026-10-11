@@ -17,6 +17,7 @@ import {Paginanoencontradacomponent} from "./components/paginanoencontradacompon
 import {Contactocomponent} from "./components/contactocomponent/contactocomponent";
 import {Comoreservarcomponent} from "./components/comoreservarcomponent/comoreservarcomponent";
 import {Preguntasfrecuentescomponent} from "./components/preguntasfrecuentescomponent/preguntasfrecuentescomponent";
+import {Cancelacionescomponent} from "./components/cancelacionescomponent/cancelacionescomponent";
 
 const routes: Routes = [
     {
@@ -80,6 +81,11 @@ const routes: Routes = [
     {
         path: "faq",
         component: Preguntasfrecuentescomponent
+    },
+    {
+      path: "cancelaciones",
+        component: Cancelacionescomponent
+
     },
     {
         path: "**",

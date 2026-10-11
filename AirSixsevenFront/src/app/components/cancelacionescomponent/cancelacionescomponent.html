@@ -1,0 +1,179 @@
+<section class="cancelar">
+    <div class="container">
+
+        <div class="encabezado">
+            <p class="eyebrow">SI TUS PLANES CAMBIAN</p>
+            <h1 class="titulo">Cancelar es sencillo y depende solo de ti.</h1>
+            <p class="descripcion">
+                Puedes cancelar tus reservas desde tu cuenta, sin escribirnos ni esperar
+                una respuesta. Así funciona y estas son las condiciones.
+            </p>
+        </div>
+
+        <ol class="pasos row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+            <li class="col">
+                <div class="paso">
+                    <span class="numero">1</span>
+                    <h2>Inicia sesión</h2>
+                    <p>
+                        Solo quien hizo la reserva puede cancelarla. Entra con la misma
+                        cuenta con la que reservaste.
+                    </p>
+                </div>
+            </li>
+
+            <li class="col">
+                <div class="paso">
+                    <span class="numero">2</span>
+                    <h2>Abre Mis reservas</h2>
+                    <p>
+                        Allí están todas tus reservas, de la más reciente a la más antigua.
+                    </p>
+                </div>
+            </li>
+
+            <li class="col">
+                <div class="paso">
+                    <span class="numero">3</span>
+                    <h2>Pulsa Cancelar reserva</h2>
+                    <p>
+                        Hazlo en la reserva que quieres cancelar. Si no ves el botón, esa
+                        reserva ya no se puede cancelar.
+                    </p>
+                </div>
+            </li>
+
+            <li class="col">
+                <div class="paso">
+                    <span class="numero">4</span>
+                    <h2>Confirma la cancelación</h2>
+                    <p>
+                        Te pedimos confirmar una vez más. Al aceptar, la reserva pasa al
+                        estado CANCELADA.
+                    </p>
+                </div>
+            </li>
+
+        </ol>
+    </div>
+</section>
+
+<section class="condiciones">
+    <div class="container">
+
+        <h2 class="titulo-seccion">¿Puedo cancelar mi reserva?</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <div class="bloque si">
+                    <h3><i class="bi bi-check-circle-fill"></i> Puedes cancelar si</h3>
+                    <ul>
+                        <li>
+                            <i class="bi bi-check-lg"></i>
+                            <span>La reserva está en estado <strong>CONFIRMADA</strong>.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-lg"></i>
+                            <span>Iniciaste sesión con la cuenta que hizo la reserva.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="bloque no">
+                    <h3><i class="bi bi-x-circle-fill"></i> No puedes cancelar si</h3>
+                    <ul>
+                        <li>
+                            <i class="bi bi-x-lg"></i>
+                            <span>La reserva ya está <strong>CANCELADA</strong>.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-x-lg"></i>
+                            <span>La reserva pertenece a otra cuenta.</span>
+                        </li>
+                    </ul>
+                    <p class="nota-bloque">
+                        En esos casos el botón no aparece. Si tienes una situación
+                        especial, <a routerLink="/contacto">escríbenos</a>.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="despues">
+    <div class="container">
+
+        <h2 class="titulo-claro">Qué pasa cuando cancelas</h2>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 g-lg-5">
+
+            <div class="col">
+                <div class="resultado">
+                    <span class="resultado-icono"><i class="bi bi-clock-history"></i></span>
+                    <div>
+                        <h3>Queda en tu historial</h3>
+                        <p>
+                            La reserva no se borra: sigue en Mis reservas con el estado
+                            CANCELADA.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="resultado">
+                    <span class="resultado-icono"><i class="bi bi-calendar-check"></i></span>
+                    <div>
+                        <h3>Las fechas se liberan</h3>
+                        <p>
+                            El alojamiento vuelve a estar disponible para otros huéspedes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="resultado">
+                    <span class="resultado-icono"><i class="bi bi-arrow-repeat"></i></span>
+                    <div>
+                        <h3>Una cancelada no se reactiva</h3>
+                        <p>
+                            Si todavía quieres viajar, haz una reserva nueva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="aviso-prototipo">
+            <i class="bi bi-info-circle"></i>
+            Esta plataforma es un prototipo académico: no se realizan cobros reales,
+            por lo que tampoco se gestionan reembolsos.
+        </p>
+
+    </div>
+</section>
+
+<section class="cierre">
+    <div class="container cierre-contenido">
+        <div>
+            <h2 class="cierre-titulo">¿Necesitas cambiar tus fechas?</h2>
+            <p class="cierre-sub">
+                Por ahora no se pueden modificar. Cancela y reserva de nuevo, o
+                escríbenos y lo revisamos contigo.
+            </p>
+        </div>
+
+        <div class="acciones">
+            <a routerLink="/mis-reservas" class="btn-principal">Ir a Mis reservas</a>
+            <a routerLink="/contacto" class="btn-contorno">Contáctanos</a>
+        </div>
+    </div>
+</section>
