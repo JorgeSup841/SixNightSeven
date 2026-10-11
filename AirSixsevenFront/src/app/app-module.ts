@@ -29,6 +29,7 @@ import { Paginanoencontradacomponent } from "./components/paginanoencontradacomp
 import { Contactocomponent } from "./components/contactocomponent/contactocomponent";
 import { Comoreservarcomponent } from "./components/comoreservarcomponent/comoreservarcomponent";
 import { Preguntasfrecuentescomponent } from "./components/preguntasfrecuentescomponent/preguntasfrecuentescomponent";
+import { Cancelacionescomponent } from "./components/cancelacionescomponent/cancelacionescomponent";
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { Preguntasfrecuentescomponent } from "./components/preguntasfrecuentesco
     Contactocomponent,
     Comoreservarcomponent,
     Preguntasfrecuentescomponent,
+    Cancelacionescomponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
