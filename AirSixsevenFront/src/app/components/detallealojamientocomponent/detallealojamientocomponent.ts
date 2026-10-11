@@ -7,6 +7,7 @@ import {Cotizacionservice} from "../../services/cotizacionservice";
 import {Cotizacionmodel} from "../../models/reservasmodel";
 import { Router } from "@angular/router";
 import { Authservice } from "../../services/authservice";
+import { ClimaService } from "../../services/climaservice";
 
 @Component({
     selector: "app-detallealojamientocomponent",
@@ -20,12 +21,14 @@ export class Detallealojamientocomponent implements OnInit {
     private cotizacionService = inject(Cotizacionservice);
     private authService = inject(Authservice);
     private router = inject(Router);
+    private climaService = inject(ClimaService);
     cdr = inject(ChangeDetectorRef);
 
     alojamiento?: Alojamiento;
     resenas: Resena[] = [];
     cargando = true;
     imagenActiva = '';
+    temperatura: number | null = null;
 
     hoy = this.cotizacionService.hoy();
     llegada = '';
@@ -77,10 +80,19 @@ export class Detallealojamientocomponent implements OnInit {
             this.alojamiento = a;
             this.cargando = false;
             if (a) this.imagenActiva = a.imagenPrincipal;
+
+            if (a && a.latitud && a.longitud) {
+                this.climaService.obtenerClima(a.latitud, a.longitud).subscribe((respuesta: any) => {
+                    this.temperatura = respuesta.current.temperature_2m;
+                    this.cdr.detectChanges();
+                });
+            }
+
             this.cdr.detectChanges();
         });
-
-        this.alojamientosService.getResenas(id).subscribe(r => this.resenas = r);
-        this.cdr.detectChanges();
+        this.alojamientosService.getResenas(id).subscribe(r => {
+            this.resenas = r;
+            this.cdr.detectChanges();
+        });
     }
 }
