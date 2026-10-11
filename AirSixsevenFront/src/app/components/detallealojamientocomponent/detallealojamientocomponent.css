@@ -495,3 +495,13 @@ button.btn-reservar:disabled {
     color: #7a6a60;
     font-size: 0.9rem;
 }
+
+.detalle-clima {
+    background-color: #f1e4d8;
+    color: #5a2a1a;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-left: 960px;
+}
